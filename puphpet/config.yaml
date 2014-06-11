@@ -53,6 +53,7 @@ server:
     packages:
         - vim
         - htop
+        - curl
     dot_files:
         -
             bash_aliases: null
@@ -88,7 +89,7 @@ apache:
             servername: reunion.dev
             serveraliases:
                 - www.reunion.dev
-            docroot: /var/www/reunion
+            docroot: /var/www
             port: '80'
             setenv:
                 - 'APP_ENV dev'
