@@ -15,3 +15,7 @@ adminer/
 
 ### puphpet ###
 puphpet/files/dot/ssh/id_rsa*
+
+### composer ###
+vendor/*
+composer.lock
