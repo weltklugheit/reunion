@@ -3,7 +3,7 @@ vagrantfile-local:
     vm:
         box: puphpet/debian75-x64
         box_url: puphpet/debian75-x64
-        hostname: null
+        hostname: reuniondev
         memory: '512'
         chosen_provider: virtualbox
         network:
@@ -16,6 +16,8 @@ vagrantfile-local:
             virtualbox:
                 modifyvm:
                     natdnshostresolver1: on
+                    name: reunion
+                    cpus: 1
                 setextradata:
                     VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root: 1
             vmware:
@@ -89,7 +91,7 @@ apache:
             servername: reunion.dev
             serveraliases:
                 - www.reunion.dev
-            docroot: /var/www
+            docroot: /var/www/public
             port: '80'
             setenv:
                 - 'APP_ENV dev'
@@ -104,6 +106,7 @@ apache:
             ssl_key: ''
             ssl_chain: ''
             ssl_certs_dir: ''
+            logroot: '/var/www/data/logs/'
     mod_pagespeed: 0
     mod_spdy: 0
 nginx:
@@ -139,6 +142,9 @@ php:
     ini:
         display_errors: On
         error_reporting: '-1'
+        log_errors: '1'
+        track_errors: '1'
+        error_log: '/var/www/data/logs/phperror.log'
         session.save_path: /var/lib/php/session
     timezone: Europe/Berlin
 xdebug:
