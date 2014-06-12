@@ -1,0 +1,411 @@
+[12-Jun-2014 09:07:49 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Zend\ServiceManager\Exception\ServiceNotFoundException' with message 'Zend\ServiceManager\ServiceManager::get was unable to fetch or create an instance for BjyAuthorize\Config' in /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:529
+Stack trace:
+#0 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Module.php(41): Zend\ServiceManager\ServiceManager->get('BjyAuthorize\\Co...')
+#1 [internal function]: BjyAuthorize\Module->onBootstrap(Object(Zend\Mvc\MvcEvent))
+#2 /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php(468): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#3 /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php(207): Zend\EventManager\EventManager->triggerListeners('bootstrap', Object(Zend\Mvc\MvcEvent), Array)
+#4 /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php(156): Zend\EventManager\EventManager->trigger('bootstrap', Object(Zend\Mv in /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php on line 529
+[12-Jun-2014 09:11:22 Europe/Berlin] PHP Catchable fatal error:  Argument 1 passed to User\Module::onBootstrap() must be an instance of User\MvcEvent, instance of Zend\Mvc\MvcEvent given in /var/www/module/User/src/User/Module.php on line 37
+[12-Jun-2014 09:11:22 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 09:11:22 Europe/Berlin] PHP   1. {main}() /var/www/public/index.php:0
+[12-Jun-2014 09:11:22 Europe/Berlin] PHP   2. Zend\Mvc\Application::init() /var/www/public/index.php:9
+[12-Jun-2014 09:11:22 Europe/Berlin] PHP   3. Zend\Mvc\Application->bootstrap() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:260
+[12-Jun-2014 09:11:22 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:156
+[12-Jun-2014 09:11:22 Europe/Berlin] PHP   5. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[12-Jun-2014 09:11:22 Europe/Berlin] PHP   6. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[12-Jun-2014 09:11:22 Europe/Berlin] PHP   7. User\Module->onBootstrap() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[12-Jun-2014 09:11:39 Europe/Berlin] PHP Fatal error:  Interface 'User\Entity\UserInterface' not found in /var/www/module/User/src/User/Entity/User.php on line 35
+[12-Jun-2014 09:11:39 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 09:11:39 Europe/Berlin] PHP   1. {main}() /var/www/public/index.php:0
+[12-Jun-2014 09:11:39 Europe/Berlin] PHP   2. Zend\Mvc\Application->run() /var/www/public/index.php:9
+[12-Jun-2014 09:11:39 Europe/Berlin] PHP   3. Zend\Mvc\Application->completeRequest() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:327
+[12-Jun-2014 09:11:39 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:353
+[12-Jun-2014 09:11:39 Europe/Berlin] PHP   5. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[12-Jun-2014 09:11:39 Europe/Berlin] PHP   6. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[12-Jun-2014 09:11:39 Europe/Berlin] PHP   7. ZendDeveloperTools\Listener\ProfilerListener->onFinish() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[12-Jun-2014 09:11:39 Europe/Berlin] PHP   8. ZendDeveloperTools\Profiler->collect() /var/www/vendor/zendframework/zend-developer-tools/src/ZendDeveloperTools/Listener/ProfilerListener.php:107
+[12-Jun-2014 09:11:39 Europe/Berlin] PHP   9. DoctrineORMModule\Collector\MappingCollector->collect() /var/www/vendor/zendframework/zend-developer-tools/src/ZendDeveloperTools/Profiler.php:211
+[12-Jun-2014 09:11:39 Europe/Berlin] PHP  10. Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory->getAllMetadata() /var/www/vendor/doctrine/doctrine-orm-module/src/DoctrineORMModule/Collector/MappingCollector.php:97
+[12-Jun-2014 09:11:39 Europe/Berlin] PHP  11. Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain->getAllClassNames() /var/www/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php:113
+[12-Jun-2014 09:11:39 Europe/Berlin] PHP  12. Doctrine\Common\Persistence\Mapping\Driver\AnnotationDriver->getAllClassNames() /var/www/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/MappingDriverChain.php:129
+[12-Jun-2014 09:11:39 Europe/Berlin] PHP  13. require_once() /var/www/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/AnnotationDriver.php:237
+[12-Jun-2014 09:12:41 Europe/Berlin] PHP Fatal error:  Class User\Entity\User contains 6 abstract methods and must therefore be declared abstract or implement the remaining methods (ZfcUser\Mapper\UserInterface::findByEmail, ZfcUser\Mapper\UserInterface::findByUsername, ZfcUser\Mapper\UserInterface::findById, ...) in /var/www/module/User/src/User/Entity/User.php on line 256
+[12-Jun-2014 09:12:41 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 09:12:41 Europe/Berlin] PHP   1. {main}() /var/www/public/index.php:0
+[12-Jun-2014 09:12:41 Europe/Berlin] PHP   2. Zend\Mvc\Application->run() /var/www/public/index.php:9
+[12-Jun-2014 09:12:41 Europe/Berlin] PHP   3. Zend\Mvc\Application->completeRequest() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:327
+[12-Jun-2014 09:12:41 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:353
+[12-Jun-2014 09:12:41 Europe/Berlin] PHP   5. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[12-Jun-2014 09:12:41 Europe/Berlin] PHP   6. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[12-Jun-2014 09:12:41 Europe/Berlin] PHP   7. ZendDeveloperTools\Listener\ProfilerListener->onFinish() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[12-Jun-2014 09:12:41 Europe/Berlin] PHP   8. ZendDeveloperTools\Profiler->collect() /var/www/vendor/zendframework/zend-developer-tools/src/ZendDeveloperTools/Listener/ProfilerListener.php:107
+[12-Jun-2014 09:12:41 Europe/Berlin] PHP   9. DoctrineORMModule\Collector\MappingCollector->collect() /var/www/vendor/zendframework/zend-developer-tools/src/ZendDeveloperTools/Profiler.php:211
+[12-Jun-2014 09:12:41 Europe/Berlin] PHP  10. Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory->getAllMetadata() /var/www/vendor/doctrine/doctrine-orm-module/src/DoctrineORMModule/Collector/MappingCollector.php:97
+[12-Jun-2014 09:12:41 Europe/Berlin] PHP  11. Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain->getAllClassNames() /var/www/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php:113
+[12-Jun-2014 09:12:41 Europe/Berlin] PHP  12. Doctrine\Common\Persistence\Mapping\Driver\AnnotationDriver->getAllClassNames() /var/www/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/MappingDriverChain.php:129
+[12-Jun-2014 09:12:41 Europe/Berlin] PHP  13. require_once() /var/www/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/AnnotationDriver.php:237
+[12-Jun-2014 09:54:02 Europe/Berlin] PHP Warning:  spl_object_hash() expects parameter 1 to be object, null given in /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php on line 1388
+[12-Jun-2014 09:54:02 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 09:54:02 Europe/Berlin] PHP   1. {main}() /var/www/public/index.php:0
+[12-Jun-2014 09:54:02 Europe/Berlin] PHP   2. Zend\Mvc\Application->run() /var/www/public/index.php:9
+[12-Jun-2014 09:54:02 Europe/Berlin] PHP   3. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:313
+[12-Jun-2014 09:54:02 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[12-Jun-2014 09:54:02 Europe/Berlin] PHP   5. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[12-Jun-2014 09:54:02 Europe/Berlin] PHP   6. Zend\Mvc\DispatchListener->onDispatch() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[12-Jun-2014 09:54:02 Europe/Berlin] PHP   7. Zend\Mvc\Controller\AbstractController->dispatch() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/DispatchListener.php:114
+[12-Jun-2014 09:54:02 Europe/Berlin] PHP   8. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/AbstractController.php:117
+[12-Jun-2014 09:54:02 Europe/Berlin] PHP   9. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[12-Jun-2014 09:54:02 Europe/Berlin] PHP  10. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[12-Jun-2014 09:54:02 Europe/Berlin] PHP  11. Zend\Mvc\Controller\AbstractActionController->onDispatch() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[12-Jun-2014 09:54:02 Europe/Berlin] PHP  12. ZfcUser\Controller\UserController->registerAction() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/AbstractActionController.php:83
+[12-Jun-2014 09:54:02 Europe/Berlin] PHP  13. ZfcUser\Service\User->register() /var/www/vendor/zf-commons/zfc-user/src/ZfcUser/Controller/UserController.php:204
+[12-Jun-2014 09:54:02 Europe/Berlin] PHP  14. ZfcUserDoctrineORM\Mapper\User->insert() /var/www/vendor/zf-commons/zfc-user/src/ZfcUser/Service/User.php:98
+[12-Jun-2014 09:54:02 Europe/Berlin] PHP  15. ZfcUserDoctrineORM\Mapper\User->persist() /var/www/vendor/zf-commons/zfc-user-doctrine-orm/src/ZfcUserDoctrineORM/Mapper/User.php:51
+[12-Jun-2014 09:54:02 Europe/Berlin] PHP  16. Doctrine\ORM\EntityManager->flush() /var/www/vendor/zf-commons/zfc-user-doctrine-orm/src/ZfcUserDoctrineORM/Mapper/User.php:62
+[12-Jun-2014 09:54:02 Europe/Berlin] PHP  17. Doctrine\ORM\UnitOfWork->commit() /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:389
+[12-Jun-2014 09:54:02 Europe/Berlin] PHP  18. Doctrine\ORM\UnitOfWork->computeChangeSets() /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:297
+[12-Jun-2014 09:54:02 Europe/Berlin] PHP  19. Doctrine\ORM\UnitOfWork->computeScheduleInsertsChangeSets() /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:711
+[12-Jun-2014 09:54:02 Europe/Berlin] PHP  20. Doctrine\ORM\UnitOfWork->computeChangeSet() /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:404
+[12-Jun-2014 09:54:02 Europe/Berlin] PHP  21. Doctrine\ORM\UnitOfWork->computeAssociationChanges() /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:687
+[12-Jun-2014 09:54:02 Europe/Berlin] PHP  22. Doctrine\ORM\UnitOfWork->getEntityState() /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:788
+[12-Jun-2014 09:54:02 Europe/Berlin] PHP  23. spl_object_hash() /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1388
+[12-Jun-2014 10:56:26 Europe/Berlin] PHP Warning:  fopen(/vagrant/scripts/db/delta/1): failed to open stream: Success in /vagrant/scripts/db/update.php on line 37
+[12-Jun-2014 10:56:26 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 10:56:26 Europe/Berlin] PHP   1. {main}() /vagrant/scripts/db/update.php:0
+[12-Jun-2014 10:56:26 Europe/Berlin] PHP   2. newDeltascript() /vagrant/scripts/db/update.php:7
+[12-Jun-2014 10:56:26 Europe/Berlin] PHP   3. fopen() /vagrant/scripts/db/update.php:37
+[12-Jun-2014 10:56:26 Europe/Berlin] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /vagrant/scripts/db/update.php on line 38
+[12-Jun-2014 10:56:26 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 10:56:26 Europe/Berlin] PHP   1. {main}() /vagrant/scripts/db/update.php:0
+[12-Jun-2014 10:56:26 Europe/Berlin] PHP   2. newDeltascript() /vagrant/scripts/db/update.php:7
+[12-Jun-2014 10:56:26 Europe/Berlin] PHP   3. fwrite() /vagrant/scripts/db/update.php:38
+[12-Jun-2014 10:56:26 Europe/Berlin] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /vagrant/scripts/db/update.php on line 39
+[12-Jun-2014 10:56:26 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 10:56:26 Europe/Berlin] PHP   1. {main}() /vagrant/scripts/db/update.php:0
+[12-Jun-2014 10:56:26 Europe/Berlin] PHP   2. newDeltascript() /vagrant/scripts/db/update.php:7
+[12-Jun-2014 10:56:26 Europe/Berlin] PHP   3. fclose() /vagrant/scripts/db/update.php:39
+[12-Jun-2014 12:48:09 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message '00000' in /vagrant/scripts/db/update.php:123
+Stack trace:
+#0 /vagrant/scripts/db/update.php(57): DbDeployPDO->deploy(1)
+#1 /vagrant/scripts/db/update.php(8): updateDatabase()
+#2 {main}
+  thrown in /vagrant/scripts/db/update.php on line 123
+[12-Jun-2014 12:49:14 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message '00000' in /vagrant/scripts/db/update.php:125
+Stack trace:
+#0 /vagrant/scripts/db/update.php(57): DbDeployPDO->deploy(1)
+#1 /vagrant/scripts/db/update.php(8): updateDatabase()
+#2 {main}
+  thrown in /vagrant/scripts/db/update.php on line 125
+[12-Jun-2014 12:49:53 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message '00000' in /vagrant/scripts/db/update.php:126
+Stack trace:
+#0 /vagrant/scripts/db/update.php(57): DbDeployPDO->deploy(1)
+#1 /vagrant/scripts/db/update.php(8): updateDatabase()
+#2 {main}
+  thrown in /vagrant/scripts/db/update.php on line 126
+[12-Jun-2014 12:50:59 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message '00000' in /vagrant/scripts/db/update.php:126
+Stack trace:
+#0 /vagrant/scripts/db/update.php(57): DbDeployPDO->deploy(1)
+#1 /vagrant/scripts/db/update.php(8): updateDatabase()
+#2 {main}
+  thrown in /vagrant/scripts/db/update.php on line 126
+[12-Jun-2014 12:56:01 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message '23000' in /vagrant/scripts/db/update.php:112
+Stack trace:
+#0 /vagrant/scripts/db/update.php(57): DbDeployPDO->deploy(2)
+#1 /vagrant/scripts/db/update.php(8): updateDatabase()
+#2 {main}
+  thrown in /vagrant/scripts/db/update.php on line 112
+[12-Jun-2014 12:57:01 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message '23000' in /vagrant/scripts/db/update.php:113
+Stack trace:
+#0 /vagrant/scripts/db/update.php(58): DbDeployPDO->deploy(2)
+#1 /vagrant/scripts/db/update.php(8): updateDatabase()
+#2 {main}
+  thrown in /vagrant/scripts/db/update.php on line 113
+[12-Jun-2014 12:57:22 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message '23000' in /vagrant/scripts/db/update.php:114
+Stack trace:
+#0 /vagrant/scripts/db/update.php(59): DbDeployPDO->deploy(2)
+#1 /vagrant/scripts/db/update.php(8): updateDatabase()
+#2 {main}
+  thrown in /vagrant/scripts/db/update.php on line 114
+[12-Jun-2014 12:57:46 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message '23000' in /vagrant/scripts/db/update.php:115
+Stack trace:
+#0 /vagrant/scripts/db/update.php(59): DbDeployPDO->deploy(2)
+#1 /vagrant/scripts/db/update.php(8): updateDatabase()
+#2 {main}
+  thrown in /vagrant/scripts/db/update.php on line 115
+[12-Jun-2014 12:58:58 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message '42000' in /vagrant/scripts/db/update.php:114
+Stack trace:
+#0 /vagrant/scripts/db/update.php(59): DbDeployPDO->deploy(3)
+#1 /vagrant/scripts/db/update.php(9): updateDatabase()
+#2 {main}
+  thrown in /vagrant/scripts/db/update.php on line 114
+[12-Jun-2014 13:06:43 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message '42000' in /vagrant/scripts/db/update.php:120
+Stack trace:
+#0 /vagrant/scripts/db/update.php(65): DbDeployPDO->deploy(4)
+#1 /vagrant/scripts/db/update.php(9): updateDatabase()
+#2 {main}
+  thrown in /vagrant/scripts/db/update.php on line 120
+[12-Jun-2014 13:42:23 Europe/Berlin] PHP Warning:  preg_grep() expects parameter 2 to be array, string given in /vagrant/scripts/db/update.php on line 44
+[12-Jun-2014 13:42:23 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 13:42:23 Europe/Berlin] PHP   1. {main}() /vagrant/scripts/db/update.php:0
+[12-Jun-2014 13:42:23 Europe/Berlin] PHP   2. newDeltascript() /vagrant/scripts/db/update.php:8
+[12-Jun-2014 13:42:23 Europe/Berlin] PHP   3. preg_grep() /vagrant/scripts/db/update.php:44
+[12-Jun-2014 13:42:23 Europe/Berlin] PHP Warning:  preg_grep() expects parameter 2 to be array, string given in /vagrant/scripts/db/update.php on line 44
+[12-Jun-2014 13:42:23 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 13:42:23 Europe/Berlin] PHP   1. {main}() /vagrant/scripts/db/update.php:0
+[12-Jun-2014 13:42:23 Europe/Berlin] PHP   2. newDeltascript() /vagrant/scripts/db/update.php:8
+[12-Jun-2014 13:42:23 Europe/Berlin] PHP   3. preg_grep() /vagrant/scripts/db/update.php:44
+[12-Jun-2014 13:42:23 Europe/Berlin] PHP Warning:  preg_grep() expects parameter 2 to be array, string given in /vagrant/scripts/db/update.php on line 44
+[12-Jun-2014 13:42:24 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 13:42:24 Europe/Berlin] PHP   1. {main}() /vagrant/scripts/db/update.php:0
+[12-Jun-2014 13:42:24 Europe/Berlin] PHP   2. newDeltascript() /vagrant/scripts/db/update.php:8
+[12-Jun-2014 13:42:24 Europe/Berlin] PHP   3. preg_grep() /vagrant/scripts/db/update.php:44
+[12-Jun-2014 13:44:35 Europe/Berlin] PHP Warning:  preg_match(): Invalid flags specified in /vagrant/scripts/db/update.php on line 44
+[12-Jun-2014 13:44:35 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 13:44:35 Europe/Berlin] PHP   1. {main}() /vagrant/scripts/db/update.php:0
+[12-Jun-2014 13:44:35 Europe/Berlin] PHP   2. newDeltascript() /vagrant/scripts/db/update.php:8
+[12-Jun-2014 13:44:35 Europe/Berlin] PHP   3. preg_match() /vagrant/scripts/db/update.php:44
+[12-Jun-2014 13:44:35 Europe/Berlin] PHP Warning:  preg_match(): Invalid flags specified in /vagrant/scripts/db/update.php on line 44
+[12-Jun-2014 13:44:35 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 13:44:35 Europe/Berlin] PHP   1. {main}() /vagrant/scripts/db/update.php:0
+[12-Jun-2014 13:44:35 Europe/Berlin] PHP   2. newDeltascript() /vagrant/scripts/db/update.php:8
+[12-Jun-2014 13:44:35 Europe/Berlin] PHP   3. preg_match() /vagrant/scripts/db/update.php:44
+[12-Jun-2014 13:44:35 Europe/Berlin] PHP Warning:  preg_match(): Invalid flags specified in /vagrant/scripts/db/update.php on line 44
+[12-Jun-2014 13:44:35 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 13:44:35 Europe/Berlin] PHP   1. {main}() /vagrant/scripts/db/update.php:0
+[12-Jun-2014 13:44:35 Europe/Berlin] PHP   2. newDeltascript() /vagrant/scripts/db/update.php:8
+[12-Jun-2014 13:44:35 Europe/Berlin] PHP   3. preg_match() /vagrant/scripts/db/update.php:44
+[12-Jun-2014 13:44:53 Europe/Berlin] PHP Warning:  preg_match(): Invalid flags specified in /vagrant/scripts/db/update.php on line 44
+[12-Jun-2014 13:44:53 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 13:44:53 Europe/Berlin] PHP   1. {main}() /vagrant/scripts/db/update.php:0
+[12-Jun-2014 13:44:53 Europe/Berlin] PHP   2. newDeltascript() /vagrant/scripts/db/update.php:8
+[12-Jun-2014 13:44:53 Europe/Berlin] PHP   3. preg_match() /vagrant/scripts/db/update.php:44
+[12-Jun-2014 13:44:53 Europe/Berlin] PHP Warning:  preg_match(): Invalid flags specified in /vagrant/scripts/db/update.php on line 44
+[12-Jun-2014 13:44:53 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 13:44:53 Europe/Berlin] PHP   1. {main}() /vagrant/scripts/db/update.php:0
+[12-Jun-2014 13:44:53 Europe/Berlin] PHP   2. newDeltascript() /vagrant/scripts/db/update.php:8
+[12-Jun-2014 13:44:53 Europe/Berlin] PHP   3. preg_match() /vagrant/scripts/db/update.php:44
+[12-Jun-2014 13:44:53 Europe/Berlin] PHP Warning:  preg_match(): Invalid flags specified in /vagrant/scripts/db/update.php on line 44
+[12-Jun-2014 13:44:53 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 13:44:53 Europe/Berlin] PHP   1. {main}() /vagrant/scripts/db/update.php:0
+[12-Jun-2014 13:44:53 Europe/Berlin] PHP   2. newDeltascript() /vagrant/scripts/db/update.php:8
+[12-Jun-2014 13:44:53 Europe/Berlin] PHP   3. preg_match() /vagrant/scripts/db/update.php:44
+[12-Jun-2014 13:48:57 Europe/Berlin] PHP Notice:  Undefined offset: 1 in /vagrant/scripts/db/update.php on line 46
+[12-Jun-2014 13:48:57 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 13:48:57 Europe/Berlin] PHP   1. {main}() /vagrant/scripts/db/update.php:0
+[12-Jun-2014 13:48:57 Europe/Berlin] PHP   2. newDeltascript() /vagrant/scripts/db/update.php:8
+[12-Jun-2014 13:48:57 Europe/Berlin] PHP Notice:  Undefined offset: 2 in /vagrant/scripts/db/update.php on line 46
+[12-Jun-2014 13:48:57 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 13:48:57 Europe/Berlin] PHP   1. {main}() /vagrant/scripts/db/update.php:0
+[12-Jun-2014 13:48:57 Europe/Berlin] PHP   2. newDeltascript() /vagrant/scripts/db/update.php:8
+[12-Jun-2014 13:49:23 Europe/Berlin] PHP Notice:  Undefined offset: 1 in /vagrant/scripts/db/update.php on line 48
+[12-Jun-2014 13:49:23 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 13:49:23 Europe/Berlin] PHP   1. {main}() /vagrant/scripts/db/update.php:0
+[12-Jun-2014 13:49:23 Europe/Berlin] PHP   2. newDeltascript() /vagrant/scripts/db/update.php:8
+[12-Jun-2014 13:49:23 Europe/Berlin] PHP Notice:  Undefined offset: 2 in /vagrant/scripts/db/update.php on line 48
+[12-Jun-2014 13:49:23 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 13:49:23 Europe/Berlin] PHP   1. {main}() /vagrant/scripts/db/update.php:0
+[12-Jun-2014 13:49:23 Europe/Berlin] PHP   2. newDeltascript() /vagrant/scripts/db/update.php:8
+[12-Jun-2014 13:49:50 Europe/Berlin] PHP Notice:  Undefined offset: 1 in /vagrant/scripts/db/update.php on line 48
+[12-Jun-2014 13:49:50 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 13:49:50 Europe/Berlin] PHP   1. {main}() /vagrant/scripts/db/update.php:0
+[12-Jun-2014 13:49:50 Europe/Berlin] PHP   2. newDeltascript() /vagrant/scripts/db/update.php:8
+[12-Jun-2014 13:49:50 Europe/Berlin] PHP Notice:  Undefined offset: 2 in /vagrant/scripts/db/update.php on line 48
+[12-Jun-2014 13:49:50 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 13:49:50 Europe/Berlin] PHP   1. {main}() /vagrant/scripts/db/update.php:0
+[12-Jun-2014 13:49:50 Europe/Berlin] PHP   2. newDeltascript() /vagrant/scripts/db/update.php:8
+[12-Jun-2014 13:50:06 Europe/Berlin] PHP Notice:  Undefined offset: 1 in /vagrant/scripts/db/update.php on line 48
+[12-Jun-2014 13:50:06 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 13:50:06 Europe/Berlin] PHP   1. {main}() /vagrant/scripts/db/update.php:0
+[12-Jun-2014 13:50:06 Europe/Berlin] PHP   2. newDeltascript() /vagrant/scripts/db/update.php:8
+[12-Jun-2014 13:50:06 Europe/Berlin] PHP Notice:  Undefined offset: 2 in /vagrant/scripts/db/update.php on line 48
+[12-Jun-2014 13:50:06 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 13:50:06 Europe/Berlin] PHP   1. {main}() /vagrant/scripts/db/update.php:0
+[12-Jun-2014 13:50:06 Europe/Berlin] PHP   2. newDeltascript() /vagrant/scripts/db/update.php:8
+[12-Jun-2014 13:50:41 Europe/Berlin] PHP Notice:  Undefined offset: 1 in /vagrant/scripts/db/update.php on line 48
+[12-Jun-2014 13:50:41 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 13:50:41 Europe/Berlin] PHP   1. {main}() /vagrant/scripts/db/update.php:0
+[12-Jun-2014 13:50:41 Europe/Berlin] PHP   2. newDeltascript() /vagrant/scripts/db/update.php:8
+[12-Jun-2014 13:50:41 Europe/Berlin] PHP Notice:  Undefined offset: 1 in /vagrant/scripts/db/update.php on line 48
+[12-Jun-2014 13:50:41 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 13:50:41 Europe/Berlin] PHP   1. {main}() /vagrant/scripts/db/update.php:0
+[12-Jun-2014 13:50:41 Europe/Berlin] PHP   2. newDeltascript() /vagrant/scripts/db/update.php:8
+[12-Jun-2014 13:50:41 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message 'mapping not ok' in /vagrant/scripts/db/update.php:55
+Stack trace:
+#0 /vagrant/scripts/db/update.php(8): newDeltascript()
+#1 {main}
+  thrown in /vagrant/scripts/db/update.php on line 55
+[12-Jun-2014 13:51:05 Europe/Berlin] PHP Notice:  Undefined offset: 1 in /vagrant/scripts/db/update.php on line 48
+[12-Jun-2014 13:51:05 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 13:51:05 Europe/Berlin] PHP   1. {main}() /vagrant/scripts/db/update.php:0
+[12-Jun-2014 13:51:05 Europe/Berlin] PHP   2. newDeltascript() /vagrant/scripts/db/update.php:8
+[12-Jun-2014 13:51:05 Europe/Berlin] PHP Notice:  Undefined offset: 2 in /vagrant/scripts/db/update.php on line 48
+[12-Jun-2014 13:51:05 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 13:51:05 Europe/Berlin] PHP   1. {main}() /vagrant/scripts/db/update.php:0
+[12-Jun-2014 13:51:05 Europe/Berlin] PHP   2. newDeltascript() /vagrant/scripts/db/update.php:8
+[12-Jun-2014 14:18:13 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Mapping\MappingException' with message 'The target-entity World\Entity\User cannot be found in 'World\Entity\World#owner'.' in /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/MappingException.php:740
+Stack trace:
+#0 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataInfo.php(953): Doctrine\ORM\Mapping\MappingException::invalidTargetEntityClass('World\\Entity\\Us...', 'World\\Entity\\Wo...', 'owner')
+#1 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php(199): Doctrine\ORM\Mapping\ClassMetadataInfo->validateAssociations()
+#2 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php(178): Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), NULL)
+#3 /var/www/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php(318): Doctrine\ORM\Mapping\ClassMetadataFactory->doLoadMetadata(Object(Doctrine\ORM\Mapping\ClassMetad in /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/MappingException.php on line 740
+[12-Jun-2014 14:23:10 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message '23000' in /vagrant/scripts/db/update.php:135
+Stack trace:
+#0 /vagrant/scripts/db/update.php(80): DbDeployPDO->deploy(6)
+#1 /vagrant/scripts/db/update.php(10): updateDatabase()
+#2 {main}
+  thrown in /vagrant/scripts/db/update.php on line 135
+[12-Jun-2014 14:23:53 Europe/Berlin] PHP Notice:  A non well formed numeric value encountered in /vagrant/scripts/db/update.php on line 135
+[12-Jun-2014 14:23:53 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 14:23:53 Europe/Berlin] PHP   1. {main}() /vagrant/scripts/db/update.php:0
+[12-Jun-2014 14:23:53 Europe/Berlin] PHP   2. updateDatabase() /vagrant/scripts/db/update.php:8
+[12-Jun-2014 14:23:53 Europe/Berlin] PHP   3. DbDeployPDO->deploy() /vagrant/scripts/db/update.php:80
+[12-Jun-2014 14:23:53 Europe/Berlin] PHP   4. Exception->__construct() /vagrant/scripts/db/update.php:135
+[12-Jun-2014 14:23:53 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message '42S01' in /vagrant/scripts/db/update.php:135
+Stack trace:
+#0 /vagrant/scripts/db/update.php(80): DbDeployPDO->deploy(4)
+#1 /vagrant/scripts/db/update.php(8): updateDatabase()
+#2 {main}
+  thrown in /vagrant/scripts/db/update.php on line 135
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP Warning:  require_once(/var/www/module/Species/src/Species/Module.php): failed to open stream: No such file or directory in /var/www/module/Species/Module.php on line 2
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP   1. {main}() /var/www/public/index.php:0
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP   2. Zend\Mvc\Application::init() /var/www/public/index.php:9
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP   3. Zend\ModuleManager\ModuleManager->loadModules() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:252
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/ModuleManager.php:109
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP   5. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP   6. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP   7. Zend\ModuleManager\ModuleManager->onLoadModules() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP   8. Zend\ModuleManager\ModuleManager->loadModule() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/ModuleManager.php:90
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP   9. Zend\ModuleManager\ModuleManager->loadModuleByName() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/ModuleManager.php:163
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP  10. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/ModuleManager.php:185
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP  11. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP  12. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP  13. Zend\ModuleManager\Listener\ModuleResolverListener->__invoke() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP  14. class_exists() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/Listener/ModuleResolverListener.php:28
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP  15. Zend\Loader\ModuleAutoloader->autoload() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/Listener/ModuleResolverListener.php:0
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP  16. Zend\Loader\ModuleAutoloader->loadModuleFromDir() /var/www/vendor/zendframework/zendframework/library/Zend/Loader/ModuleAutoloader.php:198
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP  17. require_once() /var/www/vendor/zendframework/zendframework/library/Zend/Loader/ModuleAutoloader.php:239
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required '/var/www/module/Species/src/Species/Module.php' (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/module/Species/Module.php on line 2
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP   1. {main}() /var/www/public/index.php:0
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP   2. Zend\Mvc\Application::init() /var/www/public/index.php:9
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP   3. Zend\ModuleManager\ModuleManager->loadModules() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:252
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/ModuleManager.php:109
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP   5. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP   6. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP   7. Zend\ModuleManager\ModuleManager->onLoadModules() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP   8. Zend\ModuleManager\ModuleManager->loadModule() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/ModuleManager.php:90
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP   9. Zend\ModuleManager\ModuleManager->loadModuleByName() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/ModuleManager.php:163
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP  10. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/ModuleManager.php:185
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP  11. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP  12. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP  13. Zend\ModuleManager\Listener\ModuleResolverListener->__invoke() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP  14. class_exists() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/Listener/ModuleResolverListener.php:28
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP  15. Zend\Loader\ModuleAutoloader->autoload() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/Listener/ModuleResolverListener.php:0
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP  16. Zend\Loader\ModuleAutoloader->loadModuleFromDir() /var/www/vendor/zendframework/zendframework/library/Zend/Loader/ModuleAutoloader.php:198
+[12-Jun-2014 14:58:11 Europe/Berlin] PHP  17. require_once() /var/www/vendor/zendframework/zendframework/library/Zend/Loader/ModuleAutoloader.php:239
+[12-Jun-2014 14:59:02 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\Common\Persistence\Mapping\MappingException' with message 'File mapping drivers must have a valid directory path, however the given path [/var/www/module/Species/config/../src/World/Entity] seems to be incorrect!' in /var/www/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/MappingException.php:61
+Stack trace:
+#0 /var/www/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/AnnotationDriver.php(209): Doctrine\Common\Persistence\Mapping\MappingException::fileMappingDriversRequireConfiguredDirectoryPath('/var/www/module...')
+#1 /var/www/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/MappingDriverChain.php(129): Doctrine\Common\Persistence\Mapping\Driver\AnnotationDriver->getAllClassNames()
+#2 /var/www/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php(113): Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain->getAllClassNames()
+#3 /var/www/vendor/doctrine/doctrine-orm-module/ in /var/www/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/MappingException.php on line 61
+[12-Jun-2014 15:16:05 Europe/Berlin] PHP Fatal error:  Cannot redeclare class Species\Module in /var/www/module/Base/src/Base/Module.php on line 37
+[12-Jun-2014 15:16:05 Europe/Berlin] PHP Stack trace:
+[12-Jun-2014 15:16:05 Europe/Berlin] PHP   1. {main}() /var/www/public/index.php:0
+[12-Jun-2014 15:16:05 Europe/Berlin] PHP   2. Zend\Mvc\Application::init() /var/www/public/index.php:9
+[12-Jun-2014 15:16:05 Europe/Berlin] PHP   3. Zend\ModuleManager\ModuleManager->loadModules() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:252
+[12-Jun-2014 15:16:05 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/ModuleManager.php:109
+[12-Jun-2014 15:16:05 Europe/Berlin] PHP   5. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[12-Jun-2014 15:16:05 Europe/Berlin] PHP   6. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[12-Jun-2014 15:16:05 Europe/Berlin] PHP   7. Zend\ModuleManager\ModuleManager->onLoadModules() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[12-Jun-2014 15:16:05 Europe/Berlin] PHP   8. Zend\ModuleManager\ModuleManager->loadModule() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/ModuleManager.php:90
+[12-Jun-2014 15:16:05 Europe/Berlin] PHP   9. Zend\ModuleManager\ModuleManager->loadModuleByName() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/ModuleManager.php:163
+[12-Jun-2014 15:16:05 Europe/Berlin] PHP  10. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/ModuleManager.php:185
+[12-Jun-2014 15:16:05 Europe/Berlin] PHP  11. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[12-Jun-2014 15:16:05 Europe/Berlin] PHP  12. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[12-Jun-2014 15:16:05 Europe/Berlin] PHP  13. Zend\ModuleManager\Listener\ModuleResolverListener->__invoke() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[12-Jun-2014 15:16:05 Europe/Berlin] PHP  14. class_exists() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/Listener/ModuleResolverListener.php:28
+[12-Jun-2014 15:16:05 Europe/Berlin] PHP  15. Zend\Loader\ModuleAutoloader->autoload() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/Listener/ModuleResolverListener.php:0
+[12-Jun-2014 15:16:05 Europe/Berlin] PHP  16. Zend\Loader\ModuleAutoloader->loadModuleFromDir() /var/www/vendor/zendframework/zendframework/library/Zend/Loader/ModuleAutoloader.php:198
+[12-Jun-2014 15:16:05 Europe/Berlin] PHP  17. require_once() /var/www/vendor/zendframework/zendframework/library/Zend/Loader/ModuleAutoloader.php:239
+[12-Jun-2014 15:16:05 Europe/Berlin] PHP  18. require_once() /var/www/module/Base/Module.php:2
+[12-Jun-2014 15:45:41 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\Common\Annotations\AnnotationException' with message '[Semantical Error] The annotation "@Doctrine\ORM\Mapping\MappedSupperclass" in class World\Entity\AstronomicalObject does not exist, or could not be auto-loaded.' in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:52
+Stack trace:
+#0 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(640): Doctrine\Common\Annotations\AnnotationException::semanticalError('The annotation ...')
+#1 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(576): Doctrine\Common\Annotations\DocParser->Annotation()
+#2 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(318): Doctrine\Common\Annotations\DocParser->Annotations()
+#3 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationReader.php(159): Doctrine\Common\Annotations\DocParser->parse('/**\n * @ORM\\Ent...', 'class World\\Ent...')
+#4 /var in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php on line 52
+[12-Jun-2014 15:46:17 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\Common\Annotations\AnnotationException' with message '[Semantical Error] The annotation "@Doctrine\ORM\Mapping\MappedSupperclass" in class World\Entity\AstronomicalObject does not exist, or could not be auto-loaded.' in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:52
+Stack trace:
+#0 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(640): Doctrine\Common\Annotations\AnnotationException::semanticalError('The annotation ...')
+#1 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(576): Doctrine\Common\Annotations\DocParser->Annotation()
+#2 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(318): Doctrine\Common\Annotations\DocParser->Annotations()
+#3 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationReader.php(159): Doctrine\Common\Annotations\DocParser->parse('/**\n * @ORM\\Ent...', 'class World\\Ent...')
+#4 /var in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php on line 52
+[12-Jun-2014 15:46:56 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\Common\Annotations\AnnotationException' with message '[Semantical Error] The annotation "@Doctrine\ORM\Mapping\MappedSupperclass" in class World\Entity\AstronomicalObject does not exist, or could not be auto-loaded.' in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:52
+Stack trace:
+#0 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(640): Doctrine\Common\Annotations\AnnotationException::semanticalError('The annotation ...')
+#1 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(576): Doctrine\Common\Annotations\DocParser->Annotation()
+#2 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(318): Doctrine\Common\Annotations\DocParser->Annotations()
+#3 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationReader.php(159): Doctrine\Common\Annotations\DocParser->parse('/**\n * @ORM\\Ent...', 'class World\\Ent...')
+#4 /var in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php on line 52
+[12-Jun-2014 15:49:56 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\Common\Annotations\AnnotationException' with message '[Semantical Error] The annotation "@Doctrine\ORM\Mapping\MappedSupperclass" in class World\Entity\AstronomicalObject does not exist, or could not be auto-loaded.' in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:52
+Stack trace:
+#0 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(640): Doctrine\Common\Annotations\AnnotationException::semanticalError('The annotation ...')
+#1 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(576): Doctrine\Common\Annotations\DocParser->Annotation()
+#2 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(318): Doctrine\Common\Annotations\DocParser->Annotations()
+#3 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationReader.php(159): Doctrine\Common\Annotations\DocParser->parse('/**\n * @ORM\\Ent...', 'class World\\Ent...')
+#4 /var in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php on line 52
+[12-Jun-2014 15:51:12 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\Common\Annotations\AnnotationException' with message '[Semantical Error] The annotation "@Doctrine\ORM\Mapping\MappedSupperclass" in class World\Entity\AstronomicalObject does not exist, or could not be auto-loaded.' in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:52
+Stack trace:
+#0 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(640): Doctrine\Common\Annotations\AnnotationException::semanticalError('The annotation ...')
+#1 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(576): Doctrine\Common\Annotations\DocParser->Annotation()
+#2 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(318): Doctrine\Common\Annotations\DocParser->Annotations()
+#3 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationReader.php(159): Doctrine\Common\Annotations\DocParser->parse('/**\n * @ORM\\Map...', 'class World\\Ent...')
+#4 /var in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php on line 52
+[12-Jun-2014 15:53:48 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\Common\Annotations\AnnotationException' with message '[Semantical Error] The annotation "@Doctrine\ORM\Mapping\MappedSupperclass" in class World\Entity\AstronomicalObject does not exist, or could not be auto-loaded.' in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:52
+Stack trace:
+#0 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(640): Doctrine\Common\Annotations\AnnotationException::semanticalError('The annotation ...')
+#1 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(576): Doctrine\Common\Annotations\DocParser->Annotation()
+#2 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(318): Doctrine\Common\Annotations\DocParser->Annotations()
+#3 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationReader.php(159): Doctrine\Common\Annotations\DocParser->parse('/**\n * @ORM\\Map...', 'class World\\Ent...')
+#4 /var in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php on line 52
+[12-Jun-2014 15:53:53 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\Common\Annotations\AnnotationException' with message '[Semantical Error] The annotation "@Doctrine\ORM\Mapping\MappedSupperclass" in class World\Entity\AstronomicalObject does not exist, or could not be auto-loaded.' in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:52
+Stack trace:
+#0 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(640): Doctrine\Common\Annotations\AnnotationException::semanticalError('The annotation ...')
+#1 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(576): Doctrine\Common\Annotations\DocParser->Annotation()
+#2 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(318): Doctrine\Common\Annotations\DocParser->Annotations()
+#3 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationReader.php(159): Doctrine\Common\Annotations\DocParser->parse('/**\n * @ORM\\Map...', 'class World\\Ent...')
+#4 /var in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php on line 52
+[12-Jun-2014 15:54:10 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\Common\Annotations\AnnotationException' with message '[Semantical Error] The annotation "@MappedSupperclass" in class World\Entity\AstronomicalObject was never imported. Did you maybe forget to add a "use" statement for this annotation?' in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:52
+Stack trace:
+#0 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(635): Doctrine\Common\Annotations\AnnotationException::semanticalError('The annotation ...')
+#1 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(576): Doctrine\Common\Annotations\DocParser->Annotation()
+#2 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(318): Doctrine\Common\Annotations\DocParser->Annotations()
+#3 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationReader.php(159): Doctrine\Common\Annotations\DocParser->parse('/**\n * @MappedS...', 'class Wor in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php on line 52
+[12-Jun-2014 15:59:49 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Mapping\MappingException' with message 'No identifier/primary key specified for Entity "World\Entity\Planet". Every Entity must have an identifier/primary key.' in /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/MappingException.php:52
+Stack trace:
+#0 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataInfo.php(934): Doctrine\ORM\Mapping\MappingException::identifierRequired('World\\Entity\\Pl...')
+#1 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php(198): Doctrine\ORM\Mapping\ClassMetadataInfo->validateIdentifier()
+#2 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php(178): Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), NULL)
+#3 /var/www/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php(318): Doctrine\ORM\Mapping\ClassMetadataFactory->doLoadMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), in /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/MappingException.php on line 52
+[12-Jun-2014 16:06:51 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\Common\Annotations\AnnotationException' with message '[Semantical Error] The annotation "@MappedSupperclass" in class World\Entity\AstronomicalObject was never imported. Did you maybe forget to add a "use" statement for this annotation?' in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:52
+Stack trace:
+#0 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(635): Doctrine\Common\Annotations\AnnotationException::semanticalError('The annotation ...')
+#1 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(576): Doctrine\Common\Annotations\DocParser->Annotation()
+#2 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(318): Doctrine\Common\Annotations\DocParser->Annotations()
+#3 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationReader.php(159): Doctrine\Common\Annotations\DocParser->parse('/**\n * @MappedS...', 'class Wor in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php on line 52
+[12-Jun-2014 16:07:39 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\Common\Annotations\AnnotationException' with message '[Semantical Error] The annotation "@ORM\MappedSupperclass" in class World\Entity\AstronomicalObject was never imported. Did you maybe forget to add a "use" statement for this annotation?' in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:52
+Stack trace:
+#0 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(635): Doctrine\Common\Annotations\AnnotationException::semanticalError('The annotation ...')
+#1 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(576): Doctrine\Common\Annotations\DocParser->Annotation()
+#2 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(318): Doctrine\Common\Annotations\DocParser->Annotations()
+#3 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationReader.php(159): Doctrine\Common\Annotations\DocParser->parse('/**\n * @ORM\\Map...', 'clas in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php on line 52
+[12-Jun-2014 16:09:37 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\Common\Annotations\AnnotationException' with message '[Semantical Error] The annotation "@ORM\MappedSupperclass" in class World\Entity\AstronomicalObject was never imported. Did you maybe forget to add a "use" statement for this annotation?' in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:52
+Stack trace:
+#0 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(635): Doctrine\Common\Annotations\AnnotationException::semanticalError('The annotation ...')
+#1 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(576): Doctrine\Common\Annotations\DocParser->Annotation()
+#2 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(318): Doctrine\Common\Annotations\DocParser->Annotations()
+#3 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationReader.php(159): Doctrine\Common\Annotations\DocParser->parse('/**\n * @ORM\\Map...', 'clas in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php on line 52

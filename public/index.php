@@ -1,5 +1,5 @@
 <?php
-
+define('REQUEST_MICROTIME', microtime(true));
 chdir(dirname(__DIR__));
 define('APPLICATION_PATH', realpath(__DIR__ . '/..'));
 

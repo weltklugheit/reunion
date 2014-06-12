@@ -8,7 +8,12 @@ return array(
         'ZfcBase',
         'ZfcUser',
         'ZfcUserDoctrineORM',
+        'BjyAuthorize',
         'Application',
+        'User',
+        'World',
+        'Species',
+        'Base',
     ),
     'module_listener_options' => array(
         'module_paths'             => array(
@@ -19,7 +24,7 @@ return array(
             'config/autoload/{,*.}{global,local}.php',
         ),
         'cache_dir'                => './data/cache',
-        'config_cache_enabled'     => true,
+        'config_cache_enabled'     => false,
         'module_map_cache_enabled' => false,
     ),
     'service_manager'         => array(
