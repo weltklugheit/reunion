@@ -27,58 +27,20 @@
 namespace World\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use User\Entity\User;
+
 
 /**
  * Description of World
  * @ORM\Entity
- * @ORM\Table(name="planets")
  * 
  * @author heiner
  */
-class Planet
+class Planet extends AstronomicalObject
 {
     /**
      *
-     * @var User 
-     * @ORM\OneToOne(targetEntity="User\Entity\User")
-     * @ORM\JoinColumn(name="ownder_id", referencedColumnName="id")
+     * @var \World\Entity\PlanetarySystem
+     * @ORM\ManyToOne(targetEntity="World\Entity\PlanetarySystem", inversedBy="planets")
      */
-    protected $owner;
-    
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    public function setId($id)
-    {
-        $this->id = (int) $id;
-    }
-
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-    
-    public function getOwner()
-    {
-        return $this->owner;
-    }
-
-    public function setOwner(User $owner)
-    {
-        $this->owner = $owner;
-    }
-
-
-
-
-    
-    
+    protected $planetarySystem;
 }

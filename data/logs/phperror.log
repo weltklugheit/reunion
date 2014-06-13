@@ -409,3 +409,105 @@ Stack trace:
 #1 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(576): Doctrine\Common\Annotations\DocParser->Annotation()
 #2 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(318): Doctrine\Common\Annotations\DocParser->Annotations()
 #3 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationReader.php(159): Doctrine\Common\Annotations\DocParser->parse('/**\n * @ORM\\Map...', 'clas in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php on line 52
+[13-Jun-2014 10:39:38 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\Common\Annotations\AnnotationException' with message '[Semantical Error] The annotation "@ORM\Entity" in class World\Entity\AstronomicalObject was never imported. Did you maybe forget to add a "use" statement for this annotation?' in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:52
+Stack trace:
+#0 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(635): Doctrine\Common\Annotations\AnnotationException::semanticalError('The annotation ...')
+#1 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(576): Doctrine\Common\Annotations\DocParser->Annotation()
+#2 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(318): Doctrine\Common\Annotations\DocParser->Annotations()
+#3 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationReader.php(159): Doctrine\Common\Annotations\DocParser->parse('/**\n * @ORM\\Ent...', 'class World\\En in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php on line 52
+[13-Jun-2014 10:39:40 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\Common\Annotations\AnnotationException' with message '[Semantical Error] The annotation "@ORM\Entity" in class World\Entity\AstronomicalObject was never imported. Did you maybe forget to add a "use" statement for this annotation?' in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:52
+Stack trace:
+#0 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(635): Doctrine\Common\Annotations\AnnotationException::semanticalError('The annotation ...')
+#1 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(576): Doctrine\Common\Annotations\DocParser->Annotation()
+#2 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(318): Doctrine\Common\Annotations\DocParser->Annotations()
+#3 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationReader.php(159): Doctrine\Common\Annotations\DocParser->parse('/**\n * @ORM\\Ent...', 'class World\\En in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php on line 52
+[13-Jun-2014 10:46:15 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\Common\Annotations\AnnotationException' with message '[Syntax Error] Expected Doctrine\Common\Annotations\DocLexer::T_CLOSE_CURLY_BRACES, got ')' at position 148 in class World\Entity\AstronomicalObject.' in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:41
+Stack trace:
+#0 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(383): Doctrine\Common\Annotations\AnnotationException::syntaxError('Expected Doctri...')
+#1 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(331): Doctrine\Common\Annotations\DocParser->syntaxError('Doctrine\\Common...')
+#2 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(1006): Doctrine\Common\Annotations\DocParser->match(102)
+#3 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(914): Doctrine\Common\Annotations\DocParser->Arrayx()
+#4 /var/www/vendor/doctrine/annotations/lib/Doctrine/C in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php on line 41
+[13-Jun-2014 10:46:17 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\Common\Annotations\AnnotationException' with message '[Syntax Error] Expected Doctrine\Common\Annotations\DocLexer::T_CLOSE_CURLY_BRACES, got ')' at position 148 in class World\Entity\AstronomicalObject.' in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:41
+Stack trace:
+#0 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(383): Doctrine\Common\Annotations\AnnotationException::syntaxError('Expected Doctri...')
+#1 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(331): Doctrine\Common\Annotations\DocParser->syntaxError('Doctrine\\Common...')
+#2 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(1006): Doctrine\Common\Annotations\DocParser->match(102)
+#3 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(914): Doctrine\Common\Annotations\DocParser->Arrayx()
+#4 /var/www/vendor/doctrine/annotations/lib/Doctrine/C in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php on line 41
+[13-Jun-2014 10:46:36 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Mapping\MappingException' with message 'No identifier/primary key specified for Entity "World\Entity\AstronomicalObject". Every Entity must have an identifier/primary key.' in /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/MappingException.php:52
+Stack trace:
+#0 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataInfo.php(934): Doctrine\ORM\Mapping\MappingException::identifierRequired('World\\Entity\\As...')
+#1 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php(198): Doctrine\ORM\Mapping\ClassMetadataInfo->validateIdentifier()
+#2 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php(178): Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), NULL)
+#3 /var/www/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php(318): Doctrine\ORM\Mapping\ClassMetadataFactory->doLoadMetadata(Object(Doctrine\ORM\Mapping\Cla in /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/MappingException.php on line 52
+[13-Jun-2014 10:46:38 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Mapping\MappingException' with message 'No identifier/primary key specified for Entity "World\Entity\AstronomicalObject". Every Entity must have an identifier/primary key.' in /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/MappingException.php:52
+Stack trace:
+#0 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataInfo.php(934): Doctrine\ORM\Mapping\MappingException::identifierRequired('World\\Entity\\As...')
+#1 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php(198): Doctrine\ORM\Mapping\ClassMetadataInfo->validateIdentifier()
+#2 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php(178): Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), NULL)
+#3 /var/www/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php(318): Doctrine\ORM\Mapping\ClassMetadataFactory->doLoadMetadata(Object(Doctrine\ORM\Mapping\Cla in /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/MappingException.php on line 52
+[13-Jun-2014 12:46:20 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Mapping\MappingException' with message 'Entity 'World\Entity\PlanetarySystem' has to be part of the discriminator map of 'World\Entity\AstronomicalObject' to be properly mapped in the inheritance hierarchy. Alternatively you can make 'World\Entity\PlanetarySystem' an abstract class to avoid this exception from occurring.' in /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/MappingException.php:669
+Stack trace:
+#0 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php(213): Doctrine\ORM\Mapping\MappingException::mappedClassNotPartOfDiscriminatorMap('World\\Entity\\Pl...', 'World\\Entity\\As...')
+#1 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php(178): Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), Object(Doctrine\ORM\Mapping\ClassMetadata))
+#2 /var/www/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php(318): Doc in /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/MappingException.php on line 669
+[13-Jun-2014 12:47:15 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Mapping\MappingException' with message 'Entity 'World\Entity\Star' has to be part of the discriminator map of 'World\Entity\AstronomicalObject' to be properly mapped in the inheritance hierarchy. Alternatively you can make 'World\Entity\Star' an abstract class to avoid this exception from occurring.' in /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/MappingException.php:669
+Stack trace:
+#0 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php(213): Doctrine\ORM\Mapping\MappingException::mappedClassNotPartOfDiscriminatorMap('World\\Entity\\St...', 'World\\Entity\\As...')
+#1 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php(178): Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), Object(Doctrine\ORM\Mapping\ClassMetadata))
+#2 /var/www/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php(318): Doctrine\ORM\Mapping\Clas in /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/MappingException.php on line 669
+[13-Jun-2014 12:47:30 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Mapping\MappingException' with message 'Entity 'World\Entity\Star' has to be part of the discriminator map of 'World\Entity\AstronomicalObject' to be properly mapped in the inheritance hierarchy. Alternatively you can make 'World\Entity\Star' an abstract class to avoid this exception from occurring.' in /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/MappingException.php:669
+Stack trace:
+#0 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php(213): Doctrine\ORM\Mapping\MappingException::mappedClassNotPartOfDiscriminatorMap('World\\Entity\\St...', 'World\\Entity\\As...')
+#1 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php(178): Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), Object(Doctrine\ORM\Mapping\ClassMetadata))
+#2 /var/www/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php(318): Doctrine\ORM\Mapping\Clas in /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/MappingException.php on line 669
+[13-Jun-2014 12:47:46 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Mapping\MappingException' with message 'Entity 'World\Entity\Star' has to be part of the discriminator map of 'World\Entity\AstronomicalObject' to be properly mapped in the inheritance hierarchy. Alternatively you can make 'World\Entity\Star' an abstract class to avoid this exception from occurring.' in /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/MappingException.php:669
+Stack trace:
+#0 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php(213): Doctrine\ORM\Mapping\MappingException::mappedClassNotPartOfDiscriminatorMap('World\\Entity\\St...', 'World\\Entity\\As...')
+#1 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php(178): Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), Object(Doctrine\ORM\Mapping\ClassMetadata))
+#2 /var/www/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php(318): Doctrine\ORM\Mapping\Clas in /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/MappingException.php on line 669
+[13-Jun-2014 12:48:20 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Mapping\MappingException' with message 'Entity 'World\Entity\Galaxy' has to be part of the discriminator map of 'World\Entity\AstronomicalObject' to be properly mapped in the inheritance hierarchy. Alternatively you can make 'World\Entity\Galaxy' an abstract class to avoid this exception from occurring.' in /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/MappingException.php:669
+Stack trace:
+#0 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php(213): Doctrine\ORM\Mapping\MappingException::mappedClassNotPartOfDiscriminatorMap('World\\Entity\\Ga...', 'World\\Entity\\As...')
+#1 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php(178): Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), Object(Doctrine\ORM\Mapping\ClassMetadata))
+#2 /var/www/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php(318): Doctrine\ORM\Mapping\ in /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/MappingException.php on line 669
+[13-Jun-2014 12:48:34 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Mapping\MappingException' with message 'Entity 'World\Entity\StarSystem' has to be part of the discriminator map of 'World\Entity\AstronomicalObject' to be properly mapped in the inheritance hierarchy. Alternatively you can make 'World\Entity\StarSystem' an abstract class to avoid this exception from occurring.' in /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/MappingException.php:669
+Stack trace:
+#0 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php(213): Doctrine\ORM\Mapping\MappingException::mappedClassNotPartOfDiscriminatorMap('World\\Entity\\St...', 'World\\Entity\\As...')
+#1 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php(178): Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), Object(Doctrine\ORM\Mapping\ClassMetadata))
+#2 /var/www/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php(318): Doctrine\ORM\ in /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/MappingException.php on line 669
+[13-Jun-2014 12:56:25 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Mapping\MappingException' with message 'Entity 'World\Entity\Satellite' has to be part of the discriminator map of 'World\Entity\AstronomicalObject' to be properly mapped in the inheritance hierarchy. Alternatively you can make 'World\Entity\Satellite' an abstract class to avoid this exception from occurring.' in /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/MappingException.php:669
+Stack trace:
+#0 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php(213): Doctrine\ORM\Mapping\MappingException::mappedClassNotPartOfDiscriminatorMap('World\\Entity\\Sa...', 'World\\Entity\\As...')
+#1 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php(178): Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), Object(Doctrine\ORM\Mapping\ClassMetadata))
+#2 /var/www/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php(318): Doctrine\ORM\Ma in /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/MappingException.php on line 669
+[13-Jun-2014 13:08:04 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Mapping\MappingException' with message 'OneToMany mapping on field 'stars' requires the 'mappedBy' attribute.' in /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/MappingException.php:249
+Stack trace:
+#0 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataInfo.php(1530): Doctrine\ORM\Mapping\MappingException::oneToManyRequiresMappedBy('stars')
+#1 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataInfo.php(2378): Doctrine\ORM\Mapping\ClassMetadataInfo->_validateAndCompleteOneToManyMapping(Array)
+#2 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/Driver/AnnotationDriver.php(323): Doctrine\ORM\Mapping\ClassMetadataInfo->mapOneToMany(Array)
+#3 /var/www/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/MappingDriverChain.php(103): Doctrine\ORM\Mapping\Driver\AnnotationDriver->loadMetadataForClass('World\\Entity\\St...', Object(Doctrine\ORM\Mapping\ClassMetadata))
+#4 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/C in /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/MappingException.php on line 249
+[13-Jun-2014 13:55:27 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\Common\Annotations\AnnotationException' with message '[Creation Error] The annotation @ORM\ManyToOne declared on property World\Entity\StarSystem::$galaxy does not have a property named "mappedBy". Available properties: targetEntity, cascade, fetch, inversedBy' in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:81
+Stack trace:
+#0 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(742): Doctrine\Common\Annotations\AnnotationException::creationError('The annotation ...')
+#1 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(576): Doctrine\Common\Annotations\DocParser->Annotation()
+#2 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(318): Doctrine\Common\Annotations\DocParser->Annotations()
+#3 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationReader.php(198): Doctrine\Common\Annotations\DocParser->parse('/**\n      in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php on line 81
+[13-Jun-2014 14:01:10 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\Common\Annotations\AnnotationException' with message '[Creation Error] The annotation @ORM\OneToMany declared on property World\Entity\StarSystem::$planetarySystem does not have a property named "inversedBy". Available properties: mappedBy, targetEntity, cascade, fetch, orphanRemoval, indexBy' in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:81
+Stack trace:
+#0 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(742): Doctrine\Common\Annotations\AnnotationException::creationError('The annotation ...')
+#1 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(576): Doctrine\Common\Annotations\DocParser->Annotation()
+#2 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(318): Doctrine\Common\Annotations\DocParser->Annotations()
+#3 /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationReader.php(198): Doctrine\Common\Annotat in /var/www/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php on line 81
+[13-Jun-2014 14:11:10 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message 'mapping not ok' in /vagrant/scripts/db/update.php:49
+Stack trace:
+#0 /vagrant/scripts/db/update.php(9): newDeltascript()
+#1 {main}
+  thrown in /vagrant/scripts/db/update.php on line 49
+[13-Jun-2014 14:13:44 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message 'mapping not ok' in /vagrant/scripts/db/update.php:50
+Stack trace:
+#0 /vagrant/scripts/db/update.php(9): newDeltascript()
+#1 {main}
+  thrown in /vagrant/scripts/db/update.php on line 50

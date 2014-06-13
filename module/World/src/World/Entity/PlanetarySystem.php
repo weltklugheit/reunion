@@ -25,56 +25,36 @@
  */
 
 namespace World\Entity;
+
 use Doctrine\ORM\Mapping as ORM;
 
+
 /**
+ * Description of World
  * @ORM\Entity
- * @ORM\Table(name="astronomical_objects")
- * @ORM\InheritanceType("JOINED")
- * @ORM\DiscriminatorColumn(name="discr", type="string")
- * @ORM\DiscriminatorMap({
- * "planets" = "Planet",
- * "planetary_systems" = "PlanetarySystem",
- * "stars" = "Star",
- * "galaxies" = "Galaxy",
- * "star_systems" = "StarSystem",
- * "sattelites" = "Satellite"
- * })
+ * 
+ * @author heiner
  */
-abstract class AstronomicalObject
+class PlanetarySystem extends AstronomicalObject
 {
     /**
-     * @var int
-     * @ORM\Id
-     * @ORM\Column(type="integer")
-     * @ORM\GeneratedValue(strategy="AUTO")
+     *
+     * @var \World\Entity\StarSystem
+     * @ORM\OneToOne(targetEntity="World\Entity\StarSystem")
      */
-    protected $id;
+    protected $starSystem;
     
     /**
-     * @var string
-     * @ORM\Column(type="string", length=255, unique=false, nullable=false)
+     *
+     * @var \World\Entity\Planet[]
+     * @ORM\OneToMany(targetEntity="World\Entity\Planet", mappedBy="planet")
      */
-    protected $name;
+    protected $planets;
     
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    public function setId($id)
-    {
-        $this->id = (int) $id;
-    }
-
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-    
+    /**
+     *
+     * @var \World\Entity\Galaxy
+     * @ORM\ManyToOne(targetEntity="World\Entity\Galaxy", inversedBy="galaxies")
+     */
+    protected $galaxy;
 }

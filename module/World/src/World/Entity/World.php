@@ -60,6 +60,14 @@ class World
      */
     protected $owner;
     
+    /**
+     *
+     * @var \World\Entity\AstronomicalObject
+     * @ORM\OneToOne(targetEntity="World\Entity\AstronomicalObject")
+     * @ORM\JoinColumn(name="astronomical_object_id", referencedColumnName="id")
+     */
+    protected $astronomicalObject;
+    
     public function getId()
     {
         return $this->id;

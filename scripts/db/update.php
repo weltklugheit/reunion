@@ -34,6 +34,7 @@ function getLastDeltaScript()
 
 function newDeltascript()
 {
+    echo "new Delta\n";
     $string = shell_exec(APPLICATION_PATH . '/vendor/bin/doctrine-module orm:validate-schema');
     $array  = \explode("\n", $string);
     $info   = array();
@@ -68,6 +69,7 @@ function newDeltascript()
 
 function updateDatabase()
 {
+    echo "update DB \n";
     $pdo = new \DbDeployPDO();
     if (!$pdo->isInstalled()) {
         $pdo->install();
