@@ -30,7 +30,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Description of Species
  * @ORM\Entity
- * @ORM\Table(name="species")
+ * @ORM\Table(name="individuals")
  * @author heiner
  */
 class Individual
@@ -52,16 +52,14 @@ class Individual
     /**
      *
      * @var \Species\Entity\Species 
-     * @ORM\OneToOne(targetEntity="Species\Entity\Species")
-     * @ORM\JoinColumn(name="species_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Species\Entity\Species", inversedBy="individuals")
      */
     protected $species;
     
     /**
      *
      * @var \World\Entity\World
-     * @ORM\OneToOne(targetEntity="World\Entity\World")
-     * @ORM\JoinColumn(name="world_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="World\Entity\World", inversedBy="individuals")
      */
     protected $world;
 }

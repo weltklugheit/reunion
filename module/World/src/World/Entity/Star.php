@@ -32,6 +32,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Description of World
  * @ORM\Entity
+ * @ORM\Table(name="stars")
  * 
  * @author heiner
  */
@@ -41,7 +42,9 @@ class Star extends AstronomicalObject
     /**
      *
      * @var \World\Entity\StarSystem
-     * @ORM\ManyToOne(targetEntity="World\Entity\StarSystem", inversedBy="stars") 
+     * @ORM\ManyToOne(targetEntity="World\Entity\StarSystem", inversedBy="stars")
      */
-    protected $starSytem;
+    protected $starSystem;
+
+    
 }

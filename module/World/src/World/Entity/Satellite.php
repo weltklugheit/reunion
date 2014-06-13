@@ -32,7 +32,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Description of World
  * @ORM\Entity
- * 
+ * @ORM\Table(name="satellites")
  * @author heiner
  */
 class Satellite extends AstronomicalObject
@@ -40,8 +40,8 @@ class Satellite extends AstronomicalObject
     /**
      *
      * @var \World\Entity\Planet
-     * @ORM\OneToOne(targetEntity="World\Entity\Planet")
-     * @ORM\JoinColumn(name="planet_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="World\Entity\Planet", inversedBy="satellites")
      */
     protected $planet;
+    
 }

@@ -32,23 +32,24 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Description of World
  * @ORM\Entity
- * 
+ * @ORM\Table(name="star_systems")
  * @author heiner
  */
 class StarSystem extends AstronomicalObject
 {
     /**
      *
-     * @var \World\Entity\Star[]
-     * @ORM\OneToMany(targetEntity="World\Entity\Star", mappedBy="star")
+     * @var \World\Entity\Planet[]
+     * @ORM\OneToMany(targetEntity="World\Entity\Star", mappedBy="starSystem")
      */
     protected $stars;
     
-
     /**
      *
      * @var \World\Entity\PlanetarySystem
-     * @ORM\OneToOne(targetEntity="World\Entity\PlanetarySystem", inversedBy="planetary_system")
+     * @ORM\OneToOne(targetEntity="World\Entity\PlanetarySystem", inversedBy="starSystem")
      */
     protected $planetarySystem;
+    
+
 }

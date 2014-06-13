@@ -32,7 +32,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Description of World
  * @ORM\Entity
- * 
+ * @ORM\Table(name="galaxies")
  * @author heiner
  */
 class Galaxy extends AstronomicalObject
@@ -41,7 +41,9 @@ class Galaxy extends AstronomicalObject
     /**
      *
      * @var \World\Entity\PlanetarySystem[]
-     * @ORM\OneToMany(targetEntity="World\Entity\PlanetarySystem", mappedBy="planetary_system")
+     * @ORM\OneToMany(targetEntity="World\Entity\PlanetarySystem", mappedBy="galaxy")
      */
     protected $planetarySystems;
+    
+    
 }

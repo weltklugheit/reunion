@@ -41,7 +41,7 @@ use Doctrine\ORM\Mapping as ORM;
  * "sattelites" = "Satellite"
  * })
  */
-abstract class AstronomicalObject
+class AstronomicalObject
 {
     /**
      * @var int

@@ -52,8 +52,14 @@ class Species
     /**
      *
      * @var \World\Entity\World
-     * @ORM\OneToOne(targetEntity="World\Entity\World")
-     * @ORM\JoinColumn(name="world_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="World\Entity\World", inversedBy="species")
      */
     protected $world;
+    
+    /**
+     *
+     * @var \Species\Entity\Individual[]
+     * @ORM\OneToMany(targetEntity="Species\Entity\Individual", mappedBy="species")
+     */
+    protected $individuals;
 }

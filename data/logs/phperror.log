@@ -511,3 +511,32 @@ Stack trace:
 #0 /vagrant/scripts/db/update.php(9): newDeltascript()
 #1 {main}
   thrown in /vagrant/scripts/db/update.php on line 50
+[13-Jun-2014 15:22:25 Europe/Berlin] PHP Notice:  Undefined index: Mapping in /vagrant/scripts/db/update.php on line 49
+[13-Jun-2014 15:22:25 Europe/Berlin] PHP Stack trace:
+[13-Jun-2014 15:22:25 Europe/Berlin] PHP   1. {main}() /vagrant/scripts/db/update.php:0
+[13-Jun-2014 15:22:25 Europe/Berlin] PHP   2. newDeltascript() /vagrant/scripts/db/update.php:9
+[13-Jun-2014 15:22:25 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message 'mapping not ok' in /vagrant/scripts/db/update.php:50
+Stack trace:
+#0 /vagrant/scripts/db/update.php(9): newDeltascript()
+#1 {main}
+  thrown in /vagrant/scripts/db/update.php on line 50
+[13-Jun-2014 15:55:21 Europe/Berlin] PHP Notice:  Undefined index: Mapping in /vagrant/scripts/db/update.php on line 49
+[13-Jun-2014 15:55:21 Europe/Berlin] PHP Stack trace:
+[13-Jun-2014 15:55:21 Europe/Berlin] PHP   1. {main}() /vagrant/scripts/db/update.php:0
+[13-Jun-2014 15:55:21 Europe/Berlin] PHP   2. newDeltascript() /vagrant/scripts/db/update.php:9
+[13-Jun-2014 15:55:21 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message 'mapping not ok' in /vagrant/scripts/db/update.php:50
+Stack trace:
+#0 /vagrant/scripts/db/update.php(9): newDeltascript()
+#1 {main}
+  thrown in /vagrant/scripts/db/update.php on line 50
+[13-Jun-2014 15:58:30 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Mapping\MappingException' with message 'Entity 'World\Entity\World' has to be part of the discriminator map of 'World\Entity\AstronomicalObject' to be properly mapped in the inheritance hierarchy. Alternatively you can make 'World\Entity\World' an abstract class to avoid this exception from occurring.' in /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/MappingException.php:669
+Stack trace:
+#0 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php(213): Doctrine\ORM\Mapping\MappingException::mappedClassNotPartOfDiscriminatorMap('World\\Entity\\Wo...', 'World\\Entity\\As...')
+#1 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php(178): Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), Object(Doctrine\ORM\Mapping\ClassMetadata))
+#2 /var/www/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php(318): Doctrine\ORM\Mapping\Cl in /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/MappingException.php on line 669
+[13-Jun-2014 15:58:44 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Mapping\MappingException' with message 'No identifier/primary key specified for Entity "World\Entity\World". Every Entity must have an identifier/primary key.' in /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/MappingException.php:52
+Stack trace:
+#0 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataInfo.php(934): Doctrine\ORM\Mapping\MappingException::identifierRequired('World\\Entity\\Wo...')
+#1 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php(198): Doctrine\ORM\Mapping\ClassMetadataInfo->validateIdentifier()
+#2 /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php(178): Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), NULL)
+#3 /var/www/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php(318): Doctrine\ORM\Mapping\ClassMetadataFactory->doLoadMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata),  in /var/www/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/MappingException.php on line 52

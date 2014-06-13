@@ -62,11 +62,27 @@ class World
     
     /**
      *
-     * @var \World\Entity\AstronomicalObject
-     * @ORM\OneToOne(targetEntity="World\Entity\AstronomicalObject")
-     * @ORM\JoinColumn(name="astronomical_object_id", referencedColumnName="id")
+     * @var \Species\Entity\Species[]
+     * @ORM\OneToMany(targetEntity="Species\Entity\Species", mappedBy="world")
      */
-    protected $astronomicalObject;
+    protected $species;
+    
+    /**
+     *
+     * @var \Species\Entity\Individual[]
+     * @ORM\OneToMany(targetEntity="Species\Entity\Individual", mappedBy="world")
+     */
+    protected $individuals;
+    
+
+    
+    /**
+     *
+     * @var \Base\Entity\Base[]
+     * @ORM\OneToMany(targetEntity="Base\Entity\Base", mappedBy="world")
+     */
+    protected $bases;
+
     
     public function getId()
     {

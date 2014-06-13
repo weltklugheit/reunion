@@ -30,7 +30,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Description of Species
  * @ORM\Entity
- * @ORM\Table(name="species")
+ * @ORM\Table(name="storeys")
  * @author heiner
  */
 class Storey
