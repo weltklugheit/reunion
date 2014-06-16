@@ -39,17 +39,45 @@ class StarSystem extends AstronomicalObject
 {
     /**
      *
-     * @var \World\Entity\Planet[]
-     * @ORM\OneToMany(targetEntity="World\Entity\Star", mappedBy="starSystem")
+     * @var Star[]
+     * @ORM\OneToMany(targetEntity="Star", mappedBy="starSystem", cascade={"persist"})
      */
     protected $stars;
     
     /**
      *
-     * @var \World\Entity\PlanetarySystem
-     * @ORM\OneToOne(targetEntity="World\Entity\PlanetarySystem", inversedBy="starSystem")
+     * @var PlanetarySystem
+     * @ORM\OneToOne(targetEntity="PlanetarySystem", inversedBy="starSystem")
      */
     protected $planetarySystem;
+    
+    public function getStars()
+    {
+        return $this->stars;
+    }
+
+    public function getPlanetarySystem()
+    {
+        return $this->planetarySystem;
+    }
+
+    public function setStars($stars)
+    {
+        $this->stars = $stars;
+    }
+    
+    public function addStar(Star $star)
+    {
+        $this->stars[] = $star;
+    }
+
+    
+    public function setPlanetarySystem(PlanetarySystem $planetarySystem)
+    {
+        $this->planetarySystem = $planetarySystem;
+    }
+
+
     
 
 }

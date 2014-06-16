@@ -24,47 +24,36 @@
  * THE SOFTWARE.
  */
 
-namespace World\Entity;
+namespace World\Service;
 
-use Doctrine\ORM\Mapping as ORM;
-
-use Zend\Form\Annotation;
+use Application\Service\NameService;
+use World\Entity\Star;
 
 /**
- * Description of World
- * @ORM\Entity
- * @ORM\Table(name="galaxies")
- * @Annotation\Name("annotation_galaxy")
- * @Annotation\Attributes({"class":"form_horizontal"})
+ * Description of StarService
+ *
  * @author heiner
  */
-class Galaxy extends AstronomicalObject implements GalaxyInterface
+class StarService
 {
-    
     /**
      *
-     * @var PlanetarySystem[]
-     * @ORM\OneToMany(targetEntity="PlanetarySystem", mappedBy="galaxy")
-     * @Annotation\Exclude
+     * @var NameService 
      */
-    protected $planetarySystems;
+    protected $nameService;
     
-    /**
-     * 
-     * @return PlanetarySystem[]
-     */
-    public function getPlanetarySystems()
+    function __construct(NameService $nameService)
     {
-        return $this->planetarySystems;
+        $this->nameService = $nameService;
     }
 
-    public function setPlanetarySystems(PlanetarySystem $planetarySystems)
+    public function createRandomStar($starSystem)
     {
-        $this->planetarySystems = $planetarySystems;
+        $star = new Star();
+        $star->setName($this->nameService->createName());
+        $star->setStarSystem($starSystem);
+        return $star;
     }
-
-
-    
     
     
 }

@@ -41,7 +41,7 @@ class PlanetarySystem extends AstronomicalObject
     /**
      *
      * @var \World\Entity\Planet[]
-     * @ORM\OneToMany(targetEntity="World\Entity\Planet", mappedBy="planetarySystem")
+     * @ORM\OneToMany(targetEntity="World\Entity\Planet", mappedBy="planetarySystem", cascade={"persist"})
      */
     protected $planets;
     
@@ -55,8 +55,67 @@ class PlanetarySystem extends AstronomicalObject
     /**
      *
      * @var \World\Entity\StarSystem
-     * @ORM\OneToOne(targetEntity="StarSystem", mappedBy="planetarySystem")
+     * @ORM\OneToOne(targetEntity="StarSystem", mappedBy="planetarySystem", cascade={"persist"})
      */
     protected $starSystem; 
+    
+    /**
+     *
+     * @var string
+     * @ORM\Column(type="string", unique=true, nullable=false)
+     */
+    protected $coordinate;
+
+
+
+
+    public function getPlanets()
+    {
+        return $this->planets;
+    }
+
+    public function getGalaxy()
+    {
+        return $this->galaxy;
+    }
+
+    public function getStarSystem()
+    {
+        return $this->starSystem;
+    }
+
+    public function setPlanets( $planets)
+    {
+        $this->planets = $planets;
+    }
+    
+    public function addPlanet(\World\Entity\Planet $planet)
+    {
+        $this->planets[] = $planet;
+    }
+
+    public function setGalaxy(\World\Entity\Galaxy $galaxy)
+    {
+        $this->galaxy = $galaxy;
+    }
+
+    public function setStarSystem(\World\Entity\StarSystem $starSystem)
+    {
+        $this->starSystem = $starSystem;
+    }
+    
+    public function getCoordinate()
+    {
+        return $this->coordinate;
+    }
+
+    public function setCoordinate($coordinate)
+    {
+        $this->coordinate = $coordinate;
+    }
+
+
+
+
    
 }

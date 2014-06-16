@@ -26,45 +26,11 @@
 
 namespace World\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
-
-use Zend\Form\Annotation;
-
 /**
- * Description of World
- * @ORM\Entity
- * @ORM\Table(name="galaxies")
- * @Annotation\Name("annotation_galaxy")
- * @Annotation\Attributes({"class":"form_horizontal"})
+ *
  * @author heiner
  */
-class Galaxy extends AstronomicalObject implements GalaxyInterface
+interface GalaxyInterface
 {
-    
-    /**
-     *
-     * @var PlanetarySystem[]
-     * @ORM\OneToMany(targetEntity="PlanetarySystem", mappedBy="galaxy")
-     * @Annotation\Exclude
-     */
-    protected $planetarySystems;
-    
-    /**
-     * 
-     * @return PlanetarySystem[]
-     */
-    public function getPlanetarySystems()
-    {
-        return $this->planetarySystems;
-    }
-
-    public function setPlanetarySystems(PlanetarySystem $planetarySystems)
-    {
-        $this->planetarySystems = $planetarySystems;
-    }
-
-
-    
-    
-    
+    //put your code here
 }

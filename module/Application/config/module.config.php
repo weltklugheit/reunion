@@ -37,10 +37,6 @@ return array(
                     ),
                 ),
             ),
-            // The following is a route to simplify getting started creating
-            // new controllers and actions without needing to create a new
-            // module. Simply drop new controllers in, and you can access them
-            // using the path /application/:controller/:action
             'application' => array(
                 'type'    => 'Literal',
                 'options' => array(
@@ -70,6 +66,10 @@ return array(
         ),
     ),
     'service_manager' => array(
+        'invokables' => array(
+            'Application\Service\Application' => 'Application\Service\ApplicationService',
+            'Application\Service\Name' => 'Application\Service\NameService',
+        ),
         'abstract_factories' => array(
             'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
             'Zend\Log\LoggerAbstractServiceFactory',

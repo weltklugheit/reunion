@@ -26,6 +26,7 @@
 
 namespace World\Entity;
 use Doctrine\ORM\Mapping as ORM;
+use Zend\Form\Annotation;
 
 /**
  * @ORM\Entity
@@ -41,19 +42,28 @@ use Doctrine\ORM\Mapping as ORM;
  * "sattelites" = "Satellite"
  * })
  */
-class AstronomicalObject
+class AstronomicalObject extends \Application\Entity\ObjectEntity
 {
     /**
      * @var int
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
+     * @Annotation\Exclude
      */
     protected $id;
     
     /**
      * @var string
      * @ORM\Column(type="string", length=255, unique=false, nullable=false)
+     * @Annotation\Type("Zend\Form\Element\Text")
+     * @Annotation\Required({"required":"true"})
+     * @Annotation\Filter({"name":"StringTrim"})
+     * @Annotation\Validator({"name":"StringLength", "options":{"max":32}})
+     * @Annotation\Validator({"name":"Alpha", "options":
+     *                                        {"allowWhiteSpace":"true"}})
+     * @Annotation\Attributes({"class":"span6"})
+     * @Annotation\Options({"label":"Name:"})
      */
     protected $name;
     

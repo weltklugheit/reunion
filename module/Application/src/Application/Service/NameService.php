@@ -24,47 +24,32 @@
  * THE SOFTWARE.
  */
 
-namespace World\Entity;
-
-use Doctrine\ORM\Mapping as ORM;
-
-use Zend\Form\Annotation;
+namespace Application\Service;
 
 /**
- * Description of World
- * @ORM\Entity
- * @ORM\Table(name="galaxies")
- * @Annotation\Name("annotation_galaxy")
- * @Annotation\Attributes({"class":"form_horizontal"})
+ * Description of NameService
+ *
  * @author heiner
  */
-class Galaxy extends AstronomicalObject implements GalaxyInterface
+class NameService
 {
-    
-    /**
-     *
-     * @var PlanetarySystem[]
-     * @ORM\OneToMany(targetEntity="PlanetarySystem", mappedBy="galaxy")
-     * @Annotation\Exclude
-     */
-    protected $planetarySystems;
-    
-    /**
-     * 
-     * @return PlanetarySystem[]
-     */
-    public function getPlanetarySystems()
+
+    protected $vowels = array("a", "e", "o", "u");
+    protected $consonants = array("b", "c", "d", "v", "g", "t");
+
+    protected function randVowel()
     {
-        return $this->planetarySystems;
+        return $this->vowels[array_rand($this->vowels, 1)];
     }
 
-    public function setPlanetarySystems(PlanetarySystem $planetarySystems)
+    protected function randConsonant()
     {
-        $this->planetarySystems = $planetarySystems;
+        return $this->consonants[array_rand($this->consonants, 1)];
     }
 
+    public function createName()
+    {
+        return ucfirst("" . $this->randConsonant() . "" . $this->randVowel() . "" . "" . $this->randConsonant() . "" . $this->randVowel() . "" . $this->randVowel() . "");
+    }
 
-    
-    
-    
 }

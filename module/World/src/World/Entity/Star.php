@@ -42,9 +42,21 @@ class Star extends AstronomicalObject
     /**
      *
      * @var \World\Entity\StarSystem
-     * @ORM\ManyToOne(targetEntity="World\Entity\StarSystem", inversedBy="stars")
+     * @ORM\ManyToOne(targetEntity="World\Entity\StarSystem", inversedBy="stars" )
      */
     protected $starSystem;
+    
+    public function getStarSystem()
+    {
+        return $this->starSystem;
+    }
+
+    public function setStarSystem(\World\Entity\StarSystem $starSystem)
+    {
+        $this->starSystem = $starSystem;
+    }
+
+
 
     
 }

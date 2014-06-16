@@ -24,47 +24,39 @@
  * THE SOFTWARE.
  */
 
-namespace World\Entity;
+namespace Application\Service;
 
-use Doctrine\ORM\Mapping as ORM;
-
-use Zend\Form\Annotation;
+use Zend\Form\Annotation\AnnotationBuilder;
+use Zend\Form\Element;
+use Zend\Form\Element\Csrf;
 
 /**
- * Description of World
- * @ORM\Entity
- * @ORM\Table(name="galaxies")
- * @Annotation\Name("annotation_galaxy")
- * @Annotation\Attributes({"class":"form_horizontal"})
+ * Description of ApplicationService
+ *
  * @author heiner
  */
-class Galaxy extends AstronomicalObject implements GalaxyInterface
+class ApplicationService
 {
-    
-    /**
-     *
-     * @var PlanetarySystem[]
-     * @ORM\OneToMany(targetEntity="PlanetarySystem", mappedBy="galaxy")
-     * @Annotation\Exclude
-     */
-    protected $planetarySystems;
-    
-    /**
-     * 
-     * @return PlanetarySystem[]
-     */
-    public function getPlanetarySystems()
+    public function createEntityForm($entity)
     {
-        return $this->planetarySystems;
+        $builder = new AnnotationBuilder();
+        $form    = $builder->createForm($entity);
+        $csrf    = new Csrf('security');
+
+        $send = new Element('send');
+        $send->setValue('Submit');
+        $send->setAttributes(array(
+            'type' => 'submit'
+        ));
+        $form->add($csrf);
+        $form->add($send);
+
+        return $form;
+    }
+    
+    public function createName()
+    {
+        
     }
 
-    public function setPlanetarySystems(PlanetarySystem $planetarySystems)
-    {
-        $this->planetarySystems = $planetarySystems;
-    }
-
-
-    
-    
-    
 }

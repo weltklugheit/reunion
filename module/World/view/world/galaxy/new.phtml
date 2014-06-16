@@ -1,0 +1,13 @@
+<?php 
+//$temp = $this->galaxy_form;
+
+//var_dump($this->objects);
+
+foreach ($this->objects as $object) { 
+    /* @var $object \World\Entity\StarSystem */
+    echo $object->getName();
+    foreach ($object->getStars() as $star) {
+        echo $star->getName();
+    }
+}
+//echo $this->form()->render($temp);

@@ -24,47 +24,23 @@
  * THE SOFTWARE.
  */
 
-namespace World\Entity;
+namespace World\Service\Factory;
 
-use Doctrine\ORM\Mapping as ORM;
-
-use Zend\Form\Annotation;
+use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\ServiceLocatorInterface;
 
 /**
- * Description of World
- * @ORM\Entity
- * @ORM\Table(name="galaxies")
- * @Annotation\Name("annotation_galaxy")
- * @Annotation\Attributes({"class":"form_horizontal"})
+ * Description of StarServiceFactory
+ *
  * @author heiner
  */
-class Galaxy extends AstronomicalObject implements GalaxyInterface
+class StarServiceFactory implements FactoryInterface
 {
-    
-    /**
-     *
-     * @var PlanetarySystem[]
-     * @ORM\OneToMany(targetEntity="PlanetarySystem", mappedBy="galaxy")
-     * @Annotation\Exclude
-     */
-    protected $planetarySystems;
-    
-    /**
-     * 
-     * @return PlanetarySystem[]
-     */
-    public function getPlanetarySystems()
+    public function createService(ServiceLocatorInterface $serviceLocator)
     {
-        return $this->planetarySystems;
+        $nameService = $serviceLocator->get('Application\Service\Name');
+        return new \World\Service\StarService($nameService);
+        
     }
 
-    public function setPlanetarySystems(PlanetarySystem $planetarySystems)
-    {
-        $this->planetarySystems = $planetarySystems;
-    }
-
-
-    
-    
-    
 }

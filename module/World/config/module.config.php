@@ -1,6 +1,6 @@
 <?php
 
-/* 
+/*
  * The MIT License
  *
  * Copyright 2014 heiner.
@@ -25,7 +25,7 @@
  */
 
 return array(
-    'doctrine'     => array(
+    'doctrine' => array(
         'driver' => array(
             // overriding zfc-user-doctrine-orm's config
             'world_entities' => array(
@@ -37,6 +37,55 @@ return array(
                     'World\Entity' => 'world_entities',
                 ),
             ),
+        ),
+    ),
+    'router'          => array(
+        'routes' => array(
+            'galaxy' => array(
+                'type'          => 'Literal',
+                'options'       => array(
+                    'route'    => '/galaxy',
+                    'defaults' => array(
+                        '__NAMESPACE__' => 'World\Controller',
+                        'controller'    => 'Galaxy',
+                        'action'        => 'index',
+                    ),
+                ),
+                'may_terminate' => true,
+                'child_routes'  => array(
+                    'default' => array(
+                        'type'    => 'Segment',
+                        'options' => array(
+                            'route'       => '/[:action]',
+                            'constraints' => array(
+                                'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                                'action'     => '[a-zA-Z][a-zA-Z0-9_-]*',
+                            ),
+                            'defaults'    => array(
+                            ),
+                        ),
+                    ),
+                ),
+            ),
+        ),
+    ),
+    'controllers'     => array(
+        'invokables' => array(
+            'World\Controller\Galaxy' => 'World\Controller\GalaxyController'
+        ),
+    ),
+    'view_manager'    => array(
+        'template_path_stack' => array(
+            __DIR__ . '/../view',
+        ),
+    ),
+    'service_manager' => array(
+        'factories' => array(
+            'World\Service\Galaxy' => 'World\Service\Factory\GalaxyServiceFactory',
+            'World\Service\Star' => 'World\Service\Factory\StarServiceFactory',
+            'World\Service\Planet' => 'World\Service\Factory\PlanetServiceFactory',
+            'World\Service\PlanetarySystem' => 'World\Service\Factory\PlanetarySystemServiceFactory',
+            'World\Service\StarSystem' => 'World\Service\Factory\StarSystemServiceFactory',
         ),
     ),
 );

@@ -24,47 +24,54 @@
  * THE SOFTWARE.
  */
 
-namespace World\Entity;
+namespace World\Service;
 
-use Doctrine\ORM\Mapping as ORM;
-
-use Zend\Form\Annotation;
+use Application\Service\NameService;
+use World\Entity\Galaxy;
 
 /**
- * Description of World
- * @ORM\Entity
- * @ORM\Table(name="galaxies")
- * @Annotation\Name("annotation_galaxy")
- * @Annotation\Attributes({"class":"form_horizontal"})
+ * Description of GalaxyService
+ *
  * @author heiner
  */
-class Galaxy extends AstronomicalObject implements GalaxyInterface
+class GalaxyService
 {
-    
     /**
      *
-     * @var PlanetarySystem[]
-     * @ORM\OneToMany(targetEntity="PlanetarySystem", mappedBy="galaxy")
-     * @Annotation\Exclude
+     * @var NameService 
      */
-    protected $planetarySystems;
+    protected $nameService;
+    
+    function __construct(NameService $nameService)
+    {
+        $this->nameService = $nameService;
+    }
+
+    public function createRandomGalaxy()
+    {
+        $galaxy = new Galaxy();
+        $galaxy->setName($this->nameService->createName());
+        return $galaxy;
+    }
     
     /**
      * 
-     * @return PlanetarySystem[]
+     * @param Galaxy $galaxy
      */
-    public function getPlanetarySystems()
+    public function createMap($galaxy)
     {
-        return $this->planetarySystems;
+        $gd = \imagecreatetruecolor(1024, 800);
+        $systems = $galaxy->getPlanetarySystems();
+        $red = imagecolorallocate($gd, 255, 255, 255); 
+        foreach ($systems as $system) {
+            $coords = \explode('.', $system->getCoordinate());
+            //echo $coords[0]." ".$coords[1]."</br>";
+            imagesetpixel($gd, $coords[0],$coords[1], $red);
+        }
+        \imagejpeg($gd, 'data.jpg');
+
+        
     }
-
-    public function setPlanetarySystems(PlanetarySystem $planetarySystems)
-    {
-        $this->planetarySystems = $planetarySystems;
-    }
-
-
-    
     
     
 }

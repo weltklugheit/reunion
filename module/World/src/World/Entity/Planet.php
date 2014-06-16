@@ -39,17 +39,77 @@ class Planet extends AstronomicalObject
 {
     /**
      *
-     * @var \World\Entity\PlanetarySystem
-     * @ORM\ManyToOne(targetEntity="World\Entity\PlanetarySystem", inversedBy="planets")
+     * @var PlanetarySystem
+     * @ORM\ManyToOne(targetEntity="PlanetarySystem", inversedBy="planets")
      */
     protected $planetarySystem;
     
     /**
      *
-     * @var \World\Entity\Satellite[]
-     * @ORM\OneToMany(targetEntity="World\Entity\Satellite", mappedBy="planet")
+     * @var Satellite[]
+     * @ORM\OneToMany(targetEntity="Satellite", mappedBy="planet")
      */
     protected $satellites;
+    
+    /**
+     *
+     * @var float
+     * @ORM\Column(type="float", unique=false, nullable=false)
+     */
+    protected $radius;
+    
+    /**
+     *
+     * @var float
+     * @ORM\Column(type="float", unique=false, nullable=false)
+     */
+    protected $distanceFromSun;
+    
+    public function getPlanetarySystem()
+    {
+        return $this->planetarySystem;
+    }
+
+    public function getSatellites()
+    {
+        return $this->satellites;
+    }
+
+    public function setPlanetarySystem(PlanetarySystem $planetarySystem)
+    {
+        $this->planetarySystem = $planetarySystem;
+    }
+
+    public function setSatellites(Satellite $satellites)
+    {
+        $this->satellites = $satellites;
+    }
+    
+    public function getRadius()
+    {
+        return $this->radius;
+    }
+
+    public function getDistanceFromSun()
+    {
+        return $this->distanceFromSun;
+    }
+
+    public function setRadius($radius)
+    {
+        $this->radius = $radius;
+    }
+
+    public function setDistanceFromSun($distanceFromSun)
+    {
+        $this->distanceFromSun = $distanceFromSun;
+    }
+
+
+    
+    
+
+
     
    
     

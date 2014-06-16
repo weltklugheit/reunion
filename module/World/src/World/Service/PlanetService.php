@@ -24,47 +24,41 @@
  * THE SOFTWARE.
  */
 
-namespace World\Entity;
+namespace World\Service;
 
-use Doctrine\ORM\Mapping as ORM;
+use Application\Service\NameService;
+use World\Entity\Planet;
 
-use Zend\Form\Annotation;
 
 /**
- * Description of World
- * @ORM\Entity
- * @ORM\Table(name="galaxies")
- * @Annotation\Name("annotation_galaxy")
- * @Annotation\Attributes({"class":"form_horizontal"})
+ * Description of StarService
+ *
  * @author heiner
  */
-class Galaxy extends AstronomicalObject implements GalaxyInterface
+class PlanetService
 {
-    
     /**
      *
-     * @var PlanetarySystem[]
-     * @ORM\OneToMany(targetEntity="PlanetarySystem", mappedBy="galaxy")
-     * @Annotation\Exclude
+     * @var NameService 
      */
-    protected $planetarySystems;
+    protected $nameService;
     
-    /**
-     * 
-     * @return PlanetarySystem[]
-     */
-    public function getPlanetarySystems()
+    function __construct(NameService $nameService)
     {
-        return $this->planetarySystems;
+        $this->nameService = $nameService;
     }
 
-    public function setPlanetarySystems(PlanetarySystem $planetarySystems)
+    public function createRandomPlanet($planetarySystem)
     {
-        $this->planetarySystems = $planetarySystems;
+        $planet = new Planet();
+        $planet->setName($this->nameService->createName());
+        $planet->setPlanetarySystem($planetarySystem);
+        $radius = rand();
+        $distanceFromSun = rand();
+        $planet->setDistanceFromSun($distanceFromSun);
+        $planet->setRadius($radius);
+        return $planet;
     }
-
-
-    
     
     
 }
