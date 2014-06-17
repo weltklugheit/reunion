@@ -62,4 +62,48 @@ class Species
      * @ORM\OneToMany(targetEntity="Species\Entity\Individual", mappedBy="species")
      */
     protected $individuals;
+    
+       
+    
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    public function getWorld()
+    {
+        return $this->world;
+    }
+
+    public function getIndividuals()
+    {
+        return $this->individuals;
+    }
+
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    public function setWorld(\World\Entity\World $world)
+    {
+        $this->world = $world;
+    }
+
+    public function setIndividuals(\Species\Entity\Individual $individuals)
+    {
+        $this->individuals = $individuals;
+    }
+
+
 }

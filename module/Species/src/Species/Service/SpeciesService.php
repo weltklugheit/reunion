@@ -24,10 +24,11 @@
  * THE SOFTWARE.
  */
 
-namespace World\Service;
+namespace Species\Service;
 
 use Application\Service\NameService;
 use Doctrine\ORM\EntityRepository;
+use Species\Entity\Species;
 use World\Entity\Galaxy;
 use World\Entity\PlanetarySystem;
 
@@ -36,7 +37,7 @@ use World\Entity\PlanetarySystem;
  *
  * @author heiner
  */
-class PlanetarySystemService
+class SpeciesService
 {
     
     /**
@@ -50,24 +51,11 @@ class PlanetarySystemService
      */
     protected $nameService;
     
-    /**
-     *
-     * @var StarSystemService
-     */
-    protected $starSystemService;
-    
-    /**
-     *
-     * @var PlanetService
-     */
-    protected $planetService;
             
-    function __construct(EntityRepository $repository, NameService $nameService, StarSystemService $starSystemService, PlanetService $planetService)
+    function __construct(EntityRepository $repository, NameService $nameService)
     {
         $this->repository = $repository;
         $this->nameService = $nameService;
-        $this->starSystemService = $starSystemService;
-        $this->planetService = $planetService;
     }
 
     /**
@@ -75,36 +63,12 @@ class PlanetarySystemService
      * @param Galaxy $galaxy
      * @return PlanetarySystem
      */
-    public function createRandomPlanetarySystem($galaxy)
+    public function createRandomSpecies()
     {
-        $planetarySystem = new PlanetarySystem();
-        $planetarySystem->setName($this->nameService->createName());
-        $planetarySystem->setGalaxy($galaxy);
-        $starSystem = $this->starSystemService->createRandomStarSystem($planetarySystem);
-        $planetarySystem->setStarSystem($starSystem);
-        $planets =  rand (0,12);
-        for ($index = 0; $index < $planets; $index++) {
-            $planetarySystem->addPlanet($this->planetService->createRandomPlanet($planetarySystem));
-        }
+        $species = new Species();
+        $species->setName($this->nameService->createName());
         
-        $planetarySystem->setCoordinate($this->createRandomCoordinate());
-        return $planetarySystem;
+        return $species;
     }
-    
-    protected function createRandomCoordinate()
-    {
-        $coordx = rand(0,800);
-        $coordy = rand(0,1024);
-        $coordz = 0;
-        $coordinate = $coordx.'.'.$coordy.'.'.$coordz;
-        if (null === $this->repository->findOneBy(array('coordinate'=>$coordinate))){
-            return $coordinate;
-        } else {
-            echo 'exists';
-            return $this->createRandomCoordinate();
-        }
-        
-    }
-    
     
 }

@@ -24,47 +24,26 @@
  * THE SOFTWARE.
  */
 
-namespace World;
+namespace Species\Service\Factory;
 
-use Zend\Console\Adapter\AdapterInterface;
-use Zend\ModuleManager\Feature\ConsoleUsageProviderInterface;
-use Zend\Mvc\MvcEvent;
+use Species\Service\SpeciesService;
+use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\ServiceLocatorInterface;
 
 /**
- * Description of Module
+ * Description of StarServiceFactory
  *
  * @author heiner
  */
-class Module implements ConsoleUsageProviderInterface
+class SpeciesServiceFactory implements FactoryInterface
 {
-
-    public function onBootstrap(MvcEvent $mvcEvent)
+    public function createService(ServiceLocatorInterface $serviceLocator)
     {
+        $entityManager = $serviceLocator->get('Doctrine\ORM\EntityManager');
+        $repository = $entityManager->getRepository('World\Entity\PlanetarySystem');
+        $nameService = $serviceLocator->get('Application\Service\Name');
+        return new SpeciesService($repository, $nameService);
         
     }
-
-    public function getConfig()
-    {
-        return include __DIR__ . '/../../config/module.config.php';
-    }
-
-    public function getAutoloaderConfig()
-    {
-        return array(
-            'Zend\Loader\StandardAutoloader' => array(
-                'namespaces' => array(
-                    __NAMESPACE__ => __DIR__ . '/../../src/' . __NAMESPACE__,
-                ),
-            ),
-        );
-    }
-    
-    public function getConsoleUsage(AdapterInterface $console)
-    {
-        return array(
-            'galaxy generate planetarySystems' => 'create galaxy',
-        );
-    }
-
 
 }

@@ -65,6 +65,27 @@ class Planet extends AstronomicalObject
      */
     protected $distanceFromSun;
     
+    /**
+     *
+     * @var integer
+     * @ORM\Column(type="integer", unique=false, nullable=true)
+     */
+    protected $maxPopulation;
+    
+    /**
+     *
+     * @var integer
+     * @ORM\Column(type="integer", unique=false, nullable=true)
+     */
+    protected $population;
+    
+    /**
+     *
+     * @var \Species\Entity\Species[]
+     * @ORM\OneToMany(targetEntity="Species\Entity\Species", mappedBy="world")
+     */
+    protected $species;
+    
     public function getPlanetarySystem()
     {
         return $this->planetarySystem;

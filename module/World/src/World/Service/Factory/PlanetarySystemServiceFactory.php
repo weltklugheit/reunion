@@ -38,10 +38,12 @@ class PlanetarySystemServiceFactory implements FactoryInterface
 {
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
+        $entityManager = $serviceLocator->get('Doctrine\ORM\EntityManager');
+        $repository = $entityManager->getRepository('World\Entity\PlanetarySystem');
         $nameService = $serviceLocator->get('Application\Service\Name');
         $starSystemService = $serviceLocator->get('World\Service\StarSystem');
         $planetService = $serviceLocator->get('World\Service\Planet');
-        return new \World\Service\PlanetarySystemService($nameService, $starSystemService, $planetService);
+        return new \World\Service\PlanetarySystemService($repository, $nameService, $starSystemService, $planetService);
         
     }
 

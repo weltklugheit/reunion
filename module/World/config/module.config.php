@@ -39,6 +39,22 @@ return array(
             ),
         ),
     ),
+    'console'  => array(
+        'router' => array(
+            'routes' => array(
+                'galaxy-generate-planetarySystems' => array(
+                    'type'    => 'simple',
+                    'options' => array(
+                        'route'    => 'galaxy generate planetarySystems',
+                        'defaults' => array(
+                            'controller' => 'World\Controller\Console',
+                            'action'     => 'new',
+                        ),
+                    ),
+                )
+            )
+        )
+    ),
     'router'          => array(
         'routes' => array(
             'galaxy' => array(
@@ -71,7 +87,8 @@ return array(
     ),
     'controllers'     => array(
         'invokables' => array(
-            'World\Controller\Galaxy' => 'World\Controller\GalaxyController'
+            'World\Controller\Galaxy' => 'World\Controller\GalaxyController',
+            'World\Controller\Console' => 'World\Controller\ConsoleController'
         ),
     ),
     'view_manager'    => array(
@@ -81,11 +98,11 @@ return array(
     ),
     'service_manager' => array(
         'factories' => array(
-            'World\Service\Galaxy' => 'World\Service\Factory\GalaxyServiceFactory',
-            'World\Service\Star' => 'World\Service\Factory\StarServiceFactory',
-            'World\Service\Planet' => 'World\Service\Factory\PlanetServiceFactory',
+            'World\Service\Galaxy'          => 'World\Service\Factory\GalaxyServiceFactory',
+            'World\Service\Star'            => 'World\Service\Factory\StarServiceFactory',
+            'World\Service\Planet'          => 'World\Service\Factory\PlanetServiceFactory',
             'World\Service\PlanetarySystem' => 'World\Service\Factory\PlanetarySystemServiceFactory',
-            'World\Service\StarSystem' => 'World\Service\Factory\StarSystemServiceFactory',
+            'World\Service\StarSystem'      => 'World\Service\Factory\StarSystemServiceFactory',
         ),
     ),
 );

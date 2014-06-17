@@ -39,4 +39,9 @@ return array(
             ),
         ),
     ),
+    'service_manager' => array(
+        'factories' => array(
+            'Species\Service\Species'          => 'Species\Service\Factory\SpeciesServiceFactory',
+        ),
+    ),
 );

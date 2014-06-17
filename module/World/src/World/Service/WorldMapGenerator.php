@@ -24,47 +24,51 @@
  * THE SOFTWARE.
  */
 
-namespace World;
-
-use Zend\Console\Adapter\AdapterInterface;
-use Zend\ModuleManager\Feature\ConsoleUsageProviderInterface;
-use Zend\Mvc\MvcEvent;
+namespace World\Service;
 
 /**
- * Description of Module
+ * Description of WorldMapGenerator
  *
  * @author heiner
  */
-class Module implements ConsoleUsageProviderInterface
+class WorldMapGenerator
 {
 
-    public function onBootstrap(MvcEvent $mvcEvent)
+    protected $_minX;
+    protected $_maxX;
+    protected $_minY;
+    protected $_maxY;
+    protected $_imageWidth;
+    protected $_imageHeight;
+    protected $_showScale;
+    protected $_maxIterations;
+
+    public function __construct(Array $limits, Array $size, $maximumIterations = 200, $showScale = false)
+    {
+        list($this->_minX, $this->_maxX, $this->_minY, $this->_maxY) = $limits;
+        list($this->_imageWidth, $this->_imageHeight) = $size;
+
+        $this->_maxIterations = $maximumIterations;
+    }
+
+    public function __destruct()
+    {
+        imagedestroy($this->_image);
+        unset($this->_image);
+        unset($this->_colours);
+    }
+
+    public function setUpImage()
+    {
+        $this->_image = imagecreate($this->_imageWidth, $this->_imageHeight);
+
+        // Load the palette to find colours
+        $this->_colours = new Palette($this->_maxIterations, $this->_image);
+    }
+
+    protected function generateWorldMap()
     {
         
     }
-
-    public function getConfig()
-    {
-        return include __DIR__ . '/../../config/module.config.php';
-    }
-
-    public function getAutoloaderConfig()
-    {
-        return array(
-            'Zend\Loader\StandardAutoloader' => array(
-                'namespaces' => array(
-                    __NAMESPACE__ => __DIR__ . '/../../src/' . __NAMESPACE__,
-                ),
-            ),
-        );
-    }
-    
-    public function getConsoleUsage(AdapterInterface $console)
-    {
-        return array(
-            'galaxy generate planetarySystems' => 'create galaxy',
-        );
-    }
-
 
 }

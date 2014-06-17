@@ -1397,3 +1397,109 @@ Stack trace:
 [16-Jun-2014 15:35:54 Europe/Berlin] PHP  12. World\Controller\GalaxyController->newAction() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/AbstractActionController.php:83
 [16-Jun-2014 15:35:54 Europe/Berlin] PHP  13. World\Service\GalaxyService->createMap() /var/www/module/World/src/World/Controller/GalaxyController.php:117
 [16-Jun-2014 15:35:54 Europe/Berlin] PHP  14. imagejpeg() /var/www/module/World/src/World/Service/GalaxyService.php:70
+[17-Jun-2014 11:27:18 Europe/Berlin] PHP Fatal error:  Call to undefined method World\Service\Factory\PlanetarySystemServiceFactory::getServiceLocator() in /var/www/module/World/src/World/Service/Factory/PlanetarySystemServiceFactory.php on line 41
+[17-Jun-2014 11:27:18 Europe/Berlin] PHP Stack trace:
+[17-Jun-2014 11:27:18 Europe/Berlin] PHP   1. {main}() /var/www/public/index.php:0
+[17-Jun-2014 11:27:18 Europe/Berlin] PHP   2. Zend\Mvc\Application->run() /var/www/public/index.php:9
+[17-Jun-2014 11:27:18 Europe/Berlin] PHP   3. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:313
+[17-Jun-2014 11:27:18 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[17-Jun-2014 11:27:18 Europe/Berlin] PHP   5. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[17-Jun-2014 11:27:18 Europe/Berlin] PHP   6. Zend\Mvc\DispatchListener->onDispatch() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[17-Jun-2014 11:27:18 Europe/Berlin] PHP   7. Zend\Mvc\Controller\AbstractController->dispatch() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/DispatchListener.php:114
+[17-Jun-2014 11:27:18 Europe/Berlin] PHP   8. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/AbstractController.php:117
+[17-Jun-2014 11:27:18 Europe/Berlin] PHP   9. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[17-Jun-2014 11:27:18 Europe/Berlin] PHP  10. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[17-Jun-2014 11:27:18 Europe/Berlin] PHP  11. Zend\Mvc\Controller\AbstractActionController->onDispatch() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[17-Jun-2014 11:27:18 Europe/Berlin] PHP  12. World\Controller\GalaxyController->newAction() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/AbstractActionController.php:83
+[17-Jun-2014 11:27:18 Europe/Berlin] PHP  13. Zend\ServiceManager\ServiceManager->get() /var/www/module/World/src/World/Controller/GalaxyController.php:96
+[17-Jun-2014 11:27:18 Europe/Berlin] PHP  14. Zend\ServiceManager\ServiceManager->create() /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:504
+[17-Jun-2014 11:27:18 Europe/Berlin] PHP  15. Zend\ServiceManager\ServiceManager->doCreate() /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:572
+[17-Jun-2014 11:27:18 Europe/Berlin] PHP  16. Zend\ServiceManager\ServiceManager->createFromFactory() /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:612
+[17-Jun-2014 11:27:18 Europe/Berlin] PHP  17. Zend\ServiceManager\ServiceManager->createServiceViaCallback() /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:1032
+[17-Jun-2014 11:27:18 Europe/Berlin] PHP  18. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:902}() /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:902
+[17-Jun-2014 11:27:18 Europe/Berlin] PHP  19. World\Service\Factory\PlanetarySystemServiceFactory->createService() /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:902
+[17-Jun-2014 11:27:37 Europe/Berlin] PHP Fatal error:  Call to a member function findOneBy() on a non-object in /var/www/module/World/src/World/Service/PlanetarySystemService.php on line 99
+[17-Jun-2014 11:27:37 Europe/Berlin] PHP Stack trace:
+[17-Jun-2014 11:27:37 Europe/Berlin] PHP   1. {main}() /var/www/public/index.php:0
+[17-Jun-2014 11:27:37 Europe/Berlin] PHP   2. Zend\Mvc\Application->run() /var/www/public/index.php:9
+[17-Jun-2014 11:27:37 Europe/Berlin] PHP   3. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:313
+[17-Jun-2014 11:27:37 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[17-Jun-2014 11:27:37 Europe/Berlin] PHP   5. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[17-Jun-2014 11:27:37 Europe/Berlin] PHP   6. Zend\Mvc\DispatchListener->onDispatch() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[17-Jun-2014 11:27:37 Europe/Berlin] PHP   7. Zend\Mvc\Controller\AbstractController->dispatch() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/DispatchListener.php:114
+[17-Jun-2014 11:27:37 Europe/Berlin] PHP   8. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/AbstractController.php:117
+[17-Jun-2014 11:27:37 Europe/Berlin] PHP   9. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[17-Jun-2014 11:27:37 Europe/Berlin] PHP  10. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[17-Jun-2014 11:27:37 Europe/Berlin] PHP  11. Zend\Mvc\Controller\AbstractActionController->onDispatch() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[17-Jun-2014 11:27:37 Europe/Berlin] PHP  12. World\Controller\GalaxyController->newAction() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/AbstractActionController.php:83
+[17-Jun-2014 11:27:37 Europe/Berlin] PHP  13. World\Service\PlanetarySystemService->createRandomPlanetarySystem() /var/www/module/World/src/World/Controller/GalaxyController.php:100
+[17-Jun-2014 11:27:37 Europe/Berlin] PHP  14. World\Service\PlanetarySystemService->createRandomCoordinate() /var/www/module/World/src/World/Service/PlanetarySystemService.php:89
+[17-Jun-2014 11:32:17 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Zend\Console\Exception\InvalidArgumentException' with message 'Cannot understand Console route at "galaxy:generate:planetarySystems"' in /var/www/vendor/zendframework/zendframework/library/Zend/Console/RouteMatcher/DefaultRouteMatcher.php:432
+Stack trace:
+#0 /var/www/vendor/zendframework/zendframework/library/Zend/Console/RouteMatcher/DefaultRouteMatcher.php(90): Zend\Console\RouteMatcher\DefaultRouteMatcher->parseDefinition('galaxy:generate...')
+#1 /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Router/Console/Simple.php(68): Zend\Console\RouteMatcher\DefaultRouteMatcher->__construct('galaxy:generate...', Array, Array, Array)
+#2 /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Router/Console/Simple.php(125): Zend\Mvc\Router\Console\Simple->__construct('galaxy:generate...', Array, Array, Array, NULL, NULL)
+#3 /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Router/RoutePluginManager.php(111): Zend\Mvc\Router\Console\Simple::factory(Array)
+#4 /var/www/ve in /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php on line 909
+[17-Jun-2014 11:32:32 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Zend\Console\Exception\InvalidArgumentException' with message 'Cannot understand Console route at "galaxy:generate:planetarySystems"' in /var/www/vendor/zendframework/zendframework/library/Zend/Console/RouteMatcher/DefaultRouteMatcher.php:432
+Stack trace:
+#0 /var/www/vendor/zendframework/zendframework/library/Zend/Console/RouteMatcher/DefaultRouteMatcher.php(90): Zend\Console\RouteMatcher\DefaultRouteMatcher->parseDefinition('galaxy:generate...')
+#1 /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Router/Console/Simple.php(68): Zend\Console\RouteMatcher\DefaultRouteMatcher->__construct('galaxy:generate...', Array, Array, Array)
+#2 /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Router/Console/Simple.php(125): Zend\Mvc\Router\Console\Simple->__construct('galaxy:generate...', Array, Array, Array, NULL, NULL)
+#3 /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Router/RoutePluginManager.php(111): Zend\Mvc\Router\Console\Simple::factory(Array)
+#4 /var/www/ve in /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php on line 909
+[17-Jun-2014 11:33:11 Europe/Berlin] PHP Notice:  Undefined variable: objects in /var/www/module/World/src/World/Controller/ConsoleController.php on line 116
+[17-Jun-2014 11:33:11 Europe/Berlin] PHP Stack trace:
+[17-Jun-2014 11:33:11 Europe/Berlin] PHP   1. {main}() /var/www/public/index.php:0
+[17-Jun-2014 11:33:11 Europe/Berlin] PHP   2. Zend\Mvc\Application->run() /var/www/public/index.php:9
+[17-Jun-2014 11:33:11 Europe/Berlin] PHP   3. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:313
+[17-Jun-2014 11:33:11 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[17-Jun-2014 11:33:11 Europe/Berlin] PHP   5. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[17-Jun-2014 11:33:11 Europe/Berlin] PHP   6. Zend\Mvc\DispatchListener->onDispatch() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[17-Jun-2014 11:33:11 Europe/Berlin] PHP   7. Zend\Mvc\Controller\AbstractController->dispatch() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/DispatchListener.php:114
+[17-Jun-2014 11:33:11 Europe/Berlin] PHP   8. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/AbstractController.php:117
+[17-Jun-2014 11:33:11 Europe/Berlin] PHP   9. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[17-Jun-2014 11:33:11 Europe/Berlin] PHP  10. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[17-Jun-2014 11:33:11 Europe/Berlin] PHP  11. Zend\Mvc\Controller\AbstractActionController->onDispatch() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[17-Jun-2014 11:33:11 Europe/Berlin] PHP  12. World\Controller\ConsoleController->newAction() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/AbstractActionController.php:83
+[17-Jun-2014 14:31:57 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message 'mapping not ok' in /vagrant/scripts/db/update.php:50
+Stack trace:
+#0 /vagrant/scripts/db/update.php(9): newDeltascript()
+#1 {main}
+  thrown in /vagrant/scripts/db/update.php on line 50
+[17-Jun-2014 14:34:14 Europe/Berlin] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 19136512 bytes) in /var/www/vendor/doctrine/doctrine-orm-module/view/zend-developer-tools/toolbar/doctrine-orm-queries.phtml on line 27
+[17-Jun-2014 14:34:14 Europe/Berlin] PHP Stack trace:
+[17-Jun-2014 14:34:14 Europe/Berlin] PHP   1. {main}() /var/www/public/index.php:0
+[17-Jun-2014 14:34:14 Europe/Berlin] PHP   2. Zend\Mvc\Application->run() /var/www/public/index.php:9
+[17-Jun-2014 14:34:14 Europe/Berlin] PHP   3. Zend\Mvc\Application->completeRequest() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:327
+[17-Jun-2014 14:34:14 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:353
+[17-Jun-2014 14:34:14 Europe/Berlin] PHP   5. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[17-Jun-2014 14:34:14 Europe/Berlin] PHP   6. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[17-Jun-2014 14:34:14 Europe/Berlin] PHP   7. ZendDeveloperTools\Listener\ProfilerListener->onFinish() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[17-Jun-2014 14:34:14 Europe/Berlin] PHP   8. ZendDeveloperTools\Profiler->collect() /var/www/vendor/zendframework/zend-developer-tools/src/ZendDeveloperTools/Listener/ProfilerListener.php:107
+[17-Jun-2014 14:34:14 Europe/Berlin] PHP   9. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zend-developer-tools/src/ZendDeveloperTools/Profiler.php:215
+[17-Jun-2014 14:34:14 Europe/Berlin] PHP  10. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[17-Jun-2014 14:34:14 Europe/Berlin] PHP  11. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[17-Jun-2014 14:34:14 Europe/Berlin] PHP  12. ZendDeveloperTools\Listener\ToolbarListener->onCollected() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[17-Jun-2014 14:34:14 Europe/Berlin] PHP  13. ZendDeveloperTools\Listener\ToolbarListener->injectToolbar() /var/www/vendor/zendframework/zend-developer-tools/src/ZendDeveloperTools/Listener/ToolbarListener.php:137
+[17-Jun-2014 14:34:14 Europe/Berlin] PHP  14. ZendDeveloperTools\Listener\ToolbarListener->renderEntries() /var/www/vendor/zendframework/zend-developer-tools/src/ZendDeveloperTools/Listener/ToolbarListener.php:148
+[17-Jun-2014 14:34:14 Europe/Berlin] PHP  15. Zend\View\Renderer\PhpRenderer->render() /var/www/vendor/zendframework/zend-developer-tools/src/ZendDeveloperTools/Listener/ToolbarListener.php:221
+[17-Jun-2014 14:34:14 Europe/Berlin] PHP  16. include() /var/www/vendor/zendframework/zendframework/library/Zend/View/Renderer/PhpRenderer.php:506
+[17-Jun-2014 14:35:09 Europe/Berlin] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 17825792 bytes) in /var/www/vendor/doctrine/doctrine-orm-module/view/zend-developer-tools/toolbar/doctrine-orm-queries.phtml on line 49
+[17-Jun-2014 14:35:09 Europe/Berlin] PHP Stack trace:
+[17-Jun-2014 14:35:09 Europe/Berlin] PHP   1. {main}() /var/www/public/index.php:0
+[17-Jun-2014 14:35:09 Europe/Berlin] PHP   2. Zend\Mvc\Application->run() /var/www/public/index.php:9
+[17-Jun-2014 14:35:09 Europe/Berlin] PHP   3. Zend\Mvc\Application->completeRequest() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:327
+[17-Jun-2014 14:35:09 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:353
+[17-Jun-2014 14:35:09 Europe/Berlin] PHP   5. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[17-Jun-2014 14:35:09 Europe/Berlin] PHP   6. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[17-Jun-2014 14:35:09 Europe/Berlin] PHP   7. ZendDeveloperTools\Listener\ProfilerListener->onFinish() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[17-Jun-2014 14:35:09 Europe/Berlin] PHP   8. ZendDeveloperTools\Profiler->collect() /var/www/vendor/zendframework/zend-developer-tools/src/ZendDeveloperTools/Listener/ProfilerListener.php:107
+[17-Jun-2014 14:35:09 Europe/Berlin] PHP   9. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zend-developer-tools/src/ZendDeveloperTools/Profiler.php:215
+[17-Jun-2014 14:35:09 Europe/Berlin] PHP  10. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[17-Jun-2014 14:35:09 Europe/Berlin] PHP  11. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[17-Jun-2014 14:35:09 Europe/Berlin] PHP  12. ZendDeveloperTools\Listener\ToolbarListener->onCollected() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[17-Jun-2014 14:35:09 Europe/Berlin] PHP  13. ZendDeveloperTools\Listener\ToolbarListener->injectToolbar() /var/www/vendor/zendframework/zend-developer-tools/src/ZendDeveloperTools/Listener/ToolbarListener.php:137
+[17-Jun-2014 14:35:09 Europe/Berlin] PHP  14. ZendDeveloperTools\Listener\ToolbarListener->renderEntries() /var/www/vendor/zendframework/zend-developer-tools/src/ZendDeveloperTools/Listener/ToolbarListener.php:148
+[17-Jun-2014 14:35:09 Europe/Berlin] PHP  15. Zend\View\Renderer\PhpRenderer->render() /var/www/vendor/zendframework/zend-developer-tools/src/ZendDeveloperTools/Listener/ToolbarListener.php:221
+[17-Jun-2014 14:35:09 Europe/Berlin] PHP  16. include() /var/www/vendor/zendframework/zendframework/library/Zend/View/Renderer/PhpRenderer.php:506

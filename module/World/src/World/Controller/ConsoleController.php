@@ -28,16 +28,20 @@ namespace World\Controller;
 
 use Application\Service\ApplicationService;
 use Doctrine\ORM\EntityManager;
-use World\Entity\Galaxy;
+use Species\Service\SpeciesService;
+use World\Entity\StarSystem;
+use World\Service\GalaxyService;
+use World\Service\PlanetarySystemService;
+use Zend\Console\Console;
 use Zend\Mvc\Controller\AbstractActionController;
-use Zend\View\Model\ViewModel;
+use ZendDeveloperTools\Controller\IndexController;
 
 /**
  * Description of IndexController
  *
  * @author heiner
  */
-class GalaxyController extends AbstractActionController
+class ConsoleController extends AbstractActionController
 {
 
     /**
@@ -75,17 +79,13 @@ class GalaxyController extends AbstractActionController
         return $this->entityManager;
     }
 
-    public function indexAction()
-    {
-        return new ViewModel();
-    }
-
     public function newAction()
     {
+        $console = Console::getInstance();
         $applicationService = $this->getServiceLocator()->get('Application\Service\Application');
         /* @var $applicationService ApplicationService */
         $galaxyService = $this->getServiceLocator()->get('World\Service\Galaxy');
-        /* @var $galaxyService \World\Service\GalaxyService */
+        /* @var $galaxyService GalaxyService */
 //        $galaxy = $galaxyService->createRandomGalaxy();
 //        $this->getEntityManager()->persist($galaxy);
 //        $this->getEntityManager()->flush();
@@ -94,12 +94,12 @@ class GalaxyController extends AbstractActionController
 
         //$this->getEntityManager()->persist($galaxy);
         $planetarySystemService = $this->getServiceLocator()->get('World\Service\PlanetarySystem');
-        /* @var $planetarySystemService \World\Service\PlanetarySystemService */
+        /* @var $planetarySystemService PlanetarySystemService */
 
         for ($index = 0; $index < 10; $index++) {
             $planetarySystem = $planetarySystemService->createRandomPlanetarySystem($galaxy);
-            /* @var $planetarySystem \World\Entity\StarSystem */
 
+            $console->writeLine($index .' create '.$planetarySystem->getName());
 
             $this->getEntityManager()->persist($planetarySystem);
             $this->getEntityManager()->flush();
@@ -107,20 +107,24 @@ class GalaxyController extends AbstractActionController
 
 
         $planetarySystem = $planetarySystemService->createRandomPlanetarySystem($galaxy);
-        /* @var $planetarySystem \World\Entity\StarSystem */
-
-
         $this->getEntityManager()->persist($planetarySystem);
         $this->getEntityManager()->flush();
+        
+        $speciesService = $this->getServiceLocator()->get('Species\Service\SpeciesService');
+        /* @var $speciesService SpeciesService */
+        $species = $speciesService->createRandomSpecies();
+        $this->getEntityManager()->persist($species);
+        $this->getEntityManager()->flush();
+        
+
+        
 
 
         $galaxyService->createMap($galaxy);
         
         
-
-        $objects = $this->getEntityManager()->getRepository('World\Entity\StarSystem')->findAll();
         return array(
-            'objects' => $objects,
+            
         );
     }
 
