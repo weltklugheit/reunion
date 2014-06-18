@@ -14,6 +14,7 @@ return array(
         'World',
         'Species',
         'Base',
+        'Admin',
     ),
     'module_listener_options' => array(
         'module_paths'             => array(

@@ -29,7 +29,7 @@ return array(
         'role_providers'     => array(
             // using an object repository (entity repository) to load all roles into our ACL
             'BjyAuthorize\Provider\Role\ObjectRepositoryProvider' => array(
-                'object_manager'    => 'doctrine.entity_manager.orm_default',
+                'object_manager'    => 'doctrine.entitymanager.orm_default',
                 'role_entity_class' => 'User\Entity\Role',
             ),
         ),
@@ -50,10 +50,19 @@ return array(
             )
         )
     ),
+
     'controllers' => array(
         'invokables' => array(
-            'User\Controller\Console'=> 'User\Controller\ConsoleController'
+            'User\Controller\Console'=> 'User\Controller\ConsoleController',
         ),
     ),
+    
+    'view_manager'    => array(
+        'template_path_stack' => array(
+            __DIR__ . '/../view',
+        ),
+    ),
+    
+    
 
 );

@@ -1768,3 +1768,257 @@ Stack trace:
 #1 /vagrant/scripts/db/update.php(8): updateDatabase()
 #2 {main}
   thrown in /vagrant/scripts/db/update.php on line 137
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP Warning:  require_once(/var/www/module/Admin/src/Admin/Module.php): failed to open stream: No such file or directory in /var/www/module/Admin/Module.php on line 2
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP Stack trace:
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP   1. {main}() /var/www/public/index.php:0
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP   2. Zend\Mvc\Application::init() /var/www/public/index.php:9
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP   3. Zend\ModuleManager\ModuleManager->loadModules() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:252
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/ModuleManager.php:109
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP   5. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP   6. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP   7. Zend\ModuleManager\ModuleManager->onLoadModules() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP   8. Zend\ModuleManager\ModuleManager->loadModule() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/ModuleManager.php:90
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP   9. Zend\ModuleManager\ModuleManager->loadModuleByName() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/ModuleManager.php:163
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP  10. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/ModuleManager.php:185
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP  11. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP  12. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP  13. Zend\ModuleManager\Listener\ModuleResolverListener->__invoke() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP  14. class_exists() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/Listener/ModuleResolverListener.php:28
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP  15. Zend\Loader\ModuleAutoloader->autoload() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/Listener/ModuleResolverListener.php:0
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP  16. Zend\Loader\ModuleAutoloader->loadModuleFromDir() /var/www/vendor/zendframework/zendframework/library/Zend/Loader/ModuleAutoloader.php:198
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP  17. require_once() /var/www/vendor/zendframework/zendframework/library/Zend/Loader/ModuleAutoloader.php:239
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required '/var/www/module/Admin/src/Admin/Module.php' (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/module/Admin/Module.php on line 2
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP Stack trace:
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP   1. {main}() /var/www/public/index.php:0
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP   2. Zend\Mvc\Application::init() /var/www/public/index.php:9
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP   3. Zend\ModuleManager\ModuleManager->loadModules() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:252
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/ModuleManager.php:109
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP   5. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP   6. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP   7. Zend\ModuleManager\ModuleManager->onLoadModules() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP   8. Zend\ModuleManager\ModuleManager->loadModule() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/ModuleManager.php:90
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP   9. Zend\ModuleManager\ModuleManager->loadModuleByName() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/ModuleManager.php:163
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP  10. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/ModuleManager.php:185
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP  11. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP  12. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP  13. Zend\ModuleManager\Listener\ModuleResolverListener->__invoke() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP  14. class_exists() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/Listener/ModuleResolverListener.php:28
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP  15. Zend\Loader\ModuleAutoloader->autoload() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/Listener/ModuleResolverListener.php:0
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP  16. Zend\Loader\ModuleAutoloader->loadModuleFromDir() /var/www/vendor/zendframework/zendframework/library/Zend/Loader/ModuleAutoloader.php:198
+[18-Jun-2014 13:35:29 Europe/Berlin] PHP  17. require_once() /var/www/vendor/zendframework/zendframework/library/Zend/Loader/ModuleAutoloader.php:239
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP Warning:  include(/var/www/module/Admin/src/Admin/config/module.config.php): failed to open stream: No such file or directory in /var/www/module/Admin/src/Admin/Module.php on line 61
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP Stack trace:
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP   1. {main}() /var/www/public/index.php:0
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP   2. Zend\Mvc\Application::init() /var/www/public/index.php:9
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP   3. Zend\ModuleManager\ModuleManager->loadModules() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:252
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/ModuleManager.php:109
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP   5. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP   6. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP   7. Zend\ModuleManager\ModuleManager->onLoadModules() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP   8. Zend\ModuleManager\ModuleManager->loadModule() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/ModuleManager.php:90
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP   9. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/ModuleManager.php:168
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP  10. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP  11. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP  12. Zend\ModuleManager\Listener\ConfigListener->onLoadModule() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP  13. Admin\Module->getConfig() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/Listener/ConfigListener.php:126
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP Warning:  include(): Failed opening '/var/www/module/Admin/src/Admin/config/module.config.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/module/Admin/src/Admin/Module.php on line 61
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP Stack trace:
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP   1. {main}() /var/www/public/index.php:0
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP   2. Zend\Mvc\Application::init() /var/www/public/index.php:9
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP   3. Zend\ModuleManager\ModuleManager->loadModules() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:252
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/ModuleManager.php:109
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP   5. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP   6. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP   7. Zend\ModuleManager\ModuleManager->onLoadModules() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP   8. Zend\ModuleManager\ModuleManager->loadModule() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/ModuleManager.php:90
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP   9. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/ModuleManager.php:168
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP  10. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP  11. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP  12. Zend\ModuleManager\Listener\ConfigListener->onLoadModule() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP  13. Admin\Module->getConfig() /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/Listener/ConfigListener.php:126
+[18-Jun-2014 13:36:00 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Zend\ModuleManager\Listener\Exception\InvalidArgumentException' with message 'Config being merged must be an array, implement the Traversable interface, or be an instance of Zend\Config\Config. boolean given.' in /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/Listener/ConfigListener.php:335
+Stack trace:
+#0 /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/Listener/ConfigListener.php(127): Zend\ModuleManager\Listener\ConfigListener->addConfig('Admin', false)
+#1 [internal function]: Zend\ModuleManager\Listener\ConfigListener->onLoadModule(Object(Zend\ModuleManager\ModuleEvent))
+#2 /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php(468): call_user_func(Array, Object(Zend\ModuleManager\ModuleEvent))
+#3 /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php(207): Zend\EventManager\EventManager->triggerListeners('loadModule', Object(Zend\ModuleManager\ModuleEvent), NULL)
+#4 /var/www/v in /var/www/vendor/zendframework/zendframework/library/Zend/ModuleManager/Listener/ConfigListener.php on line 335
+[18-Jun-2014 13:37:04 Europe/Berlin] PHP Notice:  Undefined index: admin in /var/www/module/Admin/src/Admin/Module.php on line 94
+[18-Jun-2014 13:37:04 Europe/Berlin] PHP Stack trace:
+[18-Jun-2014 13:37:04 Europe/Berlin] PHP   1. {main}() /var/www/public/index.php:0
+[18-Jun-2014 13:37:04 Europe/Berlin] PHP   2. Zend\Mvc\Application->run() /var/www/public/index.php:9
+[18-Jun-2014 13:37:04 Europe/Berlin] PHP   3. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:313
+[18-Jun-2014 13:37:04 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 13:37:04 Europe/Berlin] PHP   5. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 13:37:04 Europe/Berlin] PHP   6. Admin\Module->selectLayoutBasedOnRoute() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 13:37:04 Europe/Berlin] PHP Notice:  Undefined index: admin in /var/www/module/Admin/src/Admin/Module.php on line 105
+[18-Jun-2014 13:37:04 Europe/Berlin] PHP Stack trace:
+[18-Jun-2014 13:37:04 Europe/Berlin] PHP   1. {main}() /var/www/public/index.php:0
+[18-Jun-2014 13:37:04 Europe/Berlin] PHP   2. Zend\Mvc\Application->run() /var/www/public/index.php:9
+[18-Jun-2014 13:37:04 Europe/Berlin] PHP   3. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:313
+[18-Jun-2014 13:37:04 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 13:37:04 Europe/Berlin] PHP   5. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 13:37:04 Europe/Berlin] PHP   6. Admin\Module->selectLayoutBasedOnRoute() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 13:39:21 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Zend\ServiceManager\Exception\ServiceNotFoundException' with message 'Zend\ServiceManager\ServiceManager::get was unable to fetch or create an instance for doctrine.entity_manager.orm_default' in /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:529
+Stack trace:
+#0 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Service/ObjectRepositoryRoleProviderFactory.php(50): Zend\ServiceManager\ServiceManager->get('doctrine.entity...')
+#1 [internal function]: BjyAuthorize\Service\ObjectRepositoryRoleProviderFactory->createService(Object(Zend\ServiceManager\ServiceManager), 'bjyauthorizepro...', 'BjyAuthorize\\Pr...')
+#2 /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php(902): call_user_func(Array, Object(Zend\ServiceManager\ServiceManager), 'bjyauthorizepro...', 'BjyAuthorize\\Pr...')
+#3 /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php(1032): Zend\ServiceManager\Servi in /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php on line 529
+[18-Jun-2014 13:41:14 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Zend\Permissions\Acl\Exception\InvalidArgumentException' with message 'Role 'admin' not found' in /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Role/Registry.php:106
+Stack trace:
+#0 /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Acl.php(548): Zend\Permissions\Acl\Role\Registry->get('admin')
+#1 /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Acl.php(432): Zend\Permissions\Acl\Acl->setRule('OP_ADD', 'TYPE_ALLOW', Array, 'route/admin', NULL, NULL)
+#2 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Service/Authorize.php(359): Zend\Permissions\Acl\Acl->allow(Array, 'route/admin', NULL, NULL)
+#3 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Service/Authorize.php(400): BjyAuthorize\Service\Authorize->loadRule(Array, 'allow')
+#4 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Service/Authorize.php(269): BjyAuthorize\Service\Authorize->loadAcl()
+#5 /var/www/vendor/bjyoungblood/bjy-aut in /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Role/Registry.php on line 106
+[18-Jun-2014 13:42:23 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Zend\Mvc\Router\Exception\RuntimeException' with message 'Route with name "zfcadmin" not found' in /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Router/Http/TreeRouteStack.php:317
+Stack trace:
+#0 /var/www/vendor/zendframework/zendframework/library/Zend/View/Helper/Url.php(100): Zend\Mvc\Router\Http\TreeRouteStack->assemble(Array, Array)
+#1 [internal function]: Zend\View\Helper\Url->__invoke('zfcadmin')
+#2 /var/www/vendor/zendframework/zendframework/library/Zend/View/Renderer/PhpRenderer.php(399): call_user_func_array(Object(Zend\View\Helper\Url), Array)
+#3 /var/www/module/Admin/view/layout/admin.phtml(32): Zend\View\Renderer\PhpRenderer->__call('url', Array)
+#4 /var/www/module/Admin/view/layout/admin.phtml(32): Zend\View\Renderer\PhpRenderer->url('zfcadmin')
+#5 /var/www/vendor/zendframework/zendframework/library/Zend/View/Renderer/PhpRenderer.php(506): include('/var/www/module...')
+#6 /var/www/vendor/zendframework/zendframework/library/Zend/View/View.php(205): Zend\View\Rend in /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Router/Http/TreeRouteStack.php on line 317
+[18-Jun-2014 13:47:31 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Zend\Permissions\Acl\Exception\InvalidArgumentException' with message 'Role 'administrator' not found' in /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Role/Registry.php:106
+Stack trace:
+#0 /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Acl.php(548): Zend\Permissions\Acl\Role\Registry->get('administrator')
+#1 /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Acl.php(432): Zend\Permissions\Acl\Acl->setRule('OP_ADD', 'TYPE_ALLOW', Array, 'route/admin', NULL, NULL)
+#2 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Service/Authorize.php(359): Zend\Permissions\Acl\Acl->allow(Array, 'route/admin', NULL, NULL)
+#3 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Service/Authorize.php(400): BjyAuthorize\Service\Authorize->loadRule(Array, 'allow')
+#4 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Service/Authorize.php(269): BjyAuthorize\Service\Authorize->loadAcl()
+#5 /var/www/vendor/bjyo in /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Role/Registry.php on line 106
+[18-Jun-2014 13:47:58 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Zend\Permissions\Acl\Exception\InvalidArgumentException' with message 'Role 'administrator' not found' in /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Role/Registry.php:106
+Stack trace:
+#0 /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Acl.php(548): Zend\Permissions\Acl\Role\Registry->get('administrator')
+#1 /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Acl.php(432): Zend\Permissions\Acl\Acl->setRule('OP_ADD', 'TYPE_ALLOW', Array, 'route/user-admi...', NULL, NULL)
+#2 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Service/Authorize.php(359): Zend\Permissions\Acl\Acl->allow(Array, 'route/user-admi...', NULL, NULL)
+#3 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Service/Authorize.php(400): BjyAuthorize\Service\Authorize->loadRule(Array, 'allow')
+#4 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Service/Authorize.php(269): BjyAuthorize\Service\Authorize->loadAcl()
+#5 /var/w in /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Role/Registry.php on line 106
+[18-Jun-2014 13:48:37 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Zend\Permissions\Acl\Exception\InvalidArgumentException' with message 'Role 'administrator' not found' in /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Role/Registry.php:106
+Stack trace:
+#0 /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Acl.php(548): Zend\Permissions\Acl\Role\Registry->get('administrator')
+#1 /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Acl.php(432): Zend\Permissions\Acl\Acl->setRule('OP_ADD', 'TYPE_ALLOW', Array, 'route/user-admi...', NULL, NULL)
+#2 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Service/Authorize.php(359): Zend\Permissions\Acl\Acl->allow(Array, 'route/user-admi...', NULL, NULL)
+#3 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Service/Authorize.php(400): BjyAuthorize\Service\Authorize->loadRule(Array, 'allow')
+#4 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Service/Authorize.php(269): BjyAuthorize\Service\Authorize->loadAcl()
+#5 /var/w in /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Role/Registry.php on line 106
+[18-Jun-2014 13:49:12 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Zend\Permissions\Acl\Exception\InvalidArgumentException' with message 'Role 'administrator' not found' in /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Role/Registry.php:106
+Stack trace:
+#0 /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Acl.php(548): Zend\Permissions\Acl\Role\Registry->get('administrator')
+#1 /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Acl.php(432): Zend\Permissions\Acl\Acl->setRule('OP_ADD', 'TYPE_ALLOW', Array, 'route/user-admi...', NULL, NULL)
+#2 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Service/Authorize.php(359): Zend\Permissions\Acl\Acl->allow(Array, 'route/user-admi...', NULL, NULL)
+#3 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Service/Authorize.php(400): BjyAuthorize\Service\Authorize->loadRule(Array, 'allow')
+#4 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Service/Authorize.php(269): BjyAuthorize\Service\Authorize->loadAcl()
+#5 /var/w in /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Role/Registry.php on line 106
+[18-Jun-2014 13:50:55 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Zend\Permissions\Acl\Exception\InvalidArgumentException' with message 'Role 'administrator' not found' in /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Role/Registry.php:106
+Stack trace:
+#0 /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Acl.php(548): Zend\Permissions\Acl\Role\Registry->get('administrator')
+#1 /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Acl.php(432): Zend\Permissions\Acl\Acl->setRule('OP_ADD', 'TYPE_ALLOW', Array, 'route/user-admi...', NULL, NULL)
+#2 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Service/Authorize.php(359): Zend\Permissions\Acl\Acl->allow(Array, 'route/user-admi...', NULL, NULL)
+#3 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Service/Authorize.php(400): BjyAuthorize\Service\Authorize->loadRule(Array, 'allow')
+#4 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Service/Authorize.php(269): BjyAuthorize\Service\Authorize->loadAcl()
+#5 /var/w in /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Role/Registry.php on line 106
+[18-Jun-2014 13:50:59 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Zend\ServiceManager\Exception\ServiceNotFoundException' with message 'An alias "zfcuser_zend_db_adapter" was requested but no service could be found.' in /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:523
+Stack trace:
+#0 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Service/ZfcUserZendDbIdentityProviderServiceFactory.php(30): Zend\ServiceManager\ServiceManager->get('zfcuser_zend_db...')
+#1 [internal function]: BjyAuthorize\Service\ZfcUserZendDbIdentityProviderServiceFactory->createService(Object(Zend\ServiceManager\ServiceManager), 'bjyauthorizepro...', 'BjyAuthorize\\Pr...')
+#2 /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php(902): call_user_func(Array, Object(Zend\ServiceManager\ServiceManager), 'bjyauthorizepro...', 'BjyAuthorize\\Pr...')
+#3 /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php(1032): Zend\ServiceManager\ServiceManager->createServiceVi in /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php on line 523
+[18-Jun-2014 13:51:03 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Zend\Permissions\Acl\Exception\InvalidArgumentException' with message 'Role 'administrator' not found' in /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Role/Registry.php:106
+Stack trace:
+#0 /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Acl.php(548): Zend\Permissions\Acl\Role\Registry->get('administrator')
+#1 /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Acl.php(432): Zend\Permissions\Acl\Acl->setRule('OP_ADD', 'TYPE_ALLOW', Array, 'route/user-admi...', NULL, NULL)
+#2 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Service/Authorize.php(359): Zend\Permissions\Acl\Acl->allow(Array, 'route/user-admi...', NULL, NULL)
+#3 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Service/Authorize.php(400): BjyAuthorize\Service\Authorize->loadRule(Array, 'allow')
+#4 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Service/Authorize.php(269): BjyAuthorize\Service\Authorize->loadAcl()
+#5 /var/w in /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Role/Registry.php on line 106
+[18-Jun-2014 13:51:04 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Zend\Permissions\Acl\Exception\InvalidArgumentException' with message 'Role 'administrator' not found' in /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Role/Registry.php:106
+Stack trace:
+#0 /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Acl.php(548): Zend\Permissions\Acl\Role\Registry->get('administrator')
+#1 /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Acl.php(432): Zend\Permissions\Acl\Acl->setRule('OP_ADD', 'TYPE_ALLOW', Array, 'route/user-admi...', NULL, NULL)
+#2 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Service/Authorize.php(359): Zend\Permissions\Acl\Acl->allow(Array, 'route/user-admi...', NULL, NULL)
+#3 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Service/Authorize.php(400): BjyAuthorize\Service\Authorize->loadRule(Array, 'allow')
+#4 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Service/Authorize.php(269): BjyAuthorize\Service\Authorize->loadAcl()
+#5 /var/w in /var/www/vendor/zendframework/zendframework/library/Zend/Permissions/Acl/Role/Registry.php on line 106
+[18-Jun-2014 13:52:19 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Zend\ServiceManager\Exception\ServiceNotFoundException' with message 'An alias "zfcuser_zend_db_adapter" was requested but no service could be found.' in /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:523
+Stack trace:
+#0 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Service/ZfcUserZendDbIdentityProviderServiceFactory.php(30): Zend\ServiceManager\ServiceManager->get('zfcuser_zend_db...')
+#1 [internal function]: BjyAuthorize\Service\ZfcUserZendDbIdentityProviderServiceFactory->createService(Object(Zend\ServiceManager\ServiceManager), 'bjyauthorizepro...', 'BjyAuthorize\\Pr...')
+#2 /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php(902): call_user_func(Array, Object(Zend\ServiceManager\ServiceManager), 'bjyauthorizepro...', 'BjyAuthorize\\Pr...')
+#3 /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php(1032): Zend\ServiceManager\ServiceManager->createServiceVi in /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php on line 523
+[18-Jun-2014 16:18:59 Europe/Berlin] PHP Fatal error:  Class 'User\Controller\AbstractActionController' not found in /var/www/module/User/src/User/Controller/AdminController.php on line 35
+[18-Jun-2014 16:18:59 Europe/Berlin] PHP Stack trace:
+[18-Jun-2014 16:18:59 Europe/Berlin] PHP   1. {main}() /var/www/public/index.php:0
+[18-Jun-2014 16:18:59 Europe/Berlin] PHP   2. Zend\Mvc\Application->run() /var/www/public/index.php:9
+[18-Jun-2014 16:18:59 Europe/Berlin] PHP   3. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:313
+[18-Jun-2014 16:18:59 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 16:18:59 Europe/Berlin] PHP   5. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 16:18:59 Europe/Berlin] PHP   6. Zend\Mvc\DispatchListener->onDispatch() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 16:18:59 Europe/Berlin] PHP   7. Zend\Mvc\Controller\ControllerManager->get() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/DispatchListener.php:97
+[18-Jun-2014 16:18:59 Europe/Berlin] PHP   8. Zend\ServiceManager\AbstractPluginManager->get() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/ControllerManager.php:137
+[18-Jun-2014 16:18:59 Europe/Berlin] PHP   9. Zend\ServiceManager\ServiceManager->get() /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/AbstractPluginManager.php:103
+[18-Jun-2014 16:18:59 Europe/Berlin] PHP  10. Zend\ServiceManager\ServiceManager->create() /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:504
+[18-Jun-2014 16:18:59 Europe/Berlin] PHP  11. Zend\ServiceManager\ServiceManager->doCreate() /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:572
+[18-Jun-2014 16:18:59 Europe/Berlin] PHP  12. Zend\ServiceManager\AbstractPluginManager->createFromInvokable() /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:616
+[18-Jun-2014 16:18:59 Europe/Berlin] PHP  13. Zend\Loader\StandardAutoloader->autoload() /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:0
+[18-Jun-2014 16:18:59 Europe/Berlin] PHP  14. Zend\Loader\StandardAutoloader->loadClass() /var/www/vendor/zendframework/zendframework/library/Zend/Loader/StandardAutoloader.php:215
+[18-Jun-2014 16:18:59 Europe/Berlin] PHP  15. include() /var/www/vendor/zendframework/zendframework/library/Zend/Loader/StandardAutoloader.php:304
+[18-Jun-2014 16:19:09 Europe/Berlin] PHP Fatal error:  Class 'User\Controller\AbstractActionController' not found in /var/www/module/User/src/User/Controller/AdminController.php on line 37
+[18-Jun-2014 16:19:09 Europe/Berlin] PHP Stack trace:
+[18-Jun-2014 16:19:09 Europe/Berlin] PHP   1. {main}() /var/www/public/index.php:0
+[18-Jun-2014 16:19:09 Europe/Berlin] PHP   2. Zend\Mvc\Application->run() /var/www/public/index.php:9
+[18-Jun-2014 16:19:09 Europe/Berlin] PHP   3. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:313
+[18-Jun-2014 16:19:09 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 16:19:09 Europe/Berlin] PHP   5. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 16:19:09 Europe/Berlin] PHP   6. Zend\Mvc\DispatchListener->onDispatch() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 16:19:09 Europe/Berlin] PHP   7. Zend\Mvc\Controller\ControllerManager->get() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/DispatchListener.php:97
+[18-Jun-2014 16:19:09 Europe/Berlin] PHP   8. Zend\ServiceManager\AbstractPluginManager->get() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/ControllerManager.php:137
+[18-Jun-2014 16:19:09 Europe/Berlin] PHP   9. Zend\ServiceManager\ServiceManager->get() /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/AbstractPluginManager.php:103
+[18-Jun-2014 16:19:09 Europe/Berlin] PHP  10. Zend\ServiceManager\ServiceManager->create() /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:504
+[18-Jun-2014 16:19:09 Europe/Berlin] PHP  11. Zend\ServiceManager\ServiceManager->doCreate() /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:572
+[18-Jun-2014 16:19:09 Europe/Berlin] PHP  12. Zend\ServiceManager\AbstractPluginManager->createFromInvokable() /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:616
+[18-Jun-2014 16:19:09 Europe/Berlin] PHP  13. Zend\Loader\StandardAutoloader->autoload() /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:0
+[18-Jun-2014 16:19:09 Europe/Berlin] PHP  14. Zend\Loader\StandardAutoloader->loadClass() /var/www/vendor/zendframework/zendframework/library/Zend/Loader/StandardAutoloader.php:215
+[18-Jun-2014 16:19:09 Europe/Berlin] PHP  15. include() /var/www/vendor/zendframework/zendframework/library/Zend/Loader/StandardAutoloader.php:304
+[18-Jun-2014 16:19:16 Europe/Berlin] PHP Fatal error:  Class 'User\Controller\AbstractActionController' not found in /var/www/module/User/src/User/Controller/AdminController.php on line 37
+[18-Jun-2014 16:19:16 Europe/Berlin] PHP Stack trace:
+[18-Jun-2014 16:19:16 Europe/Berlin] PHP   1. {main}() /var/www/public/index.php:0
+[18-Jun-2014 16:19:16 Europe/Berlin] PHP   2. Zend\Mvc\Application->run() /var/www/public/index.php:9
+[18-Jun-2014 16:19:16 Europe/Berlin] PHP   3. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:313
+[18-Jun-2014 16:19:16 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 16:19:16 Europe/Berlin] PHP   5. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 16:19:16 Europe/Berlin] PHP   6. Zend\Mvc\DispatchListener->onDispatch() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 16:19:16 Europe/Berlin] PHP   7. Zend\Mvc\Controller\ControllerManager->get() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/DispatchListener.php:97
+[18-Jun-2014 16:19:16 Europe/Berlin] PHP   8. Zend\ServiceManager\AbstractPluginManager->get() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/ControllerManager.php:137
+[18-Jun-2014 16:19:16 Europe/Berlin] PHP   9. Zend\ServiceManager\ServiceManager->get() /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/AbstractPluginManager.php:103
+[18-Jun-2014 16:19:16 Europe/Berlin] PHP  10. Zend\ServiceManager\ServiceManager->create() /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:504
+[18-Jun-2014 16:19:16 Europe/Berlin] PHP  11. Zend\ServiceManager\ServiceManager->doCreate() /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:572
+[18-Jun-2014 16:19:16 Europe/Berlin] PHP  12. Zend\ServiceManager\AbstractPluginManager->createFromInvokable() /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:616
+[18-Jun-2014 16:19:16 Europe/Berlin] PHP  13. Zend\Loader\StandardAutoloader->autoload() /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:0
+[18-Jun-2014 16:19:16 Europe/Berlin] PHP  14. Zend\Loader\StandardAutoloader->loadClass() /var/www/vendor/zendframework/zendframework/library/Zend/Loader/StandardAutoloader.php:215
+[18-Jun-2014 16:19:16 Europe/Berlin] PHP  15. include() /var/www/vendor/zendframework/zendframework/library/Zend/Loader/StandardAutoloader.php:304
+[18-Jun-2014 17:33:04 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Zend\ServiceManager\Exception\ServiceNotFoundException' with message 'Zend\ServiceManager\ServiceManager::get was unable to fetch or create an instance for BjyAuthorize\Config' in /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:529
+Stack trace:
+#0 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Module.php(41): Zend\ServiceManager\ServiceManager->get('BjyAuthorize\\Co...')
+#1 [internal function]: BjyAuthorize\Module->onBootstrap(Object(Zend\Mvc\MvcEvent))
+#2 /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php(468): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#3 /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php(207): Zend\EventManager\EventManager->triggerListeners('bootstrap', Object(Zend\Mvc\MvcEvent), Array)
+#4 /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php(156): Zend\EventManager\EventManager->trigger('bootstrap', Object(Zend\Mv in /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php on line 529
+[18-Jun-2014 17:35:34 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Zend\ServiceManager\Exception\ServiceNotFoundException' with message 'Zend\ServiceManager\ServiceManager::get was unable to fetch or create an instance for BjyAuthorize\Config' in /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:529
+Stack trace:
+#0 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Module.php(41): Zend\ServiceManager\ServiceManager->get('BjyAuthorize\\Co...')
+#1 [internal function]: BjyAuthorize\Module->onBootstrap(Object(Zend\Mvc\MvcEvent))
+#2 /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php(468): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#3 /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php(207): Zend\EventManager\EventManager->triggerListeners('bootstrap', Object(Zend\Mvc\MvcEvent), Array)
+#4 /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php(156): Zend\EventManager\EventManager->trigger('bootstrap', Object(Zend\Mv in /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php on line 529
+[18-Jun-2014 17:36:19 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Zend\ServiceManager\Exception\ServiceNotFoundException' with message 'Zend\ServiceManager\ServiceManager::get was unable to fetch or create an instance for BjyAuthorize\Config' in /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:529
+Stack trace:
+#0 /var/www/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Module.php(41): Zend\ServiceManager\ServiceManager->get('BjyAuthorize\\Co...')
+#1 [internal function]: BjyAuthorize\Module->onBootstrap(Object(Zend\Mvc\MvcEvent))
+#2 /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php(468): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#3 /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php(207): Zend\EventManager\EventManager->triggerListeners('bootstrap', Object(Zend\Mvc\MvcEvent), Array)
+#4 /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php(156): Zend\EventManager\EventManager->trigger('bootstrap', Object(Zend\Mv in /var/www/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php on line 529

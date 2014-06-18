@@ -22,3 +22,7 @@ a project of weltklugheit | ©2014 Heiner Bäumer
 vagrant up
 vagrant ssh
 composer install
+
+sudo php /vagrant/scripts/db/update.php
+
+sudo php /vagrant/public/index.php create user administrator <email>

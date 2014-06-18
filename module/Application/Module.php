@@ -27,6 +27,7 @@
 namespace Application;
 
 use Zend\Console\Adapter\AdapterInterface;
+use Zend\ModuleManager\Feature\ConsoleBannerProviderInterface;
 use Zend\ModuleManager\Feature\ConsoleUsageProviderInterface;
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
@@ -36,7 +37,7 @@ use Zend\Mvc\MvcEvent;
  *
  * @author heiner
  */
-class Module implements ConsoleUsageProviderInterface
+class Module implements ConsoleUsageProviderInterface, ConsoleBannerProviderInterface
 {
     public function onBootstrap(MvcEvent $e)
     {
@@ -66,4 +67,15 @@ class Module implements ConsoleUsageProviderInterface
             'create user <role> <email>' => 'create user <role> <email>',
         );
     }
+    public function getConsoleBanner(AdapterInterface $console)
+    {
+        return
+        "         _______   ____  ___   ___ ____  _   __\n".
+        "   _____/ ____/ | / / / / / | / (_) __ \/ | / /\n".
+        "  / ___/ __/ /  |/ / / / /  |/ / / / / /  |/ / \n".
+        " / /  / /___/ /|  / /_/ / /|  / / /_/ / /|  /  \n".
+        "/_/  /_____/_/ |_/\____/_/ |_/_/\____/_/ |_/   \n".
+        "a project by weltklugheit | ©2014 Heiner Bäumer";
+    }
+
 }
