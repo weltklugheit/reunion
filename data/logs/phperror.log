@@ -1503,3 +1503,268 @@ Stack trace:
 [17-Jun-2014 14:35:09 Europe/Berlin] PHP  14. ZendDeveloperTools\Listener\ToolbarListener->renderEntries() /var/www/vendor/zendframework/zend-developer-tools/src/ZendDeveloperTools/Listener/ToolbarListener.php:148
 [17-Jun-2014 14:35:09 Europe/Berlin] PHP  15. Zend\View\Renderer\PhpRenderer->render() /var/www/vendor/zendframework/zend-developer-tools/src/ZendDeveloperTools/Listener/ToolbarListener.php:221
 [17-Jun-2014 14:35:09 Europe/Berlin] PHP  16. include() /var/www/vendor/zendframework/zendframework/library/Zend/View/Renderer/PhpRenderer.php:506
+[18-Jun-2014 09:41:41 Europe/Berlin] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 18240326 bytes) in /var/www/vendor/zendframework/zendframework/library/Zend/View/Renderer/PhpRenderer.php on line 507
+[18-Jun-2014 09:41:41 Europe/Berlin] PHP Stack trace:
+[18-Jun-2014 09:41:41 Europe/Berlin] PHP   1. {main}() /var/www/public/index.php:0
+[18-Jun-2014 09:41:41 Europe/Berlin] PHP   2. Zend\Mvc\Application->run() /var/www/public/index.php:9
+[18-Jun-2014 09:41:41 Europe/Berlin] PHP   3. Zend\Mvc\Application->completeRequest() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:327
+[18-Jun-2014 09:41:41 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:353
+[18-Jun-2014 09:41:41 Europe/Berlin] PHP   5. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 09:41:41 Europe/Berlin] PHP   6. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 09:41:41 Europe/Berlin] PHP   7. ZendDeveloperTools\Listener\ProfilerListener->onFinish() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 09:41:41 Europe/Berlin] PHP   8. ZendDeveloperTools\Profiler->collect() /var/www/vendor/zendframework/zend-developer-tools/src/ZendDeveloperTools/Listener/ProfilerListener.php:107
+[18-Jun-2014 09:41:41 Europe/Berlin] PHP   9. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zend-developer-tools/src/ZendDeveloperTools/Profiler.php:215
+[18-Jun-2014 09:41:41 Europe/Berlin] PHP  10. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 09:41:41 Europe/Berlin] PHP  11. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 09:41:41 Europe/Berlin] PHP  12. ZendDeveloperTools\Listener\ToolbarListener->onCollected() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 09:41:41 Europe/Berlin] PHP  13. ZendDeveloperTools\Listener\ToolbarListener->injectToolbar() /var/www/vendor/zendframework/zend-developer-tools/src/ZendDeveloperTools/Listener/ToolbarListener.php:137
+[18-Jun-2014 09:41:41 Europe/Berlin] PHP  14. ZendDeveloperTools\Listener\ToolbarListener->renderEntries() /var/www/vendor/zendframework/zend-developer-tools/src/ZendDeveloperTools/Listener/ToolbarListener.php:148
+[18-Jun-2014 09:41:41 Europe/Berlin] PHP  15. Zend\View\Renderer\PhpRenderer->render() /var/www/vendor/zendframework/zend-developer-tools/src/ZendDeveloperTools/Listener/ToolbarListener.php:221
+[18-Jun-2014 09:41:41 Europe/Berlin] PHP  16. ob_get_clean() /var/www/vendor/zendframework/zendframework/library/Zend/View/Renderer/PhpRenderer.php:507
+[18-Jun-2014 10:17:26 Europe/Berlin] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 18249763 bytes) in /var/www/vendor/zendframework/zendframework/library/Zend/View/Renderer/PhpRenderer.php on line 507
+[18-Jun-2014 10:17:26 Europe/Berlin] PHP Stack trace:
+[18-Jun-2014 10:17:26 Europe/Berlin] PHP   1. {main}() /var/www/public/index.php:0
+[18-Jun-2014 10:17:26 Europe/Berlin] PHP   2. Zend\Mvc\Application->run() /var/www/public/index.php:9
+[18-Jun-2014 10:17:26 Europe/Berlin] PHP   3. Zend\Mvc\Application->completeRequest() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:327
+[18-Jun-2014 10:17:26 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:353
+[18-Jun-2014 10:17:26 Europe/Berlin] PHP   5. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 10:17:26 Europe/Berlin] PHP   6. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 10:17:26 Europe/Berlin] PHP   7. ZendDeveloperTools\Listener\ProfilerListener->onFinish() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 10:17:26 Europe/Berlin] PHP   8. ZendDeveloperTools\Profiler->collect() /var/www/vendor/zendframework/zend-developer-tools/src/ZendDeveloperTools/Listener/ProfilerListener.php:107
+[18-Jun-2014 10:17:26 Europe/Berlin] PHP   9. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zend-developer-tools/src/ZendDeveloperTools/Profiler.php:215
+[18-Jun-2014 10:17:26 Europe/Berlin] PHP  10. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 10:17:26 Europe/Berlin] PHP  11. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 10:17:26 Europe/Berlin] PHP  12. ZendDeveloperTools\Listener\ToolbarListener->onCollected() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 10:17:26 Europe/Berlin] PHP  13. ZendDeveloperTools\Listener\ToolbarListener->injectToolbar() /var/www/vendor/zendframework/zend-developer-tools/src/ZendDeveloperTools/Listener/ToolbarListener.php:137
+[18-Jun-2014 10:17:26 Europe/Berlin] PHP  14. ZendDeveloperTools\Listener\ToolbarListener->renderEntries() /var/www/vendor/zendframework/zend-developer-tools/src/ZendDeveloperTools/Listener/ToolbarListener.php:148
+[18-Jun-2014 10:17:26 Europe/Berlin] PHP  15. Zend\View\Renderer\PhpRenderer->render() /var/www/vendor/zendframework/zend-developer-tools/src/ZendDeveloperTools/Listener/ToolbarListener.php:221
+[18-Jun-2014 10:17:26 Europe/Berlin] PHP  16. ob_get_clean() /var/www/vendor/zendframework/zendframework/library/Zend/View/Renderer/PhpRenderer.php:507
+[18-Jun-2014 10:17:46 Europe/Berlin] PHP Notice:  Undefined variable: objects in /var/www/module/World/src/World/Controller/GalaxyController.php on line 124
+[18-Jun-2014 10:17:46 Europe/Berlin] PHP Stack trace:
+[18-Jun-2014 10:17:46 Europe/Berlin] PHP   1. {main}() /var/www/public/index.php:0
+[18-Jun-2014 10:17:46 Europe/Berlin] PHP   2. Zend\Mvc\Application->run() /var/www/public/index.php:9
+[18-Jun-2014 10:17:46 Europe/Berlin] PHP   3. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:313
+[18-Jun-2014 10:17:46 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 10:17:46 Europe/Berlin] PHP   5. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 10:17:46 Europe/Berlin] PHP   6. Zend\Mvc\DispatchListener->onDispatch() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 10:17:46 Europe/Berlin] PHP   7. Zend\Mvc\Controller\AbstractController->dispatch() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/DispatchListener.php:114
+[18-Jun-2014 10:17:46 Europe/Berlin] PHP   8. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/AbstractController.php:117
+[18-Jun-2014 10:17:46 Europe/Berlin] PHP   9. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 10:17:46 Europe/Berlin] PHP  10. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 10:17:46 Europe/Berlin] PHP  11. Zend\Mvc\Controller\AbstractActionController->onDispatch() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 10:17:46 Europe/Berlin] PHP  12. World\Controller\GalaxyController->newAction() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/AbstractActionController.php:83
+[18-Jun-2014 10:17:46 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in /var/www/module/World/view/world/galaxy/new.phtml on line 6
+[18-Jun-2014 10:17:46 Europe/Berlin] PHP Stack trace:
+[18-Jun-2014 10:17:46 Europe/Berlin] PHP   1. {main}() /var/www/public/index.php:0
+[18-Jun-2014 10:17:46 Europe/Berlin] PHP   2. Zend\Mvc\Application->run() /var/www/public/index.php:9
+[18-Jun-2014 10:17:46 Europe/Berlin] PHP   3. Zend\Mvc\Application->completeRequest() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:327
+[18-Jun-2014 10:17:46 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->trigger() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:352
+[18-Jun-2014 10:17:46 Europe/Berlin] PHP   5. Zend\EventManager\EventManager->triggerListeners() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 10:17:46 Europe/Berlin] PHP   6. call_user_func:{/var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 10:17:46 Europe/Berlin] PHP   7. Zend\Mvc\View\Http\DefaultRenderingStrategy->render() /var/www/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 10:17:46 Europe/Berlin] PHP   8. Zend\View\View->render() /var/www/vendor/zendframework/zendframework/library/Zend/Mvc/View/Http/DefaultRenderingStrategy.php:102
+[18-Jun-2014 10:17:46 Europe/Berlin] PHP   9. Zend\View\View->renderChildren() /var/www/vendor/zendframework/zendframework/library/Zend/View/View.php:198
+[18-Jun-2014 10:17:46 Europe/Berlin] PHP  10. Zend\View\View->render() /var/www/vendor/zendframework/zendframework/library/Zend/View/View.php:233
+[18-Jun-2014 10:17:46 Europe/Berlin] PHP  11. Zend\View\Renderer\PhpRenderer->render() /var/www/vendor/zendframework/zendframework/library/Zend/View/View.php:205
+[18-Jun-2014 10:17:46 Europe/Berlin] PHP  12. include() /var/www/vendor/zendframework/zendframework/library/Zend/View/Renderer/PhpRenderer.php:506
+[18-Jun-2014 10:20:58 Europe/Berlin] PHP Notice:  A non well formed numeric value encountered in /vagrant/scripts/db/update.php on line 137
+[18-Jun-2014 10:20:58 Europe/Berlin] PHP Stack trace:
+[18-Jun-2014 10:20:58 Europe/Berlin] PHP   1. {main}() /vagrant/scripts/db/update.php:0
+[18-Jun-2014 10:20:58 Europe/Berlin] PHP   2. updateDatabase() /vagrant/scripts/db/update.php:8
+[18-Jun-2014 10:20:58 Europe/Berlin] PHP   3. DbDeployPDO->deploy() /vagrant/scripts/db/update.php:82
+[18-Jun-2014 10:20:58 Europe/Berlin] PHP   4. Exception->__construct() /vagrant/scripts/db/update.php:137
+[18-Jun-2014 10:20:58 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message '42S02' in /vagrant/scripts/db/update.php:137
+Stack trace:
+#0 /vagrant/scripts/db/update.php(82): DbDeployPDO->deploy(2)
+#1 /vagrant/scripts/db/update.php(8): updateDatabase()
+#2 {main}
+  thrown in /vagrant/scripts/db/update.php on line 137
+[18-Jun-2014 10:33:09 Europe/Berlin] PHP Catchable fatal error:  Argument 1 passed to World\Entity\PlanetarySystem::setGalaxy() must be an instance of World\Entity\Galaxy, null given, called in /vagrant/module/World/src/World/Service/PlanetarySystemService.php on line 82 and defined in /vagrant/module/World/src/World/Entity/PlanetarySystem.php on line 97
+[18-Jun-2014 10:33:09 Europe/Berlin] PHP Stack trace:
+[18-Jun-2014 10:33:09 Europe/Berlin] PHP   1. {main}() /vagrant/public/index.php:0
+[18-Jun-2014 10:33:09 Europe/Berlin] PHP   2. Zend\Mvc\Application->run() /vagrant/public/index.php:9
+[18-Jun-2014 10:33:09 Europe/Berlin] PHP   3. Zend\EventManager\EventManager->trigger() /vagrant/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:313
+[18-Jun-2014 10:33:09 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->triggerListeners() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 10:33:09 Europe/Berlin] PHP   5. call_user_func:{/vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 10:33:09 Europe/Berlin] PHP   6. Zend\Mvc\DispatchListener->onDispatch() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 10:33:09 Europe/Berlin] PHP   7. Zend\Mvc\Controller\AbstractController->dispatch() /vagrant/vendor/zendframework/zendframework/library/Zend/Mvc/DispatchListener.php:114
+[18-Jun-2014 10:33:09 Europe/Berlin] PHP   8. Zend\EventManager\EventManager->trigger() /vagrant/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/AbstractController.php:117
+[18-Jun-2014 10:33:09 Europe/Berlin] PHP   9. Zend\EventManager\EventManager->triggerListeners() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 10:33:09 Europe/Berlin] PHP  10. call_user_func:{/vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 10:33:09 Europe/Berlin] PHP  11. Zend\Mvc\Controller\AbstractActionController->onDispatch() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 10:33:09 Europe/Berlin] PHP  12. World\Controller\ConsoleController->newAction() /vagrant/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/AbstractActionController.php:83
+[18-Jun-2014 10:33:09 Europe/Berlin] PHP  13. World\Service\PlanetarySystemService->createRandomPlanetarySystem() /vagrant/module/World/src/World/Controller/ConsoleController.php:100
+[18-Jun-2014 10:33:09 Europe/Berlin] PHP  14. World\Entity\PlanetarySystem->setGalaxy() /vagrant/module/World/src/World/Service/PlanetarySystemService.php:82
+[18-Jun-2014 10:35:48 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Zend\ServiceManager\Exception\ServiceNotFoundException' with message 'Zend\ServiceManager\ServiceManager::get was unable to fetch or create an instance for BjyAuthorize\Config' in /vagrant/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:529
+Stack trace:
+#0 /vagrant/vendor/bjyoungblood/bjy-authorize/src/BjyAuthorize/Module.php(41): Zend\ServiceManager\ServiceManager->get('BjyAuthorize\\Co...')
+#1 [internal function]: BjyAuthorize\Module->onBootstrap(Object(Zend\Mvc\MvcEvent))
+#2 /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php(468): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#3 /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php(207): Zend\EventManager\EventManager->triggerListeners('bootstrap', Object(Zend\Mvc\MvcEvent), Array)
+#4 /vagrant/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php(156): Zend\EventManager\EventManager->trigger('bootstrap', Object(Zend\Mv in /vagrant/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php on line 529
+[18-Jun-2014 10:46:50 Europe/Berlin] PHP Catchable fatal error:  Argument 1 passed to World\Entity\PlanetarySystem::setGalaxy() must be an instance of World\Entity\Galaxy, null given, called in /vagrant/module/World/src/World/Service/PlanetarySystemService.php on line 82 and defined in /vagrant/module/World/src/World/Entity/PlanetarySystem.php on line 97
+[18-Jun-2014 10:46:50 Europe/Berlin] PHP Stack trace:
+[18-Jun-2014 10:46:50 Europe/Berlin] PHP   1. {main}() /vagrant/public/index.php:0
+[18-Jun-2014 10:46:50 Europe/Berlin] PHP   2. Zend\Mvc\Application->run() /vagrant/public/index.php:9
+[18-Jun-2014 10:46:50 Europe/Berlin] PHP   3. Zend\EventManager\EventManager->trigger() /vagrant/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:313
+[18-Jun-2014 10:46:50 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->triggerListeners() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 10:46:50 Europe/Berlin] PHP   5. call_user_func:{/vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 10:46:50 Europe/Berlin] PHP   6. Zend\Mvc\DispatchListener->onDispatch() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 10:46:50 Europe/Berlin] PHP   7. Zend\Mvc\Controller\AbstractController->dispatch() /vagrant/vendor/zendframework/zendframework/library/Zend/Mvc/DispatchListener.php:114
+[18-Jun-2014 10:46:50 Europe/Berlin] PHP   8. Zend\EventManager\EventManager->trigger() /vagrant/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/AbstractController.php:117
+[18-Jun-2014 10:46:50 Europe/Berlin] PHP   9. Zend\EventManager\EventManager->triggerListeners() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 10:46:50 Europe/Berlin] PHP  10. call_user_func:{/vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 10:46:50 Europe/Berlin] PHP  11. Zend\Mvc\Controller\AbstractActionController->onDispatch() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 10:46:50 Europe/Berlin] PHP  12. World\Controller\ConsoleController->newAction() /vagrant/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/AbstractActionController.php:83
+[18-Jun-2014 10:46:50 Europe/Berlin] PHP  13. World\Service\PlanetarySystemService->createRandomPlanetarySystem() /vagrant/module/World/src/World/Controller/ConsoleController.php:100
+[18-Jun-2014 10:46:50 Europe/Berlin] PHP  14. World\Entity\PlanetarySystem->setGalaxy() /vagrant/module/World/src/World/Service/PlanetarySystemService.php:82
+[18-Jun-2014 10:58:39 Europe/Berlin] PHP Fatal error:  Call to undefined function Application\Controller\var_dumnp() in /vagrant/module/Application/src/Application/Controller/ConsoleController.php on line 48
+[18-Jun-2014 10:58:39 Europe/Berlin] PHP Stack trace:
+[18-Jun-2014 10:58:39 Europe/Berlin] PHP   1. {main}() /vagrant/public/index.php:0
+[18-Jun-2014 10:58:39 Europe/Berlin] PHP   2. Zend\Mvc\Application->run() /vagrant/public/index.php:9
+[18-Jun-2014 10:58:39 Europe/Berlin] PHP   3. Zend\EventManager\EventManager->trigger() /vagrant/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:313
+[18-Jun-2014 10:58:39 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->triggerListeners() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 10:58:39 Europe/Berlin] PHP   5. call_user_func:{/vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 10:58:39 Europe/Berlin] PHP   6. Zend\Mvc\DispatchListener->onDispatch() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 10:58:39 Europe/Berlin] PHP   7. Zend\Mvc\Controller\AbstractController->dispatch() /vagrant/vendor/zendframework/zendframework/library/Zend/Mvc/DispatchListener.php:114
+[18-Jun-2014 10:58:39 Europe/Berlin] PHP   8. Zend\EventManager\EventManager->trigger() /vagrant/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/AbstractController.php:117
+[18-Jun-2014 10:58:39 Europe/Berlin] PHP   9. Zend\EventManager\EventManager->triggerListeners() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 10:58:39 Europe/Berlin] PHP  10. call_user_func:{/vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 10:58:39 Europe/Berlin] PHP  11. Zend\Mvc\Controller\AbstractActionController->onDispatch() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 10:58:39 Europe/Berlin] PHP  12. Application\Controller\ConsoleController->createAdminAction() /vagrant/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/AbstractActionController.php:83
+[18-Jun-2014 11:41:26 Europe/Berlin] PHP Fatal error:  Class 'User\Controller\ConsoleController' not found in /vagrant/vendor/zendframework/zendframework/library/Zend/ServiceManager/AbstractPluginManager.php on line 170
+[18-Jun-2014 11:41:26 Europe/Berlin] PHP Stack trace:
+[18-Jun-2014 11:41:26 Europe/Berlin] PHP   1. {main}() /vagrant/public/index.php:0
+[18-Jun-2014 11:41:26 Europe/Berlin] PHP   2. Zend\Mvc\Application->run() /vagrant/public/index.php:9
+[18-Jun-2014 11:41:26 Europe/Berlin] PHP   3. Zend\EventManager\EventManager->trigger() /vagrant/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:313
+[18-Jun-2014 11:41:26 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->triggerListeners() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 11:41:26 Europe/Berlin] PHP   5. call_user_func:{/vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 11:41:26 Europe/Berlin] PHP   6. Zend\Mvc\DispatchListener->onDispatch() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 11:41:26 Europe/Berlin] PHP   7. Zend\Mvc\Controller\ControllerManager->get() /vagrant/vendor/zendframework/zendframework/library/Zend/Mvc/DispatchListener.php:97
+[18-Jun-2014 11:41:26 Europe/Berlin] PHP   8. Zend\ServiceManager\AbstractPluginManager->get() /vagrant/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/ControllerManager.php:137
+[18-Jun-2014 11:41:26 Europe/Berlin] PHP   9. Zend\ServiceManager\ServiceManager->get() /vagrant/vendor/zendframework/zendframework/library/Zend/ServiceManager/AbstractPluginManager.php:103
+[18-Jun-2014 11:41:26 Europe/Berlin] PHP  10. Zend\ServiceManager\ServiceManager->create() /vagrant/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:504
+[18-Jun-2014 11:41:26 Europe/Berlin] PHP  11. Zend\ServiceManager\ServiceManager->doCreate() /vagrant/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:572
+[18-Jun-2014 11:41:26 Europe/Berlin] PHP  12. Zend\ServiceManager\AbstractPluginManager->createFromInvokable() /vagrant/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:616
+[18-Jun-2014 11:41:37 Europe/Berlin] PHP Fatal error:  Class 'User\Controller\ConsoleController' not found in /vagrant/vendor/zendframework/zendframework/library/Zend/ServiceManager/AbstractPluginManager.php on line 170
+[18-Jun-2014 11:41:37 Europe/Berlin] PHP Stack trace:
+[18-Jun-2014 11:41:37 Europe/Berlin] PHP   1. {main}() /vagrant/public/index.php:0
+[18-Jun-2014 11:41:37 Europe/Berlin] PHP   2. Zend\Mvc\Application->run() /vagrant/public/index.php:9
+[18-Jun-2014 11:41:37 Europe/Berlin] PHP   3. Zend\EventManager\EventManager->trigger() /vagrant/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:313
+[18-Jun-2014 11:41:37 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->triggerListeners() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 11:41:37 Europe/Berlin] PHP   5. call_user_func:{/vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 11:41:37 Europe/Berlin] PHP   6. Zend\Mvc\DispatchListener->onDispatch() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 11:41:37 Europe/Berlin] PHP   7. Zend\Mvc\Controller\ControllerManager->get() /vagrant/vendor/zendframework/zendframework/library/Zend/Mvc/DispatchListener.php:97
+[18-Jun-2014 11:41:37 Europe/Berlin] PHP   8. Zend\ServiceManager\AbstractPluginManager->get() /vagrant/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/ControllerManager.php:137
+[18-Jun-2014 11:41:37 Europe/Berlin] PHP   9. Zend\ServiceManager\ServiceManager->get() /vagrant/vendor/zendframework/zendframework/library/Zend/ServiceManager/AbstractPluginManager.php:103
+[18-Jun-2014 11:41:37 Europe/Berlin] PHP  10. Zend\ServiceManager\ServiceManager->create() /vagrant/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:504
+[18-Jun-2014 11:41:37 Europe/Berlin] PHP  11. Zend\ServiceManager\ServiceManager->doCreate() /vagrant/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:572
+[18-Jun-2014 11:41:37 Europe/Berlin] PHP  12. Zend\ServiceManager\AbstractPluginManager->createFromInvokable() /vagrant/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:616
+[18-Jun-2014 11:42:41 Europe/Berlin] PHP Fatal error:  Class 'User\Controller\ConsoleController' not found in /vagrant/vendor/zendframework/zendframework/library/Zend/ServiceManager/AbstractPluginManager.php on line 170
+[18-Jun-2014 11:42:41 Europe/Berlin] PHP Stack trace:
+[18-Jun-2014 11:42:41 Europe/Berlin] PHP   1. {main}() /vagrant/public/index.php:0
+[18-Jun-2014 11:42:41 Europe/Berlin] PHP   2. Zend\Mvc\Application->run() /vagrant/public/index.php:9
+[18-Jun-2014 11:42:41 Europe/Berlin] PHP   3. Zend\EventManager\EventManager->trigger() /vagrant/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:313
+[18-Jun-2014 11:42:41 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->triggerListeners() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 11:42:41 Europe/Berlin] PHP   5. call_user_func:{/vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 11:42:41 Europe/Berlin] PHP   6. Zend\Mvc\DispatchListener->onDispatch() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 11:42:41 Europe/Berlin] PHP   7. Zend\Mvc\Controller\ControllerManager->get() /vagrant/vendor/zendframework/zendframework/library/Zend/Mvc/DispatchListener.php:97
+[18-Jun-2014 11:42:41 Europe/Berlin] PHP   8. Zend\ServiceManager\AbstractPluginManager->get() /vagrant/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/ControllerManager.php:137
+[18-Jun-2014 11:42:41 Europe/Berlin] PHP   9. Zend\ServiceManager\ServiceManager->get() /vagrant/vendor/zendframework/zendframework/library/Zend/ServiceManager/AbstractPluginManager.php:103
+[18-Jun-2014 11:42:41 Europe/Berlin] PHP  10. Zend\ServiceManager\ServiceManager->create() /vagrant/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:504
+[18-Jun-2014 11:42:41 Europe/Berlin] PHP  11. Zend\ServiceManager\ServiceManager->doCreate() /vagrant/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:572
+[18-Jun-2014 11:42:41 Europe/Berlin] PHP  12. Zend\ServiceManager\AbstractPluginManager->createFromInvokable() /vagrant/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:616
+[18-Jun-2014 12:12:30 Europe/Berlin] PHP Fatal error:  Call to a member function addRole() on a non-object in /vagrant/module/User/src/User/Controller/ConsoleController.php on line 102
+[18-Jun-2014 12:12:30 Europe/Berlin] PHP Stack trace:
+[18-Jun-2014 12:12:30 Europe/Berlin] PHP   1. {main}() /vagrant/public/index.php:0
+[18-Jun-2014 12:12:30 Europe/Berlin] PHP   2. Zend\Mvc\Application->run() /vagrant/public/index.php:9
+[18-Jun-2014 12:12:30 Europe/Berlin] PHP   3. Zend\EventManager\EventManager->trigger() /vagrant/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:313
+[18-Jun-2014 12:12:30 Europe/Berlin] PHP   4. Zend\EventManager\EventManager->triggerListeners() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 12:12:30 Europe/Berlin] PHP   5. call_user_func:{/vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 12:12:30 Europe/Berlin] PHP   6. Zend\Mvc\DispatchListener->onDispatch() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 12:12:30 Europe/Berlin] PHP   7. Zend\Mvc\Controller\AbstractController->dispatch() /vagrant/vendor/zendframework/zendframework/library/Zend/Mvc/DispatchListener.php:114
+[18-Jun-2014 12:12:30 Europe/Berlin] PHP   8. Zend\EventManager\EventManager->trigger() /vagrant/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/AbstractController.php:117
+[18-Jun-2014 12:12:30 Europe/Berlin] PHP   9. Zend\EventManager\EventManager->triggerListeners() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+[18-Jun-2014 12:12:30 Europe/Berlin] PHP  10. call_user_func:{/vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468}() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 12:12:30 Europe/Berlin] PHP  11. Zend\Mvc\Controller\AbstractActionController->onDispatch() /vagrant/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+[18-Jun-2014 12:12:30 Europe/Berlin] PHP  12. User\Controller\ConsoleController->createAdminAction() /vagrant/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/AbstractActionController.php:83
+[18-Jun-2014 12:45:59 Europe/Berlin] PHP Fatal error:  Cannot redeclare class User\User in /vagrant/module/User/src/User/Entity/User.php on line 24
+[18-Jun-2014 12:45:59 Europe/Berlin] PHP Stack trace:
+[18-Jun-2014 12:45:59 Europe/Berlin] PHP   1. {main}() /vagrant/vendor/doctrine/doctrine-module/bin/doctrine-module:0
+[18-Jun-2014 12:45:59 Europe/Berlin] PHP   2. include() /vagrant/vendor/doctrine/doctrine-module/bin/doctrine-module:4
+[18-Jun-2014 12:45:59 Europe/Berlin] PHP   3. Symfony\Component\Console\Application->run() /vagrant/vendor/doctrine/doctrine-module/bin/doctrine-module.php:52
+[18-Jun-2014 12:45:59 Europe/Berlin] PHP   4. Symfony\Component\Console\Application->doRun() /vagrant/vendor/symfony/console/Symfony/Component/Console/Application.php:124
+[18-Jun-2014 12:45:59 Europe/Berlin] PHP   5. Symfony\Component\Console\Application->doRunCommand() /vagrant/vendor/symfony/console/Symfony/Component/Console/Application.php:193
+[18-Jun-2014 12:45:59 Europe/Berlin] PHP   6. Symfony\Component\Console\Command\Command->run() /vagrant/vendor/symfony/console/Symfony/Component/Console/Application.php:887
+[18-Jun-2014 12:45:59 Europe/Berlin] PHP   7. Doctrine\ORM\Tools\Console\Command\SchemaTool\AbstractCommand->execute() /vagrant/vendor/symfony/console/Symfony/Component/Console/Command/Command.php:252
+[18-Jun-2014 12:45:59 Europe/Berlin] PHP   8. Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory->getAllMetadata() /vagrant/vendor/doctrine/orm/lib/Doctrine/ORM/Tools/Console/Command/SchemaTool/AbstractCommand.php:59
+[18-Jun-2014 12:45:59 Europe/Berlin] PHP   9. Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory->getMetadataFor() /vagrant/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php:114
+[18-Jun-2014 12:45:59 Europe/Berlin] PHP  10. Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory->loadMetadata() /vagrant/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php:211
+[18-Jun-2014 12:45:59 Europe/Berlin] PHP  11. Doctrine\ORM\Mapping\ClassMetadataFactory->doLoadMetadata() /vagrant/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php:318
+[18-Jun-2014 12:45:59 Europe/Berlin] PHP  12. Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata() /vagrant/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php:178
+[18-Jun-2014 12:45:59 Europe/Berlin] PHP  13. Doctrine\ORM\Mapping\ClassMetadataInfo->validateAssociations() /vagrant/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php:199
+[18-Jun-2014 12:45:59 Europe/Berlin] PHP  14. Doctrine\Common\ClassLoader::classExists() /vagrant/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataInfo.php:952
+[18-Jun-2014 12:45:59 Europe/Berlin] PHP  15. Zend\Loader\StandardAutoloader->autoload() /vagrant/vendor/doctrine/common/lib/Doctrine/Common/ClassLoader.php:245
+[18-Jun-2014 12:45:59 Europe/Berlin] PHP  16. Zend\Loader\StandardAutoloader->loadClass() /vagrant/vendor/zendframework/zendframework/library/Zend/Loader/StandardAutoloader.php:215
+[18-Jun-2014 12:45:59 Europe/Berlin] PHP  17. include() /vagrant/vendor/zendframework/zendframework/library/Zend/Loader/StandardAutoloader.php:304
+[18-Jun-2014 12:46:01 Europe/Berlin] PHP Fatal error:  Cannot redeclare class User\User in /vagrant/module/User/src/User/Entity/User.php on line 24
+[18-Jun-2014 12:46:01 Europe/Berlin] PHP Stack trace:
+[18-Jun-2014 12:46:01 Europe/Berlin] PHP   1. {main}() /vagrant/vendor/doctrine/doctrine-module/bin/doctrine-module:0
+[18-Jun-2014 12:46:01 Europe/Berlin] PHP   2. include() /vagrant/vendor/doctrine/doctrine-module/bin/doctrine-module:4
+[18-Jun-2014 12:46:01 Europe/Berlin] PHP   3. Symfony\Component\Console\Application->run() /vagrant/vendor/doctrine/doctrine-module/bin/doctrine-module.php:52
+[18-Jun-2014 12:46:01 Europe/Berlin] PHP   4. Symfony\Component\Console\Application->doRun() /vagrant/vendor/symfony/console/Symfony/Component/Console/Application.php:124
+[18-Jun-2014 12:46:01 Europe/Berlin] PHP   5. Symfony\Component\Console\Application->doRunCommand() /vagrant/vendor/symfony/console/Symfony/Component/Console/Application.php:193
+[18-Jun-2014 12:46:01 Europe/Berlin] PHP   6. Symfony\Component\Console\Command\Command->run() /vagrant/vendor/symfony/console/Symfony/Component/Console/Application.php:887
+[18-Jun-2014 12:46:01 Europe/Berlin] PHP   7. Doctrine\ORM\Tools\Console\Command\ValidateSchemaCommand->execute() /vagrant/vendor/symfony/console/Symfony/Component/Console/Command/Command.php:252
+[18-Jun-2014 12:46:01 Europe/Berlin] PHP   8. Doctrine\ORM\Tools\SchemaValidator->validateMapping() /vagrant/vendor/doctrine/orm/lib/Doctrine/ORM/Tools/Console/Command/ValidateSchemaCommand.php:62
+[18-Jun-2014 12:46:01 Europe/Berlin] PHP   9. Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory->getAllMetadata() /vagrant/vendor/doctrine/orm/lib/Doctrine/ORM/Tools/SchemaValidator.php:69
+[18-Jun-2014 12:46:01 Europe/Berlin] PHP  10. Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory->getMetadataFor() /vagrant/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php:114
+[18-Jun-2014 12:46:01 Europe/Berlin] PHP  11. Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory->loadMetadata() /vagrant/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php:211
+[18-Jun-2014 12:46:01 Europe/Berlin] PHP  12. Doctrine\ORM\Mapping\ClassMetadataFactory->doLoadMetadata() /vagrant/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php:318
+[18-Jun-2014 12:46:01 Europe/Berlin] PHP  13. Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata() /vagrant/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php:178
+[18-Jun-2014 12:46:01 Europe/Berlin] PHP  14. Doctrine\ORM\Mapping\ClassMetadataInfo->validateAssociations() /vagrant/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php:199
+[18-Jun-2014 12:46:01 Europe/Berlin] PHP  15. Doctrine\Common\ClassLoader::classExists() /vagrant/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataInfo.php:952
+[18-Jun-2014 12:46:01 Europe/Berlin] PHP  16. Zend\Loader\StandardAutoloader->autoload() /vagrant/vendor/doctrine/common/lib/Doctrine/Common/ClassLoader.php:245
+[18-Jun-2014 12:46:01 Europe/Berlin] PHP  17. Zend\Loader\StandardAutoloader->loadClass() /vagrant/vendor/zendframework/zendframework/library/Zend/Loader/StandardAutoloader.php:215
+[18-Jun-2014 12:46:01 Europe/Berlin] PHP  18. include() /vagrant/vendor/zendframework/zendframework/library/Zend/Loader/StandardAutoloader.php:304
+[18-Jun-2014 12:46:01 Europe/Berlin] PHP Notice:  Undefined index: Mapping in /vagrant/scripts/db/update.php on line 49
+[18-Jun-2014 12:46:01 Europe/Berlin] PHP Stack trace:
+[18-Jun-2014 12:46:01 Europe/Berlin] PHP   1. {main}() /vagrant/scripts/db/update.php:0
+[18-Jun-2014 12:46:01 Europe/Berlin] PHP   2. newDeltascript() /vagrant/scripts/db/update.php:9
+[18-Jun-2014 12:46:01 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message 'mapping not ok' in /vagrant/scripts/db/update.php:50
+Stack trace:
+#0 /vagrant/scripts/db/update.php(9): newDeltascript()
+#1 {main}
+  thrown in /vagrant/scripts/db/update.php on line 50
+[18-Jun-2014 12:46:41 Europe/Berlin] PHP Fatal error:  Cannot redeclare class User\User in /vagrant/module/User/src/User/Entity/User.php on line 24
+[18-Jun-2014 12:46:41 Europe/Berlin] PHP Stack trace:
+[18-Jun-2014 12:46:41 Europe/Berlin] PHP   1. {main}() /vagrant/vendor/doctrine/doctrine-module/bin/doctrine-module:0
+[18-Jun-2014 12:46:41 Europe/Berlin] PHP   2. include() /vagrant/vendor/doctrine/doctrine-module/bin/doctrine-module:4
+[18-Jun-2014 12:46:41 Europe/Berlin] PHP   3. Symfony\Component\Console\Application->run() /vagrant/vendor/doctrine/doctrine-module/bin/doctrine-module.php:52
+[18-Jun-2014 12:46:41 Europe/Berlin] PHP   4. Symfony\Component\Console\Application->doRun() /vagrant/vendor/symfony/console/Symfony/Component/Console/Application.php:124
+[18-Jun-2014 12:46:41 Europe/Berlin] PHP   5. Symfony\Component\Console\Application->doRunCommand() /vagrant/vendor/symfony/console/Symfony/Component/Console/Application.php:193
+[18-Jun-2014 12:46:41 Europe/Berlin] PHP   6. Symfony\Component\Console\Command\Command->run() /vagrant/vendor/symfony/console/Symfony/Component/Console/Application.php:887
+[18-Jun-2014 12:46:41 Europe/Berlin] PHP   7. Doctrine\ORM\Tools\Console\Command\ValidateSchemaCommand->execute() /vagrant/vendor/symfony/console/Symfony/Component/Console/Command/Command.php:252
+[18-Jun-2014 12:46:41 Europe/Berlin] PHP   8. Doctrine\ORM\Tools\SchemaValidator->validateMapping() /vagrant/vendor/doctrine/orm/lib/Doctrine/ORM/Tools/Console/Command/ValidateSchemaCommand.php:62
+[18-Jun-2014 12:46:41 Europe/Berlin] PHP   9. Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory->getAllMetadata() /vagrant/vendor/doctrine/orm/lib/Doctrine/ORM/Tools/SchemaValidator.php:69
+[18-Jun-2014 12:46:41 Europe/Berlin] PHP  10. Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory->getMetadataFor() /vagrant/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php:114
+[18-Jun-2014 12:46:41 Europe/Berlin] PHP  11. Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory->loadMetadata() /vagrant/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php:211
+[18-Jun-2014 12:46:41 Europe/Berlin] PHP  12. Doctrine\ORM\Mapping\ClassMetadataFactory->doLoadMetadata() /vagrant/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php:318
+[18-Jun-2014 12:46:41 Europe/Berlin] PHP  13. Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata() /vagrant/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php:178
+[18-Jun-2014 12:46:41 Europe/Berlin] PHP  14. Doctrine\ORM\Mapping\ClassMetadataInfo->validateAssociations() /vagrant/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php:199
+[18-Jun-2014 12:46:41 Europe/Berlin] PHP  15. Doctrine\Common\ClassLoader::classExists() /vagrant/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataInfo.php:952
+[18-Jun-2014 12:46:41 Europe/Berlin] PHP  16. Zend\Loader\StandardAutoloader->autoload() /vagrant/vendor/doctrine/common/lib/Doctrine/Common/ClassLoader.php:245
+[18-Jun-2014 12:46:41 Europe/Berlin] PHP  17. Zend\Loader\StandardAutoloader->loadClass() /vagrant/vendor/zendframework/zendframework/library/Zend/Loader/StandardAutoloader.php:215
+[18-Jun-2014 12:46:41 Europe/Berlin] PHP  18. include() /vagrant/vendor/zendframework/zendframework/library/Zend/Loader/StandardAutoloader.php:304
+[18-Jun-2014 12:49:53 Europe/Berlin] PHP Notice:  A non well formed numeric value encountered in /vagrant/scripts/db/update.php on line 137
+[18-Jun-2014 12:49:53 Europe/Berlin] PHP Stack trace:
+[18-Jun-2014 12:49:53 Europe/Berlin] PHP   1. {main}() /vagrant/scripts/db/update.php:0
+[18-Jun-2014 12:49:53 Europe/Berlin] PHP   2. updateDatabase() /vagrant/scripts/db/update.php:8
+[18-Jun-2014 12:49:53 Europe/Berlin] PHP   3. DbDeployPDO->deploy() /vagrant/scripts/db/update.php:82
+[18-Jun-2014 12:49:53 Europe/Berlin] PHP   4. Exception->__construct() /vagrant/scripts/db/update.php:137
+[18-Jun-2014 12:49:53 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message '42S02' in /vagrant/scripts/db/update.php:137
+Stack trace:
+#0 /vagrant/scripts/db/update.php(82): DbDeployPDO->deploy(2)
+#1 /vagrant/scripts/db/update.php(8): updateDatabase()
+#2 {main}
+  thrown in /vagrant/scripts/db/update.php on line 137

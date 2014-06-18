@@ -26,6 +26,8 @@
 
 namespace Application;
 
+use Zend\Console\Adapter\AdapterInterface;
+use Zend\ModuleManager\Feature\ConsoleUsageProviderInterface;
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
 
@@ -34,7 +36,7 @@ use Zend\Mvc\MvcEvent;
  *
  * @author heiner
  */
-class Module
+class Module implements ConsoleUsageProviderInterface
 {
     public function onBootstrap(MvcEvent $e)
     {
@@ -56,6 +58,12 @@ class Module
                     __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
                 ),
             ),
+        );
+    }
+    public function getConsoleUsage(AdapterInterface $console)
+    {
+        return array(
+            'create user <role> <email>' => 'create user <role> <email>',
         );
     }
 }

@@ -1,44 +1,25 @@
 <?php
-
-/*
- * The MIT License
+/**
+ * BjyAuthorize Module (https://github.com/bjyoungblood/BjyAuthorize)
  *
- * Copyright 2014 heiner.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
+ * @link https://github.com/bjyoungblood/BjyAuthorize for the canonical source repository
+ * @license http://framework.zend.com/license/new-bsd New BSD License
  */
-
+ 
 namespace User\Entity;
 
-use BjyAuthorize\Provider\Rule\ProviderInterface;
+use BjyAuthorize\Provider\Role\ProviderInterface;
 use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use ZfcUser\Entity\UserInterface;
 
 /**
- * Description of User
+ * An example of how to implement a role aware user entity.
  *
  * @ORM\Entity
  * @ORM\Table(name="users")
- * 
- * @author heiner
+ *
+ * @author Tom Oram <tom@scl.co.uk>
  */
 class User implements UserInterface, ProviderInterface
 {
@@ -78,11 +59,10 @@ class User implements UserInterface, ProviderInterface
      * @var int
      */
     protected $state;
-    
 
     /**
-     * @var Collection
-     * @ORM\ManyToMany(targetEntity="Role")
+     * @var \Doctrine\Common\Collections\Collection
+     * @ORM\ManyToMany(targetEntity="User\Entity\Role")
      * @ORM\JoinTable(name="user_role_linker",
      *      joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")},
      *      inverseJoinColumns={@ORM\JoinColumn(name="role_id", referencedColumnName="id")}
@@ -251,12 +231,4 @@ class User implements UserInterface, ProviderInterface
     {
         $this->roles[] = $role;
     }
-    
-    public function getRules()
-    {
-        
-    }
-
-    
-
 }

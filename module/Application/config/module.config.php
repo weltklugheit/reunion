@@ -25,6 +25,7 @@
  */
 
 return array(
+    
     'router' => array(
         'routes' => array(
             'home' => array(
@@ -65,6 +66,7 @@ return array(
             ),
         ),
     ),
+    
     'service_manager' => array(
         'invokables' => array(
             'Application\Service\Application' => 'Application\Service\ApplicationService',
@@ -90,7 +92,7 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Application\Controller\Index' => 'Application\Controller\IndexController'
+            'Application\Controller\Index' => 'Application\Controller\IndexController',
         ),
     ),
     'view_manager' => array(
@@ -107,13 +109,6 @@ return array(
         ),
         'template_path_stack' => array(
             __DIR__ . '/../view',
-        ),
-    ),
-    // Placeholder for console routes
-    'console' => array(
-        'router' => array(
-            'routes' => array(
-            ),
         ),
     ),
 );

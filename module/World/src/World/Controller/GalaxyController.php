@@ -82,45 +82,46 @@ class GalaxyController extends AbstractActionController
 
     public function newAction()
     {
-        $applicationService = $this->getServiceLocator()->get('Application\Service\Application');
-        /* @var $applicationService ApplicationService */
-        $galaxyService = $this->getServiceLocator()->get('World\Service\Galaxy');
-        /* @var $galaxyService \World\Service\GalaxyService */
-//        $galaxy = $galaxyService->createRandomGalaxy();
-//        $this->getEntityManager()->persist($galaxy);
+        echo 'new';
+//        $applicationService = $this->getServiceLocator()->get('Application\Service\Application');
+//        /* @var $applicationService ApplicationService */
+//        $galaxyService = $this->getServiceLocator()->get('World\Service\Galaxy');
+//        /* @var $galaxyService \World\Service\GalaxyService */
+////        $galaxy = $galaxyService->createRandomGalaxy();
+////        $this->getEntityManager()->persist($galaxy);
+////        $this->getEntityManager()->flush();
+//        $galaxy = $this->getEntityManager()->find('World\Entity\Galaxy', 1);
+//
+//
+//        //$this->getEntityManager()->persist($galaxy);
+//        $planetarySystemService = $this->getServiceLocator()->get('World\Service\PlanetarySystem');
+//        /* @var $planetarySystemService \World\Service\PlanetarySystemService */
+//
+//        for ($index = 0; $index < 10; $index++) {
+//            $planetarySystem = $planetarySystemService->createRandomPlanetarySystem($galaxy);
+//            /* @var $planetarySystem \World\Entity\StarSystem */
+//
+//
+//            $this->getEntityManager()->persist($planetarySystem);
+//            $this->getEntityManager()->flush();
+//        }
+//
+//
+//        $planetarySystem = $planetarySystemService->createRandomPlanetarySystem($galaxy);
+//        /* @var $planetarySystem \World\Entity\StarSystem */
+//
+//
+//        $this->getEntityManager()->persist($planetarySystem);
 //        $this->getEntityManager()->flush();
-        $galaxy = $this->getEntityManager()->find('World\Entity\Galaxy', 1);
-
-
-        //$this->getEntityManager()->persist($galaxy);
-        $planetarySystemService = $this->getServiceLocator()->get('World\Service\PlanetarySystem');
-        /* @var $planetarySystemService \World\Service\PlanetarySystemService */
-
-        for ($index = 0; $index < 10; $index++) {
-            $planetarySystem = $planetarySystemService->createRandomPlanetarySystem($galaxy);
-            /* @var $planetarySystem \World\Entity\StarSystem */
-
-
-            $this->getEntityManager()->persist($planetarySystem);
-            $this->getEntityManager()->flush();
-        }
-
-
-        $planetarySystem = $planetarySystemService->createRandomPlanetarySystem($galaxy);
-        /* @var $planetarySystem \World\Entity\StarSystem */
-
-
-        $this->getEntityManager()->persist($planetarySystem);
-        $this->getEntityManager()->flush();
-
-
-        $galaxyService->createMap($galaxy);
-        
-        
-
-        $objects = $this->getEntityManager()->getRepository('World\Entity\StarSystem')->findAll();
+//
+//
+//        $galaxyService->createMap($galaxy);
+//        
+//        
+//
+//        $objects = $this->getEntityManager()->getRepository('World\Entity\StarSystem')->findAll();
         return array(
-            'objects' => $objects,
+            
         );
     }
 

@@ -34,4 +34,26 @@ return array(
             ),
         ),
     ),
+     'console'  => array(
+        'router' => array(
+            'routes' => array(
+                'create-admin' => array(
+                    'type'    => 'simple',
+                    'options' => array(
+                        'route'    => 'create user <role> <email>',
+                        'defaults' => array(
+                            'controller' => 'User\Controller\Console',
+                            'action'     => 'create-admin',
+                        ),
+                    ),
+                )
+            )
+        )
+    ),
+    'controllers' => array(
+        'invokables' => array(
+            'User\Controller\Console'=> 'User\Controller\ConsoleController'
+        ),
+    ),
+
 );
