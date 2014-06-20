@@ -23,6 +23,13 @@ vagrant up
 vagrant ssh
 composer install
 
+bower install
+
+npm install
+
+grunt install
+
+
 sudo php /vagrant/scripts/db/update.php
 
 sudo php /vagrant/public/index.php create user administrator <email>

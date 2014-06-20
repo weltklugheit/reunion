@@ -1,0 +1,22 @@
+{
+  "name": "reunion",
+  "authors": [
+    "Heiner Bäumer <hbaeumer@googlemail.com>"
+  ],
+"dependencies": {
+    "bootstrap-sass-official": "*",
+    "font-awesome": "*",
+    "jquery": "*",
+    "angular": "*",
+    "angular-ui-bootstrap": "*"
+  },
+  "description": "reunion",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
