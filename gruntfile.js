@@ -10,13 +10,13 @@ module.exports = function(grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: 'vendor/bower_components/angular/',
+                        cwd: 'bower_components/angular/',
                         src: ['./angular.min.js'],
                         dest: 'public/js/libs'
                     },
                     {
                         expand: true,
-                        cwd: 'vendor/bower_components/bootstrap-sass-official/vendor/assets/stylesheets',
+                        cwd: 'bower_components/bootstrap-sass-official/vendor/assets/stylesheets',
                         src: ['./**/**'],
                         dest: 'public/sass'
                     },
@@ -49,7 +49,7 @@ module.exports = function(grunt) {
         watch: {
             sass: {
                 files: ['public/sass/**/*.scss'],
-                tasks: ['compass','copy:deploy']
+                tasks: ['compass:dev']
             },
         },
         uglify: {
@@ -76,6 +76,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('test', ['copy:dev']);
     grunt.registerTask('dev', ['copy']);
+    grunt.registerTask('holla', ['watch']);
     grunt.registerTask('default', ['copy','watch']);
     grunt.registerTask('install',['copy:dev', 'compass:dev']);
     grunt.registerTask('update', ['copy:dev', 'compass:dev', 'uglify']);

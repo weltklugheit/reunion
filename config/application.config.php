@@ -14,6 +14,8 @@ return array(
         'World',
         'Species',
         'Base',
+        'CMS',
+        'Bootstrap',
         'Admin',
     ),
     'module_listener_options' => array(

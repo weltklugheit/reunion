@@ -69,6 +69,13 @@ class User implements UserInterface, ProviderInterface
      * )
      */
     protected $roles;
+    
+    /**
+     *
+     * @var \CMS\Entity\Post[]
+     * @ORM\OneToMany(targetEntity="CMS\Entity\Post", mappedBy="author", cascade={"persist"})
+     */
+    protected $posts;
 
     /**
      * Initialies the roles variable.
