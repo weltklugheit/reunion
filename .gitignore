@@ -21,6 +21,14 @@ vendor/*
 composer.lock
 
 ### Node ###
+
+### Sass ###
+.sass-cache
+
+
+### Bower ###
+bower_components
+
 # Logs
 logs
 *.log

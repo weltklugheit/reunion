@@ -10,21 +10,21 @@ module.exports = function(grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: 'vendor/bower_components/angluar/',
+                        cwd: 'vendor/bower_components/angular/',
                         src: ['./angular.min.js'],
-                        dest: 'frontenddev/libs'
+                        dest: 'public/js/libs'
                     },
                     {
                         expand: true,
-                        cwd: 'bower_components/bootstrap-sass-official/vendor/assets/stylesheets',
+                        cwd: 'vendor/bower_components/bootstrap-sass-official/vendor/assets/stylesheets',
                         src: ['./**/**'],
-                        dest: 'frontenddev/sass/'
+                        dest: 'public/sass'
                     },
                     {
                         expand: true,
                         cwd: 'bower_components/font-awesome/scss/',
                         src: ['./**/**'],
-                        dest: 'frontenddev/sass/font-awesome'
+                        dest: 'public/sass/font-awesome'
                     },
                     {
                         expand: true,
@@ -34,23 +34,12 @@ module.exports = function(grunt) {
                     }
                 ]
             },
-            deploy: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: 'frontenddev/styles/',
-                        src: ['./style.css'],
-                        flatten: true,
-                        dest: 'public/css'
-                    },
-                ]
-            },
         },
         compass: {
             dev: {
                 options: {
-                    sassDir: ['frontenddev/sass'],
-                    cssDir: ['frontenddev/styles'],
+                    sassDir: ['public/sass'],
+                    cssDir: ['public/css'],
                     environment: 'production',
                     outputStyle: 'compressed',
                     noLineComments: true,
@@ -59,7 +48,7 @@ module.exports = function(grunt) {
         },
         watch: {
             sass: {
-                files: ['frontenddev/sass/**/*.scss'],
+                files: ['public/sass/**/*.scss'],
                 tasks: ['compass','copy:deploy']
             },
         },
@@ -85,9 +74,10 @@ module.exports = function(grunt) {
 
     // TASKS =====================================/
 
+    grunt.registerTask('test', ['copy:dev']);
     grunt.registerTask('dev', ['copy']);
     grunt.registerTask('default', ['copy','watch']);
-    grunt.registerTask('install',['copy:dev', 'compass:dev', 'copy:deploy']);
-    grunt.registerTask('update', ['copy:dev', 'compass:dev', 'uglify', 'copy:deploy']);
+    grunt.registerTask('install',['copy:dev', 'compass:dev']);
+    grunt.registerTask('update', ['copy:dev', 'compass:dev', 'uglify']);
 
 };
