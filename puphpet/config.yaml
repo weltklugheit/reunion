@@ -91,7 +91,7 @@ apache:
             servername: reunion.dev
             serveraliases:
                 - www.reunion.dev
-            docroot: /var/www/public
+            docroot: /var/www/src/public
             port: '80'
             setenv:
                 - 'APP_ENV dev'
@@ -106,7 +106,7 @@ apache:
             ssl_key: ''
             ssl_chain: ''
             ssl_certs_dir: ''
-            logroot: '/var/www/data/logs/'
+            logroot: '/var/www/src/data/logs/'
     mod_pagespeed: 0
     mod_spdy: 0
 nginx:
@@ -145,7 +145,7 @@ php:
         error_reporting: '-1'
         log_errors: '1'
         track_errors: '1'
-        error_log: '/var/www/data/logs/phperror.log'
+        error_log: '/var/www/src/data/logs/phperror.log'
         session.save_path: /var/lib/php/session
     timezone: Europe/Berlin
 xdebug:
