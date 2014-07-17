@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit bootstrap="module/Application/PHPUnitBootstrap.php" colors="true">
+    <testsuites>
+        <testsuite name="Application">
+            <directory>module/Application/tests/ApplicationTest</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <blacklist>
+            <directory>vendor</directory>
+        </blacklist>
+    </filter>
+</phpunit>
