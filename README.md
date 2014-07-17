@@ -7,6 +7,8 @@
 a project of weltklugheit | ©2014 Heiner Bäumer
 ```
 
+[![Build Status](https://travis-ci.org/weltklugheit/reunion.svg?branch=master)](https://travis-ci.org/weltklugheit/reunion)
+
 # rENUNiON
 
 ## Development Installation
