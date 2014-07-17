@@ -190,7 +190,7 @@ mariadb:
     databases: {  }
     version: '10.0'
 mongodb:
-    install: '1'
+    install: '0'
     settings:
         auth: 1
         port: '27017'
