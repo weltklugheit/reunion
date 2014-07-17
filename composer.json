@@ -12,8 +12,5 @@
     },
     "require-dev": {
         "zendframework/zend-developer-tools": "dev-master"
-    },
-    "config": {
-        "vendor-dir":"src/vendor"
     }
 }
