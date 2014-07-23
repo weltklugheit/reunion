@@ -62,5 +62,4 @@ class Galaxy extends AstronomicalObject implements GalaxyInterface
     {
         $this->planetarySystems = $planetarySystems;
     }
-
 }

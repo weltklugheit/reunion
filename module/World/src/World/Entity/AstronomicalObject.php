@@ -25,6 +25,7 @@
  */
 
 namespace World\Entity;
+
 use Doctrine\ORM\Mapping as ORM;
 use Zend\Form\Annotation;
 
@@ -86,5 +87,4 @@ class AstronomicalObject extends \Application\Entity\ObjectEntity
     {
         $this->name = $name;
     }
-
 }

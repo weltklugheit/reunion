@@ -65,5 +65,4 @@ class Module implements ConsoleUsageProviderInterface
             'galaxy generate planetarySystems' => 'create galaxy',
         );
     }
-
 }

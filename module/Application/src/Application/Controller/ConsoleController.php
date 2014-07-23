@@ -103,5 +103,4 @@ class ConsoleController extends AbstractActionController
         // Return the password
         return $password;
     }
-
 }

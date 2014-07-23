@@ -96,7 +96,10 @@ class Module
 
         $match      = $e->getRouteMatch();
         $controller = $e->getTarget();
-        if (!$match instanceof RouteMatch || 0 !== strpos($match->getMatchedRouteName(), 'admin') || $controller->getEvent()->getResult()->terminate()
+        if (
+            !$match instanceof RouteMatch || 
+            0 !== strpos($match->getMatchedRouteName(), 'admin') ||
+            $controller->getEvent()->getResult()->terminate()
         ) {
             return;
         }
@@ -104,5 +107,4 @@ class Module
         $layout = $config['admin']['admin_layout_template'];
         $controller->layout($layout);
     }
-
 }

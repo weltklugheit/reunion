@@ -278,5 +278,4 @@ class Post extends ObjectEntity
 
         return $this;
     }
-
 }

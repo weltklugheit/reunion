@@ -59,12 +59,11 @@ class StarSystemService
         $starSystem = new StarSystem();
         $starSystem->setPlanetarySystem($planetarySystem);
         $starSystem->setName($this->nameService->createName());
-        $stars =  rand (1,3);
+        $stars =  rand(1, 3);
         for ($index = 0; $index < $stars; $index++) {
             $starSystem->addStar($this->starService->createRandomStar($starSystem));
         }
 
         return $starSystem;
     }
-
 }

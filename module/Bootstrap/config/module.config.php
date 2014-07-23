@@ -32,7 +32,10 @@ return array(
     ),
     'view_manager' => array(
         'template_map' => array(
-            'partial/bootstrap/form-horizontal-form-group' => realpath(__DIR__ . '/../view/partial/form-horizontal-form-group.php'),
+            'partial/bootstrap/form-horizontal-form-group' => 
+            realpath(
+                __DIR__ . '/../view/partial/form-horizontal-form-group.php'
+            ),
         ),
         'template_path_stack' => array(
             __DIR__ . '/../view'

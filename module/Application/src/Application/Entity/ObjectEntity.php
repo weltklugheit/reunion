@@ -90,5 +90,4 @@ abstract class ObjectEntity implements ArraySerializableInterface
     {
         return $mode . StaticFilter::execute($key, 'wordunderscoretocamelcase');
     }
-
 }

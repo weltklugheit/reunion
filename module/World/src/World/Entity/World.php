@@ -110,5 +110,4 @@ class World
     {
         $this->owner = $owner;
     }
-
 }

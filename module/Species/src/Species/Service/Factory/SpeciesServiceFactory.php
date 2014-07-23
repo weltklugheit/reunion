@@ -46,5 +46,4 @@ class SpeciesServiceFactory implements FactoryInterface
         return new SpeciesService($repository, $nameService);
 
     }
-
 }

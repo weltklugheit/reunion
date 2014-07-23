@@ -126,5 +126,4 @@ class GalaxyController extends AbstractActionController
 
         );
     }
-
 }

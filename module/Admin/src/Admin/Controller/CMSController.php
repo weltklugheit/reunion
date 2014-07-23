@@ -51,7 +51,7 @@ class CMSController extends AbstractActionController
 
             return $prg;
         } elseif ($prg === false) {
-            // this wasn't a POST request, but there were no params in the flash messenger
+           // this wasn't a POST request, but there were no params in the flash messenger
            echo 'probably this is the first time the form was loaded';
 
             return array('form' => $form);
@@ -68,5 +68,4 @@ class CMSController extends AbstractActionController
 
         return array('form' => $form);
     }
-
 }

@@ -25,6 +25,7 @@
  */
 
 namespace Base\Entity;
+
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -64,5 +65,4 @@ class Room
      * @ORM\JoinColumn(name="room_kind_id", referencedColumnName="id")
      */
     protected $roomKind;
-
 }

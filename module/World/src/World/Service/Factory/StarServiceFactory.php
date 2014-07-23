@@ -43,5 +43,4 @@ class StarServiceFactory implements FactoryInterface
         return new \World\Service\StarService($nameService);
 
     }
-
 }

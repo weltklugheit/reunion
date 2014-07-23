@@ -42,5 +42,4 @@ class Satellite extends AstronomicalObject
      * @ORM\ManyToOne(targetEntity="World\Entity\Planet", inversedBy="satellites")
      */
     protected $planet;
-
 }

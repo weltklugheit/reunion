@@ -29,9 +29,6 @@ use RuntimeException;
 use Zend\Mvc\Service\ServiceManagerConfig;
 use Zend\ServiceManager\ServiceManager;
 
-error_reporting(E_ALL | E_STRICT);
-chdir(__DIR__);
-
 /**
  * Test bootstrap, for setting up autoloading
  */

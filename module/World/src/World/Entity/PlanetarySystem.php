@@ -109,5 +109,4 @@ class PlanetarySystem extends AstronomicalObject
     {
         $this->coordinate = $coordinate;
     }
-
 }

@@ -25,6 +25,7 @@
  */
 
 namespace Species\Entity;
+
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -102,5 +103,4 @@ class Species
     {
         $this->individuals = $individuals;
     }
-
 }

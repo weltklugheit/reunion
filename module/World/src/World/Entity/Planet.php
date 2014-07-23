@@ -124,5 +124,4 @@ class Planet extends AstronomicalObject
     {
         $this->distanceFromSun = $distanceFromSun;
     }
-
 }

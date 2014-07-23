@@ -43,5 +43,4 @@ class PlanetServiceFactory implements FactoryInterface
         return new \World\Service\PlanetService($nameService);
 
     }
-
 }

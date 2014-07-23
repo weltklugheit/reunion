@@ -34,21 +34,21 @@ namespace World\Service;
 class WorldMapGenerator
 {
 
-    protected $_minX;
-    protected $_maxX;
-    protected $_minY;
-    protected $_maxY;
-    protected $_imageWidth;
-    protected $_imageHeight;
-    protected $_showScale;
-    protected $_maxIterations;
+    protected $minX;
+    protected $maxX;
+    protected $minY;
+    protected $maxY;
+    protected $imageWidth;
+    protected $imageHeight;
+    protected $showScale;
+    protected $maxIterations;
 
     public function __construct(array $limits, array $size, $maximumIterations = 200, $showScale = false)
     {
-        list($this->_minX, $this->_maxX, $this->_minY, $this->_maxY) = $limits;
-        list($this->_imageWidth, $this->_imageHeight) = $size;
+        list($this->minX, $this->maxX, $this->minY, $this->maxY) = $limits;
+        list($this->imageWidth, $this->imageHeight) = $size;
 
-        $this->_maxIterations = $maximumIterations;
+        $this->maxIterations = $maximumIterations;
     }
 
     public function __destruct()
@@ -60,15 +60,14 @@ class WorldMapGenerator
 
     public function setUpImage()
     {
-        $this->_image = imagecreate($this->_imageWidth, $this->_imageHeight);
+        $this->_image = imagecreate($this->imageWidth, $this->imageHeight);
 
         // Load the palette to find colours
-        $this->_colours = new Palette($this->_maxIterations, $this->_image);
+        $this->_colours = new Palette($this->maxIterations, $this->_image);
     }
 
     protected function generateWorldMap()
     {
 
     }
-
 }

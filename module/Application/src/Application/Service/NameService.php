@@ -49,7 +49,10 @@ class NameService
 
     public function createName()
     {
-        return ucfirst("" . $this->randConsonant() . "" . $this->randVowel() . "" . "" . $this->randConsonant() . "" . $this->randVowel() . "" . $this->randVowel() . "");
+        return ucfirst(
+            "" . $this->randConsonant() . "" .
+            $this->randVowel() . "" . "" . $this->randConsonant() . 
+            "" . $this->randVowel() . "" . $this->randVowel() . ""
+        );
     }
-
 }

@@ -43,5 +43,4 @@ class GalaxyServiceFactory implements FactoryInterface
         return new \World\Service\GalaxyService($nameService);
 
     }
-
 }

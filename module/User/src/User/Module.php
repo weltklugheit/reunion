@@ -38,11 +38,14 @@ class Module
 
     public function onBootstrap(MvcEvent $mvcEvent)
     {
-        $zfcServiceEvents = $mvcEvent->getApplication()->getServiceManager()->get('zfcuser_user_service')->getEventManager();
+        $zfcServiceEvents = $mvcEvent->getApplication()->getServiceManager()
+            ->get('zfcuser_user_service')->getEventManager();
         $zfcServiceEvents->attach('register', function ($e) use ($mvcEvent) {
             $user            = $e->getParam('user');
-            $em              = $mvcEvent->getApplication()->getServiceManager()->get('doctrine.entitymanager.orm_default');
-            //$config = $mvcEvent->getApplication()->getServiceManager()->get('config');
+            $em              = $mvcEvent->getApplication()
+                    ->getServiceManager()
+                    ->get('doctrine.entitymanager.orm_default');
+
             $defaultUserRole = $em->getRepository('User\Entity\Role')->find(2);
             $user->addRole($defaultUserRole);
         });
@@ -63,5 +66,4 @@ class Module
             ),
         );
     }
-
 }

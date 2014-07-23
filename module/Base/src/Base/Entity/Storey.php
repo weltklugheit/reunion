@@ -25,6 +25,7 @@
  */
 
 namespace Base\Entity;
+
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -56,5 +57,4 @@ class Storey
      * @ORM\JoinColumn(name="base_id", referencedColumnName="id")
      */
     protected $base;
-
 }

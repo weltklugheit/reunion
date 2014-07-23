@@ -62,5 +62,4 @@ class AdminForm extends ZendForm
 
         return $this->openTag($form) . $formContent . $this->closeTag();
     }
-
 }

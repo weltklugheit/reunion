@@ -62,8 +62,12 @@ class PlanetarySystemService
      */
     protected $planetService;
 
-    public function __construct(EntityRepository $repository, NameService $nameService, StarSystemService $starSystemService, PlanetService $planetService)
-    {
+    public function __construct(
+        EntityRepository $repository,
+        NameService $nameService,
+        StarSystemService $starSystemService,
+        PlanetService $planetService
+    ){
         $this->repository = $repository;
         $this->nameService = $nameService;
         $this->starSystemService = $starSystemService;
@@ -82,7 +86,7 @@ class PlanetarySystemService
         $planetarySystem->setGalaxy($galaxy);
         $starSystem = $this->starSystemService->createRandomStarSystem($planetarySystem);
         $planetarySystem->setStarSystem($starSystem);
-        $planets =  rand (0,12);
+        $planets =  rand(0, 12);
         for ($index = 0; $index < $planets; $index++) {
             $planetarySystem->addPlanet($this->planetService->createRandomPlanet($planetarySystem));
         }
@@ -107,5 +111,4 @@ class PlanetarySystemService
         }
 
     }
-
 }

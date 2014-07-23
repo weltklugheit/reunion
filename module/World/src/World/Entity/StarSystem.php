@@ -74,5 +74,4 @@ class StarSystem extends AstronomicalObject
     {
         $this->planetarySystem = $planetarySystem;
     }
-
 }

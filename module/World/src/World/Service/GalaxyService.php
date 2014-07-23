@@ -67,10 +67,9 @@ class GalaxyService
         foreach ($systems as $system) {
             $coords = \explode('.', $system->getCoordinate());
             //echo $coords[0]." ".$coords[1]."</br>";
-            imagesetpixel($gd, $coords[0],$coords[1], $red);
+            imagesetpixel($gd, $coords[0], $coords[1], $red);
         }
         \imagejpeg($gd, 'data.jpg');
 
     }
-
 }

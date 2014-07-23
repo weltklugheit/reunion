@@ -121,5 +121,4 @@ class ConsoleController extends AbstractActionController
 
         );
     }
-
 }

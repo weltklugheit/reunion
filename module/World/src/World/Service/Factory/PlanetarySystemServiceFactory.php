@@ -47,5 +47,4 @@ class PlanetarySystemServiceFactory implements FactoryInterface
         return new \World\Service\PlanetarySystemService($repository, $nameService, $starSystemService, $planetService);
 
     }
-
 }

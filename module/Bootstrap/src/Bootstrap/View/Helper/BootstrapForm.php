@@ -53,11 +53,15 @@ class BootstrapForm extends ZendForm
             if ($element instanceof FieldsetInterface) {
                 $formContent.= $this->getView()->formCollection($element);
             } else {
-                $formContent.= $this->getView()->formRow($element,null,null,$partial);
+                $formContent.= $this->getView()->formRow(
+                    $element,
+                    null,
+                    null,
+                    $partial
+                );
             }
         }
 
         return $this->openTag($form) . $formContent . $this->closeTag();
     }
-
 }
