@@ -7,7 +7,7 @@
 a project of weltklugheit | ©2014 Heiner Bäumer
 ```
 
-[![Build Status](https://travis-ci.org/weltklugheit/reunion.svg?branch=master)](https://travis-ci.org/weltklugheit/reunion)
+[![Build Status](https://travis-ci.org/weltklugheit/reunion.svg?branch=master)](https://travis-ci.org/weltklugheit/reunion) [![Coverage Status](https://coveralls.io/repos/weltklugheit/reunion/badge.png)](https://coveralls.io/r/weltklugheit/reunion)
 
 # rENUNiON
 
