@@ -24,41 +24,46 @@
  * THE SOFTWARE.
  */
 
-namespace Application\Service;
+namespace Admin\View\Helper;
 
-use Zend\Form\Annotation\AnnotationBuilder;
-use Zend\Form\Element;
-use Zend\Form\Element\Csrf;
+use Zend\Form\FieldsetInterface;
+use Zend\Form\FormInterface;
+use Zend\Form\View\Helper\Form as ZendForm;
+
+
 
 /**
- * Description of ApplicationService
+ * Description of Form
  *
  * @author heiner
  */
-class ApplicationService
+class AdminForm extends ZendForm
 {
-    public function createEntityForm($entity)
-    {
-        $builder = new AnnotationBuilder();
-        $form    = $builder->createForm($entity);
-        $csrf    = new Csrf('security');
-
-        $send = new Element('send');
-        $send->setValue('Submit');
-        $send->setAttributes(array(
-            'type' => 'submit',
-            'class' => 'form-control',
-        ));
-        $form->add($csrf);
-        $form->add($send);
-        
-
-        return $form;
-    }
     
-    public function createName()
+    public function render(FormInterface $form)
     {
+        //var_dump(get_class($this->getView()->formRow()));
         
+        //var_dump($form->getAttributes());
+        //$partial = null;
+        if (method_exists($form, 'prepare')) {
+            $form->prepare();
+        }
+        
+        $formContent = '';
+
+        foreach ($form as $element) {
+            if ($element instanceof FieldsetInterface) {
+                $formContent.= $this->getView()->formCollection($element);
+            } else {
+                $formContent.= '<div class="row form-row">';
+                $formContent.= $this->getView()->formRow($element);
+                $formContent.= '</div>';
+            }
+        }
+
+        return $this->openTag($form) . $formContent . $this->closeTag();
     }
+
 
 }

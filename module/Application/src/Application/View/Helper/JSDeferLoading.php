@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2014 heiner.
+ * Copyright 2014 hbaeumer.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -24,41 +24,27 @@
  * THE SOFTWARE.
  */
 
-namespace Application\Service;
+namespace Application\View\Helper;
 
-use Zend\Form\Annotation\AnnotationBuilder;
-use Zend\Form\Element;
-use Zend\Form\Element\Csrf;
+use Zend\View\Helper\AbstractHelper;
 
 /**
- * Description of ApplicationService
+ * JSDeferLoading
  *
- * @author heiner
+ * @author Heiner Baeumer 
  */
-class ApplicationService
+class JSDeferLoading extends AbstractHelper
 {
-    public function createEntityForm($entity)
+    public function __invoke($script)
     {
-        $builder = new AnnotationBuilder();
-        $form    = $builder->createForm($entity);
-        $csrf    = new Csrf('security');
-
-        $send = new Element('send');
-        $send->setValue('Submit');
-        $send->setAttributes(array(
-            'type' => 'submit',
-            'class' => 'form-control',
-        ));
-        $form->add($csrf);
-        $form->add($send);
-        
-
-        return $form;
+        return $this->getLoader($script);
     }
-    
-    public function createName()
+
+    public function getLoader($script)
     {
-        
+        return 'function downloadJSAtOnload(){var element=document.createElement("script");element.src="'.$script.'";document.body.appendChild(element)}if(window.addEventListener)window.addEventListener("load",downloadJSAtOnload,false);else if(window.attachEvent)window.attachEvent("onload",downloadJSAtOnload);else window.onload=downloadJSAtOnload;';
+
     }
 
 }
+

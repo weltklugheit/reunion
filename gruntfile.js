@@ -10,28 +10,16 @@ module.exports = function(grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: 'bower_components/angular/',
+                        cwd: 'vendor/bower_components/angular/',
                         src: ['./angular.min.js'],
                         dest: 'public/js/libs'
                     },
                     {
                         expand: true,
-                        cwd: 'bower_components/bootstrap-sass-official/vendor/assets/stylesheets',
+                        cwd: 'vendor/bower_components/bootstrap-sass-official/vendor/assets/stylesheets',
                         src: ['./**/**'],
                         dest: 'public/sass'
                     },
-                    {
-                        expand: true,
-                        cwd: 'bower_components/font-awesome/scss/',
-                        src: ['./**/**'],
-                        dest: 'public/sass/font-awesome'
-                    },
-                    {
-                        expand: true,
-                        cwd: 'bower_components/font-awesome/fonts/',
-                        src: ['./**/*'],
-                        dest: 'public/fonts'
-                    }
                 ]
             },
         },
@@ -56,9 +44,8 @@ module.exports = function(grunt) {
             all: {
                 files: {
                     'public/js/script.min.js': [
-                        'frontenddev/libs/jquery.js',
-                        'frontenddev/libs/bootstrap.js',
-                        'frontenddev/js/script.js'
+                        'public/js/libs/angular.min.js',
+                        'public/js/controller/cms.js'
                     ],
                 }
             }

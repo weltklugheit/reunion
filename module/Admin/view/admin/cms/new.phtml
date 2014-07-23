@@ -1,0 +1,17 @@
+<?php
+//var_dump($this->form);
+$form = $this->form;
+$form->setAttribute('action', '#');
+?>
+<div class="row" data-ng-app="cmsNewApp" data-ng-controller="newCmsFormController">
+    <div class="col-sm-7">
+        <?php
+        echo $this->adminform()->render($form);
+        ?>
+    </div>
+    <div class="col-sm-5">
+        {{name}}
+        {{url}}
+    </div>
+</div>
+

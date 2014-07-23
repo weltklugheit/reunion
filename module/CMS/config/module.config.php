@@ -77,4 +77,9 @@ return array(
             __DIR__ . '/../view',
         ),
     ),
+    'service_manager' => array(
+        'factories' => array(
+            'CMS\Service\Post'          => 'CMS\Service\Factory\PostServiceFactory',
+        ),
+    ),
 );

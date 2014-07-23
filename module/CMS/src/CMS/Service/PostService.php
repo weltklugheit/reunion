@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2014 heiner.
+ * Copyright 2014 hbaeumer.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -24,41 +24,25 @@
  * THE SOFTWARE.
  */
 
-namespace Application\Service;
+namespace CMS\Service;
 
-use Zend\Form\Annotation\AnnotationBuilder;
-use Zend\Form\Element;
-use Zend\Form\Element\Csrf;
+use Application\Service\ObjectService;
 
 /**
- * Description of ApplicationService
+ * Description of PostService
  *
- * @author heiner
+ * @author hbaeumer
  */
-class ApplicationService
+class PostService extends ObjectService
 {
-    public function createEntityForm($entity)
-    {
-        $builder = new AnnotationBuilder();
-        $form    = $builder->createForm($entity);
-        $csrf    = new Csrf('security');
 
-        $send = new Element('send');
-        $send->setValue('Submit');
-        $send->setAttributes(array(
-            'type' => 'submit',
-            'class' => 'form-control',
-        ));
-        $form->add($csrf);
-        $form->add($send);
-        
-
-        return $form;
-    }
-    
-    public function createName()
+    public function create(\Application\Entity\ObjectEntity $entity)
     {
+        /* @var $entity \CMS\Entity\Post */
+
         
+        return parent::create($entity);
     }
+
 
 }

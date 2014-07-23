@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2014 heiner.
+ * Copyright 2014 hbaeumer.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -26,21 +26,45 @@
 
 namespace Application\Service;
 
+use Application\Entity\ObjectEntity;
+use Doctrine\ORM\EntityManager;
 use Zend\Form\Annotation\AnnotationBuilder;
 use Zend\Form\Element;
 use Zend\Form\Element\Csrf;
 
+
 /**
- * Description of ApplicationService
+ * Description of ObjectService
  *
- * @author heiner
+ * @author hbaeumer
  */
-class ApplicationService
+class ObjectService
 {
-    public function createEntityForm($entity)
+
+    /**
+     * @var string
+     */
+    protected $entityName;
+    
+    /**
+     *
+     * @var EntityManager
+     */
+    protected $entityManager;
+    
+    
+    function __construct($entityName, EntityManager $entityManager)
+    {
+        $this->entityName = $entityName;
+        $this->entityManager = $entityManager;
+    }
+
+    
+    
+    public function createForm()
     {
         $builder = new AnnotationBuilder();
-        $form    = $builder->createForm($entity);
+        $form    = $builder->createForm($this->entityName);
         $csrf    = new Csrf('security');
 
         $send = new Element('send');
@@ -56,9 +80,10 @@ class ApplicationService
         return $form;
     }
     
-    public function createName()
+    public function create(ObjectEntity $entity)
     {
-        
+        $this->entityManager->persist($entity);
+        $this->entityManager->flush();
+        return $entity;
     }
-
 }

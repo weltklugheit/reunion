@@ -3,7 +3,7 @@
 /*
  * The MIT License
  *
- * Copyright 2014 heiner.
+ * Copyright 2014 hbaeumer.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -24,41 +24,21 @@
  * THE SOFTWARE.
  */
 
-namespace Application\Service;
+namespace CMS\Service\Factory;
 
-use Zend\Form\Annotation\AnnotationBuilder;
-use Zend\Form\Element;
-use Zend\Form\Element\Csrf;
+use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\ServiceLocatorInterface;
 
 /**
- * Description of ApplicationService
+ * Description of PostServiceFactory
  *
- * @author heiner
+ * @author hbaeumer
  */
-class ApplicationService
+class PostServiceFactory implements FactoryInterface
 {
-    public function createEntityForm($entity)
+    public function createService(ServiceLocatorInterface $serviceLocator)
     {
-        $builder = new AnnotationBuilder();
-        $form    = $builder->createForm($entity);
-        $csrf    = new Csrf('security');
-
-        $send = new Element('send');
-        $send->setValue('Submit');
-        $send->setAttributes(array(
-            'type' => 'submit',
-            'class' => 'form-control',
-        ));
-        $form->add($csrf);
-        $form->add($send);
-        
-
-        return $form;
+        $entityManager = $serviceLocator->get('Doctrine\ORM\EntityManager');
+        return new \CMS\Service\PostService('CMS\Entity\Post', $entityManager);
     }
-    
-    public function createName()
-    {
-        
-    }
-
 }

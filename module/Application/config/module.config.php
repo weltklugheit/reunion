@@ -111,4 +111,10 @@ return array(
             __DIR__ . '/../view',
         ),
     ),
+    'view_helpers' => array(
+        'invokables' => array(
+            'deferjsloading' => 'Application\View\Helper\JSDeferLoading',
+        )
+    ),
+
 );

@@ -26,21 +26,24 @@
 
 namespace CMS\Entity;
 
+use Application\Entity\ObjectEntity;
 use DateTime;
 use Doctrine\ORM\Mapping as ORM;
+use User\Entity\User;
 use Zend\Form\Annotation;
-
 
 /**
  * Description of Post
  * @ORM\Entity
  * @ORM\Table(name="posts")
+ * @ORM\HasLifecycleCallbacks
  * @Annotation\Name("annotation_post")
  * @Annotation\Attributes({"class":"form_horizontal"})
  * @author heiner
  */
-class Post
+class Post extends ObjectEntity
 {
+
     /**
      * @var int
      * @ORM\Id
@@ -49,7 +52,7 @@ class Post
      * @Annotation\Exclude
      */
     protected $id;
-    
+
     /**
      * @var string
      * @ORM\Column(type="string", length=255, unique=false, nullable=false)
@@ -59,11 +62,11 @@ class Post
      * @Annotation\Validator({"name":"StringLength", "options":{"max":255}})
      * @Annotation\Validator({"name":"Alpha", "options":
      *                                        {"allowWhiteSpace":"true"}})
-     * @Annotation\Attributes({"class":"span6"})
+     * @Annotation\Attributes({"class":"input-sm form-control","data-ng-model":"name"})
      * @Annotation\Options({"label":"Name:"})
      */
     protected $name;
-    
+
     /**
      *
      * @var string 
@@ -74,26 +77,26 @@ class Post
      * @Annotation\Validator({"name":"StringLength", "options":{"max":255}})
      * @Annotation\Validator({"name":"Alpha", "options":
      *                                        {"allowWhiteSpace":"false"}})
-     * @Annotation\Attributes({"class":"span6"})
+     * @Annotation\Attributes({"class":"input-sm form-control","value":"{{url}}"})
      * @Annotation\Options({"label":"Url:"})
      */
     protected $url;
-    
+
     /**
      *
      * @var string 
      * @ORM\Column(type="string", length=255, unique=false, nullable=false)
-    * @Annotation\Type("Zend\Form\Element\Text")
+     * @Annotation\Type("Zend\Form\Element\Text")
      * @Annotation\Required({"required":"true"})
      * @Annotation\Filter({"name":"StringTrim"})
      * @Annotation\Validator({"name":"StringLength", "options":{"max":255}})
      * @Annotation\Validator({"name":"Alpha", "options":
      *                                        {"allowWhiteSpace":"true"}})
-     * @Annotation\Attributes({"class":"span6"})
+     * @Annotation\Attributes({"class":"input-sm form-control"})
      * @Annotation\Options({"label":"Headline:"})
      */
     protected $headline;
-    
+
     /**
      *
      * @var string 
@@ -104,21 +107,22 @@ class Post
      * @Annotation\Validator({"name":"StringLength", "options":{"max":255}})
      * @Annotation\Validator({"name":"Alpha", "options":
      *                                        {"allowWhiteSpace":"true"}})
-     * @Annotation\Attributes({"class":"span6"})
+     * @Annotation\Attributes({"class":"input-sm form-control"})
      * @Annotation\Options({"label":"Keyword:"})
      */
     protected $keywords;
-    
+
     /**
      *
      * @var string 
      * @ORM\Column(type="text", unique=false, nullable=false)
      * @Annotation\Type("Zend\Form\Element\Textarea")
      * @Annotation\Required({"required":"true"})
+     * @Annotation\Attributes({"class":"markdown-editor md-input form-control"})
      * @Annotation\Options({"label":"Body:"})
      */
     protected $articleBody;
-    
+
     /**
      *
      * @var string 
@@ -126,7 +130,7 @@ class Post
      * @Annotation\Exclude
      */
     protected $dateCreated;
-    
+
     /**
      *
      * @var string 
@@ -134,7 +138,7 @@ class Post
      * @Annotation\Exclude
      */
     protected $dateModified;
-    
+
     /**
      *
      * @var string 
@@ -142,7 +146,7 @@ class Post
      * @Annotation\Exclude
      */
     protected $datePublished;
-    
+
     /**
      *
      * @var User 
@@ -150,7 +154,23 @@ class Post
      * @Annotation\Exclude
      */
     protected $author;
-    
+
+    /**
+     * Now we tell doctrine that before we persist or update we call the updatedTimestamps() function.
+     *
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+     */
+    public function updateTimestamps()
+    {
+        
+        $this->setDateModified(new DateTime(date('Y-m-d H:i:s')));
+
+        if ($this->getDateCreated() == null) {
+            $this->setDateCreated(new DateTime(date('Y-m-d H:i:s')));
+        }
+    }
+
     public function getId()
     {
         return $this->id;
@@ -250,21 +270,4 @@ class Post
         return $this;
     }
 
-        
-     /**
-     * Now we tell doctrine that before we persist or update we call the updatedTimestamps() function.
-     *
-     * @ORM\PrePersist
-     * @ORM\PreUpdate
-     */
-    public function updateTimestamps()
-    {
-        $this->setDateModified(new DateTime(date('Y-m-d H:i:s')));
-
-        if($this->getDateCreated() == null)
-        {
-            $this->setDateCreated(new DateTime(date('Y-m-d H:i:s')));
-        }
-    }
-    
 }

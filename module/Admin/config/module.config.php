@@ -30,6 +30,7 @@ return array(
             'Admin\Controller\Index' => 'Admin\Controller\IndexController',
             'Admin\Controller\User' => 'Admin\Controller\UserController',
             'Admin\Controller\Galaxy' => 'Admin\Controller\GalaxyController',
+            'Admin\Controller\CMS' => 'Admin\Controller\CMSController',
         ),
     ),
     'admin' => array(
@@ -72,7 +73,11 @@ return array(
             ),
         ),
     ),
-    
+    'view_helpers' => array(
+        'invokables' => array(
+            'adminform' => 'Admin\View\Helper\AdminForm',
+        )
+    ),
 
     'view_manager' => array(
         'template_path_stack' => array(
