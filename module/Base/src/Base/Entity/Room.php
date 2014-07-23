@@ -48,7 +48,7 @@ class Room
      * @ORM\Column(type="string", length=255, unique=false, nullable=false)
      */
     protected $name;
-    
+
     /**
      *
      * @var \Base\Entity\Storey
@@ -56,7 +56,7 @@ class Room
      * @ORM\JoinColumn(name="storey_id", referencedColumnName="id")
      */
     protected $storey;
-    
+
     /**
      *
      * @var \Base\Entity\RoomKind
@@ -64,5 +64,5 @@ class Room
      * @ORM\JoinColumn(name="room_kind_id", referencedColumnName="id")
      */
     protected $roomKind;
-    
+
 }

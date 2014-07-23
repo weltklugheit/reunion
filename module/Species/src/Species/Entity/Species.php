@@ -48,23 +48,21 @@ class Species
      * @ORM\Column(type="string", length=255, unique=true, nullable=false)
      */
     protected $name;
-    
+
     /**
      *
      * @var \World\Entity\World
      * @ORM\ManyToOne(targetEntity="World\Entity\World", inversedBy="species")
      */
     protected $world;
-    
+
     /**
      *
      * @var \Species\Entity\Individual[]
      * @ORM\OneToMany(targetEntity="Species\Entity\Individual", mappedBy="species")
      */
     protected $individuals;
-    
-       
-    
+
     public function getId()
     {
         return $this->id;
@@ -104,6 +102,5 @@ class Species
     {
         $this->individuals = $individuals;
     }
-
 
 }

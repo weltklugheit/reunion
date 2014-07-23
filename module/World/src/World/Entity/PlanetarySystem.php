@@ -28,7 +28,6 @@ namespace World\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
-
 /**
  * Description of World
  * @ORM\Entity
@@ -37,37 +36,34 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class PlanetarySystem extends AstronomicalObject
 {
-    
+
     /**
      *
      * @var \World\Entity\Planet[]
      * @ORM\OneToMany(targetEntity="World\Entity\Planet", mappedBy="planetarySystem", cascade={"persist"})
      */
     protected $planets;
-    
+
     /**
      *
      * @var \World\Entity\Galaxy
      * @ORM\ManyToOne(targetEntity="World\Entity\Galaxy", inversedBy="planetarySystems")
      */
     protected $galaxy;
-    
+
     /**
      *
      * @var \World\Entity\StarSystem
      * @ORM\OneToOne(targetEntity="StarSystem", mappedBy="planetarySystem", cascade={"persist"})
      */
-    protected $starSystem; 
-    
+    protected $starSystem;
+
     /**
      *
      * @var string
      * @ORM\Column(type="string", unique=true, nullable=false)
      */
     protected $coordinate;
-
-
-
 
     public function getPlanets()
     {
@@ -84,11 +80,11 @@ class PlanetarySystem extends AstronomicalObject
         return $this->starSystem;
     }
 
-    public function setPlanets( $planets)
+    public function setPlanets($planets)
     {
         $this->planets = $planets;
     }
-    
+
     public function addPlanet(\World\Entity\Planet $planet)
     {
         $this->planets[] = $planet;
@@ -103,7 +99,7 @@ class PlanetarySystem extends AstronomicalObject
     {
         $this->starSystem = $starSystem;
     }
-    
+
     public function getCoordinate()
     {
         return $this->coordinate;
@@ -114,8 +110,4 @@ class PlanetarySystem extends AstronomicalObject
         $this->coordinate = $coordinate;
     }
 
-
-
-
-   
 }

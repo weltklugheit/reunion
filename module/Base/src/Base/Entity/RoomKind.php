@@ -48,6 +48,5 @@ class RoomKind
      * @ORM\Column(type="string", length=255, unique=false, nullable=false)
      */
     protected $name;
-    
-    
+
 }

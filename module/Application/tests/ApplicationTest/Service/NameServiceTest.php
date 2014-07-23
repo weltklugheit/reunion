@@ -40,7 +40,7 @@ class NameServiceTest extends PHPUnit_Framework_TestCase
     {
         PHPUnitBootstrap::init();
     }
-    
+
     public function testMe()
     {
         $this->assertEquals(1, 1);

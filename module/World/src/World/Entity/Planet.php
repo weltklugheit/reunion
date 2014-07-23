@@ -28,7 +28,6 @@ namespace World\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
-
 /**
  * Description of World
  * @ORM\Entity
@@ -43,49 +42,49 @@ class Planet extends AstronomicalObject
      * @ORM\ManyToOne(targetEntity="PlanetarySystem", inversedBy="planets")
      */
     protected $planetarySystem;
-    
+
     /**
      *
      * @var Satellite[]
      * @ORM\OneToMany(targetEntity="Satellite", mappedBy="planet")
      */
     protected $satellites;
-    
+
     /**
      *
      * @var float
      * @ORM\Column(type="float", unique=false, nullable=false)
      */
     protected $radius;
-    
+
     /**
      *
      * @var float
      * @ORM\Column(type="float", unique=false, nullable=false)
      */
     protected $distanceFromSun;
-    
+
     /**
      *
      * @var integer
      * @ORM\Column(type="integer", unique=false, nullable=true)
      */
     protected $maxPopulation;
-    
+
     /**
      *
      * @var integer
      * @ORM\Column(type="integer", unique=false, nullable=true)
      */
     protected $population;
-    
+
     /**
      *
      * @var \Species\Entity\Species[]
      * @ORM\OneToMany(targetEntity="Species\Entity\Species", mappedBy="world")
      */
     protected $species;
-    
+
     public function getPlanetarySystem()
     {
         return $this->planetarySystem;
@@ -105,7 +104,7 @@ class Planet extends AstronomicalObject
     {
         $this->satellites = $satellites;
     }
-    
+
     public function getRadius()
     {
         return $this->radius;
@@ -126,12 +125,4 @@ class Planet extends AstronomicalObject
         $this->distanceFromSun = $distanceFromSun;
     }
 
-
-    
-    
-
-
-    
-   
-    
 }

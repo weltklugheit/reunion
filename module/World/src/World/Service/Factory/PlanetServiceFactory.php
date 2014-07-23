@@ -39,8 +39,9 @@ class PlanetServiceFactory implements FactoryInterface
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
         $nameService = $serviceLocator->get('Application\Service\Name');
+
         return new \World\Service\PlanetService($nameService);
-        
+
     }
 
 }

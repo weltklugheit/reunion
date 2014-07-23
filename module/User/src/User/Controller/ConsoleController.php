@@ -94,12 +94,10 @@ class ConsoleController extends AbstractActionController
             }
         }
 
-
         $user = $service->register($data);
         if ($user instanceof \User\Entity\User) {
-            
+
             $user->addRole($role);
-            
 
             $entityManager->persist($user);
 
@@ -125,7 +123,7 @@ class ConsoleController extends AbstractActionController
 
                 if ($char === "\n") {
                     break;
-                } else if (ord($char) === 127) {
+                } elseif (ord($char) === 127) {
                     if (strlen($password) > 0) {
                         fwrite(STDOUT, "\x08 \x08");
                         $password = substr($password, 0, -1);
@@ -152,12 +150,14 @@ class ConsoleController extends AbstractActionController
         if (!$this->userService) {
             $this->userService = $this->getServiceLocator()->get('zfcuser_user_service');
         }
+
         return $this->userService;
     }
 
     public function setUserService(UserService $userService)
     {
         $this->userService = $userService;
+
         return $this;
     }
 

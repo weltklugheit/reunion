@@ -48,13 +48,14 @@ class GalaxyController extends AbstractActionController
     /**
      * Sets the EntityManager
      *
-     * @param EntityManager $em
+     * @param  EntityManager   $em
      * @access protected
      * @return IndexController
      */
     protected function setEntityManager(EntityManager $em)
     {
         $this->entityManager = $em;
+
         return $this;
     }
 
@@ -72,6 +73,7 @@ class GalaxyController extends AbstractActionController
         if (null === $this->entityManager) {
             $this->setEntityManager($this->getServiceLocator()->get('Doctrine\ORM\EntityManager'));
         }
+
         return $this->entityManager;
     }
 
@@ -116,12 +118,12 @@ class GalaxyController extends AbstractActionController
 //
 //
 //        $galaxyService->createMap($galaxy);
-//        
-//        
+//
+//
 //
 //        $objects = $this->getEntityManager()->getRepository('World\Entity\StarSystem')->findAll();
         return array(
-            
+
         );
     }
 

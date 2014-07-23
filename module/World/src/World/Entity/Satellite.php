@@ -28,7 +28,6 @@ namespace World\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
-
 /**
  * Description of World
  * @ORM\Entity
@@ -43,5 +42,5 @@ class Satellite extends AstronomicalObject
      * @ORM\ManyToOne(targetEntity="World\Entity\Planet", inversedBy="satellites")
      */
     protected $planet;
-    
+
 }

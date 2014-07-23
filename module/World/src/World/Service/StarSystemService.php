@@ -38,17 +38,17 @@ class StarSystemService
 {
     /**
      *
-     * @var NameService 
+     * @var NameService
      */
     protected $nameService;
-    
+
     /**
      *
      * @var StarService
      */
     protected $starService;
-    
-    function __construct(NameService $nameService, StarService $starService)
+
+    public function __construct(NameService $nameService, StarService $starService)
     {
         $this->nameService = $nameService;
         $this->starService = $starService;
@@ -63,8 +63,8 @@ class StarSystemService
         for ($index = 0; $index < $stars; $index++) {
             $starSystem->addStar($this->starService->createRandomStar($starSystem));
         }
+
         return $starSystem;
     }
-    
-    
+
 }

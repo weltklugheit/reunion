@@ -40,7 +40,7 @@ class Module implements ConsoleUsageProviderInterface
 
     public function onBootstrap(MvcEvent $mvcEvent)
     {
-        
+
     }
 
     public function getConfig()
@@ -58,13 +58,12 @@ class Module implements ConsoleUsageProviderInterface
             ),
         );
     }
-    
+
     public function getConsoleUsage(AdapterInterface $console)
     {
         return array(
             'galaxy generate planetarySystems' => 'create galaxy',
         );
     }
-
 
 }

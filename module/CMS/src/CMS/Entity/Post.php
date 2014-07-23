@@ -69,7 +69,7 @@ class Post extends ObjectEntity
 
     /**
      *
-     * @var string 
+     * @var string
      * @ORM\Column(type="string", length=255, unique=true, nullable=false)
      * @Annotation\Type("Zend\Form\Element\Text")
      * @Annotation\Required({"required":"true"})
@@ -84,7 +84,7 @@ class Post extends ObjectEntity
 
     /**
      *
-     * @var string 
+     * @var string
      * @ORM\Column(type="string", length=255, unique=false, nullable=false)
      * @Annotation\Type("Zend\Form\Element\Text")
      * @Annotation\Required({"required":"true"})
@@ -99,7 +99,7 @@ class Post extends ObjectEntity
 
     /**
      *
-     * @var string 
+     * @var string
      * @ORM\Column(type="string", length=255, unique=false, nullable=true)
      * @Annotation\Type("Zend\Form\Element\Text")
      * @Annotation\Required({"required":"true"})
@@ -114,7 +114,7 @@ class Post extends ObjectEntity
 
     /**
      *
-     * @var string 
+     * @var string
      * @ORM\Column(type="text", unique=false, nullable=false)
      * @Annotation\Type("Zend\Form\Element\Textarea")
      * @Annotation\Required({"required":"true"})
@@ -125,7 +125,7 @@ class Post extends ObjectEntity
 
     /**
      *
-     * @var string 
+     * @var string
      * @ORM\Column(type="datetime", unique=false, nullable=false)
      * @Annotation\Exclude
      */
@@ -133,7 +133,7 @@ class Post extends ObjectEntity
 
     /**
      *
-     * @var string 
+     * @var string
      * @ORM\Column(type="datetime", unique=false, nullable=false)
      * @Annotation\Exclude
      */
@@ -141,7 +141,7 @@ class Post extends ObjectEntity
 
     /**
      *
-     * @var string 
+     * @var string
      * @ORM\Column(type="datetime", unique=false, nullable=true)
      * @Annotation\Exclude
      */
@@ -149,7 +149,7 @@ class Post extends ObjectEntity
 
     /**
      *
-     * @var User 
+     * @var User
      * @ORM\ManyToOne(targetEntity="User\Entity\User", inversedBy="posts")
      * @Annotation\Exclude
      */
@@ -163,7 +163,7 @@ class Post extends ObjectEntity
      */
     public function updateTimestamps()
     {
-        
+
         $this->setDateModified(new DateTime(date('Y-m-d H:i:s')));
 
         if ($this->getDateCreated() == null) {
@@ -219,54 +219,63 @@ class Post extends ObjectEntity
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
     public function setUrl($url)
     {
         $this->url = $url;
+
         return $this;
     }
 
     public function setHeadline($headline)
     {
         $this->headline = $headline;
+
         return $this;
     }
 
     public function setKeywords($keywords)
     {
         $this->keywords = $keywords;
+
         return $this;
     }
 
     public function setArticleBody($articleBody)
     {
         $this->articleBody = $articleBody;
+
         return $this;
     }
 
     public function setDateCreated($dateCreated)
     {
         $this->dateCreated = $dateCreated;
+
         return $this;
     }
 
     public function setDateModified($dateModified)
     {
         $this->dateModified = $dateModified;
+
         return $this;
     }
 
     public function setDatePublished($datePublished)
     {
         $this->datePublished = $datePublished;
+
         return $this;
     }
 

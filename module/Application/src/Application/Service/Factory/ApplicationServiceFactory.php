@@ -37,6 +37,7 @@ class ApplicationServiceFactory implements FactoryInterface
     {
         $entityManager = $serviceLocator->get('Doctrine\ORM\EntityManager');
         $repository = $entityManager->getRepository('World\Entity\PlanetarySystem');
+
         return new \CMS\Service\PostService($repository, $entityManager);
     }
 }

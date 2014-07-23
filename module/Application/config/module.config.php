@@ -1,6 +1,6 @@
 <?php
 
-/* 
+/*
  * The MIT License
  *
  * Copyright 2014 heiner.
@@ -25,7 +25,7 @@
  */
 
 return array(
-    
+
     'router' => array(
         'routes' => array(
             'home' => array(
@@ -66,7 +66,7 @@ return array(
             ),
         ),
     ),
-    
+
     'service_manager' => array(
         'invokables' => array(
             'Application\Service\Application' => 'Application\Service\ApplicationService',

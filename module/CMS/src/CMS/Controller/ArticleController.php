@@ -37,24 +37,24 @@ class ArticleController extends AbstractActionController
 {
     public function showAction()
     {
-        
+
     }
-    
+
     public function editAction()
     {
-        
+
     }
-    
+
     public function newAction()
     {
         $service = $this->serviceLocator->get('Application\Service\Application');
         /* @var $service \Application\Service\ApplicationService */
         $entity = new \CMS\Entity\Post();
         $form = $service->createEntityForm($entity);
-        
+
         return array(
             'new_form' => $form,
         );
-        
+
     }
 }

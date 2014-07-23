@@ -52,25 +52,20 @@ class ConsoleController extends AbstractActionController
 
         $password = $this->getPassword(true);
         $roleId     = $request->getParam('role');
-        
+
         $entityManager = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
         /* @var $entityManager \Doctrine\ORM\EntityManager */
         $roleRepository = $entityManager->getRepository('User\Entity\Role');
         $role = $roleRepository->findOneBy(array('roleId'=>$roleId));
-        
-        
-        var_dump($role);
-        
-        
 
-        
+        var_dump($role);
+
         $email    = $request->getParam('email');
         $user     = new User();
         $user->setEmail($email);
         $user->addRole($role);
         $user->setPassword($password);
 
-        
     }
 
     protected function getPassword($stars = false)
@@ -90,7 +85,7 @@ class ConsoleController extends AbstractActionController
 
                 if ($char === "\n") {
                     break;
-                } else if (ord($char) === 127) {
+                } elseif (ord($char) === 127) {
                     if (strlen($password) > 0) {
                         fwrite(STDOUT, "\x08 \x08");
                         $password = substr($password, 0, -1);

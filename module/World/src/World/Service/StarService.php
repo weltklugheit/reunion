@@ -38,11 +38,11 @@ class StarService
 {
     /**
      *
-     * @var NameService 
+     * @var NameService
      */
     protected $nameService;
-    
-    function __construct(NameService $nameService)
+
+    public function __construct(NameService $nameService)
     {
         $this->nameService = $nameService;
     }
@@ -52,8 +52,8 @@ class StarService
         $star = new Star();
         $star->setName($this->nameService->createName());
         $star->setStarSystem($starSystem);
+
         return $star;
     }
-    
-    
+
 }

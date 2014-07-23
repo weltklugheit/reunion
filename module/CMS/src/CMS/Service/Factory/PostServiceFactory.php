@@ -39,6 +39,7 @@ class PostServiceFactory implements FactoryInterface
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
         $entityManager = $serviceLocator->get('Doctrine\ORM\EntityManager');
+
         return new \CMS\Service\PostService('CMS\Entity\Post', $entityManager);
     }
 }

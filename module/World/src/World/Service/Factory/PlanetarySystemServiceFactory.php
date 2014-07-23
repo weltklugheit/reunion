@@ -43,8 +43,9 @@ class PlanetarySystemServiceFactory implements FactoryInterface
         $nameService = $serviceLocator->get('Application\Service\Name');
         $starSystemService = $serviceLocator->get('World\Service\StarSystem');
         $planetService = $serviceLocator->get('World\Service\Planet');
+
         return new \World\Service\PlanetarySystemService($repository, $nameService, $starSystemService, $planetService);
-        
+
     }
 
 }

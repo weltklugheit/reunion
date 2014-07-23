@@ -39,7 +39,7 @@ use World\Entity\PlanetarySystem;
  */
 class SpeciesService
 {
-    
+
     /**
      *
      * @var EntityRepository
@@ -47,28 +47,27 @@ class SpeciesService
     protected $repository;
     /**
      *
-     * @var NameService 
+     * @var NameService
      */
     protected $nameService;
-    
-            
-    function __construct(EntityRepository $repository, NameService $nameService)
+
+    public function __construct(EntityRepository $repository, NameService $nameService)
     {
         $this->repository = $repository;
         $this->nameService = $nameService;
     }
 
     /**
-     * 
-     * @param Galaxy $galaxy
+     *
+     * @param  Galaxy          $galaxy
      * @return PlanetarySystem
      */
     public function createRandomSpecies()
     {
         $species = new Species();
         $species->setName($this->nameService->createName());
-        
+
         return $species;
     }
-    
+
 }

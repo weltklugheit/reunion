@@ -1,6 +1,6 @@
 <?php
 
-/* 
+/*
  * The MIT License
  *
  * Copyright 2014 hbaeumer.
@@ -56,7 +56,7 @@ class PHPUnitBootstrap
         static::initAutoloader();
 
         $configuration = include APPLICATION_PATH.'/config/application.config.php';
-        
+
         $smConfig = isset($configuration['service_manager']) ? $configuration['service_manager'] : array();
         //$listeners = isset($configuration['listeners']) ? $configuration['listeners'] : array();
         $serviceManager = new ServiceManager(new ServiceManagerConfig($smConfig));
@@ -67,7 +67,7 @@ class PHPUnitBootstrap
 
     /**
      * Get Service Manager
-     * 
+     *
      * @return ServiceManager
      */
     public static function getServiceManager()
@@ -77,7 +77,7 @@ class PHPUnitBootstrap
 
     /**
      * Initialize autoloader
-     * 
+     *
      * @throws RuntimeException
      */
     protected static function initAutoloader()
@@ -88,8 +88,8 @@ class PHPUnitBootstrap
 
     /**
      * Find the parent path
-     * 
-     * @param string $path
+     *
+     * @param  string $path
      * @return string
      */
     protected static function findParentPath($path)
@@ -103,9 +103,9 @@ class PHPUnitBootstrap
             }
             $previousDir = $dir;
         }
+
         return $dir . '/' . $path;
     }
 }
 
 PHPUnitBootstrap::init();
-

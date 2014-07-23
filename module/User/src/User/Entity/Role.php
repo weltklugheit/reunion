@@ -60,7 +60,7 @@ class Role implements HierarchicalRoleInterface
      */
     public function setId($id)
     {
-        $this->id = (int)$id;
+        $this->id = (int) $id;
     }
 
     /**

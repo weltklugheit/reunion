@@ -43,7 +43,7 @@ class WorldMapGenerator
     protected $_showScale;
     protected $_maxIterations;
 
-    public function __construct(Array $limits, Array $size, $maximumIterations = 200, $showScale = false)
+    public function __construct(array $limits, array $size, $maximumIterations = 200, $showScale = false)
     {
         list($this->_minX, $this->_maxX, $this->_minY, $this->_maxY) = $limits;
         list($this->_imageWidth, $this->_imageHeight) = $size;
@@ -68,7 +68,7 @@ class WorldMapGenerator
 
     protected function generateWorldMap()
     {
-        
+
     }
 
 }

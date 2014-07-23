@@ -29,7 +29,6 @@ namespace World\Controller;
 use Application\Service\ApplicationService;
 use Doctrine\ORM\EntityManager;
 use Species\Service\SpeciesService;
-use World\Entity\StarSystem;
 use World\Service\GalaxyService;
 use World\Service\PlanetarySystemService;
 use Zend\Console\Console;
@@ -52,13 +51,14 @@ class ConsoleController extends AbstractActionController
     /**
      * Sets the EntityManager
      *
-     * @param EntityManager $em
+     * @param  EntityManager   $em
      * @access protected
      * @return IndexController
      */
     protected function setEntityManager(EntityManager $em)
     {
         $this->entityManager = $em;
+
         return $this;
     }
 
@@ -76,6 +76,7 @@ class ConsoleController extends AbstractActionController
         if (null === $this->entityManager) {
             $this->setEntityManager($this->getServiceLocator()->get('Doctrine\ORM\EntityManager'));
         }
+
         return $this->entityManager;
     }
 
@@ -91,7 +92,6 @@ class ConsoleController extends AbstractActionController
 //        $this->getEntityManager()->flush();
         $galaxy = $this->getEntityManager()->find('World\Entity\Galaxy', 1);
 
-
         //$this->getEntityManager()->persist($galaxy);
         $planetarySystemService = $this->getServiceLocator()->get('World\Service\PlanetarySystem');
         /* @var $planetarySystemService PlanetarySystemService */
@@ -105,26 +105,20 @@ class ConsoleController extends AbstractActionController
             $this->getEntityManager()->flush();
         }
 
-
         $planetarySystem = $planetarySystemService->createRandomPlanetarySystem($galaxy);
         $this->getEntityManager()->persist($planetarySystem);
         $this->getEntityManager()->flush();
-        
+
         $speciesService = $this->getServiceLocator()->get('Species\Service\SpeciesService');
         /* @var $speciesService SpeciesService */
         $species = $speciesService->createRandomSpecies();
         $this->getEntityManager()->persist($species);
         $this->getEntityManager()->flush();
-        
-
-        
-
 
         $galaxyService->createMap($galaxy);
-        
-        
+
         return array(
-            
+
         );
     }
 

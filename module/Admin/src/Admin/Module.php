@@ -27,7 +27,6 @@
 namespace Admin;
 
 use Zend\EventManager\EventInterface;
-use Zend\Loader\AutoloaderFactory;
 use Zend\Loader\StandardAutoloader;
 use Zend\Mvc\MvcEvent;
 use Zend\Mvc\Router\RouteMatch;

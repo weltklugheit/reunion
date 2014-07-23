@@ -40,9 +40,7 @@ class PostService extends ObjectService
     {
         /* @var $entity \CMS\Entity\Post */
 
-        
         return parent::create($entity);
     }
-
 
 }

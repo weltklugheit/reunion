@@ -28,7 +28,6 @@ namespace World\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
-
 /**
  * Description of World
  * @ORM\Entity
@@ -43,14 +42,14 @@ class StarSystem extends AstronomicalObject
      * @ORM\OneToMany(targetEntity="Star", mappedBy="starSystem", cascade={"persist"})
      */
     protected $stars;
-    
+
     /**
      *
      * @var PlanetarySystem
      * @ORM\OneToOne(targetEntity="PlanetarySystem", inversedBy="starSystem")
      */
     protected $planetarySystem;
-    
+
     public function getStars()
     {
         return $this->stars;
@@ -65,19 +64,15 @@ class StarSystem extends AstronomicalObject
     {
         $this->stars = $stars;
     }
-    
+
     public function addStar(Star $star)
     {
         $this->stars[] = $star;
     }
 
-    
     public function setPlanetarySystem(PlanetarySystem $planetarySystem)
     {
         $this->planetarySystem = $planetarySystem;
     }
-
-
-    
 
 }

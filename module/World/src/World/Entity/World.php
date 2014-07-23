@@ -33,7 +33,7 @@ use User\Entity\User;
  * Description of World
  * @ORM\Entity
  * @ORM\Table(name="worlds")
- * 
+ *
  * @author heiner
  */
 class World
@@ -45,37 +45,35 @@ class World
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
-    
+
     /**
      * @var string
      * @ORM\Column(type="string", length=255, unique=false, nullable=false)
      */
     protected $name;
-    
+
     /**
      *
-     * @var User 
+     * @var User
      * @ORM\OneToOne(targetEntity="User\Entity\User")
      * @ORM\JoinColumn(name="ownder_id", referencedColumnName="id")
      */
     protected $owner;
-    
+
     /**
      *
      * @var \Species\Entity\Species[]
      * @ORM\OneToMany(targetEntity="Species\Entity\Species", mappedBy="world")
      */
     protected $species;
-    
+
     /**
      *
      * @var \Species\Entity\Individual[]
      * @ORM\OneToMany(targetEntity="Species\Entity\Individual", mappedBy="world")
      */
     protected $individuals;
-    
 
-    
     /**
      *
      * @var \Base\Entity\Base[]
@@ -83,7 +81,6 @@ class World
      */
     protected $bases;
 
-    
     public function getId()
     {
         return $this->id;
@@ -103,7 +100,7 @@ class World
     {
         $this->name = $name;
     }
-    
+
     public function getOwner()
     {
         return $this->owner;
@@ -114,9 +111,4 @@ class World
         $this->owner = $owner;
     }
 
-
-
-
-    
-    
 }

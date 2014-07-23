@@ -38,11 +38,11 @@ class GalaxyService
 {
     /**
      *
-     * @var NameService 
+     * @var NameService
      */
     protected $nameService;
-    
-    function __construct(NameService $nameService)
+
+    public function __construct(NameService $nameService)
     {
         $this->nameService = $nameService;
     }
@@ -51,18 +51,19 @@ class GalaxyService
     {
         $galaxy = new Galaxy();
         $galaxy->setName($this->nameService->createName());
+
         return $galaxy;
     }
-    
+
     /**
-     * 
+     *
      * @param Galaxy $galaxy
      */
     public function createMap($galaxy)
     {
         $gd = \imagecreatetruecolor(1024, 800);
         $systems = $galaxy->getPlanetarySystems();
-        $red = imagecolorallocate($gd, 255, 255, 255); 
+        $red = imagecolorallocate($gd, 255, 255, 255);
         foreach ($systems as $system) {
             $coords = \explode('.', $system->getCoordinate());
             //echo $coords[0]." ".$coords[1]."</br>";
@@ -70,8 +71,6 @@ class GalaxyService
         }
         \imagejpeg($gd, 'data.jpg');
 
-        
     }
-    
-    
+
 }

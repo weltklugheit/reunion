@@ -31,7 +31,7 @@ use Zend\View\Helper\AbstractHelper;
 /**
  * JSDeferLoading
  *
- * @author Heiner Baeumer 
+ * @author Heiner Baeumer
  */
 class JSDeferLoading extends AbstractHelper
 {
@@ -42,9 +42,8 @@ class JSDeferLoading extends AbstractHelper
 
     public function getLoader($script)
     {
-        return 'function downloadJSAtOnload(){var element=document.createElement("script");element.src="'.$script.'";document.body.appendChild(element)}if(window.addEventListener)window.addEventListener("load",downloadJSAtOnload,false);else if(window.attachEvent)window.attachEvent("onload",downloadJSAtOnload);else window.onload=downloadJSAtOnload;';
+        return 'function downloadJSAtOnload() {var element=document.createElement("script");element.src="'.$script.'";document.body.appendChild(element)}if(window.addEventListener)window.addEventListener("load",downloadJSAtOnload,false);else if(window.attachEvent)window.attachEvent("onload",downloadJSAtOnload);else window.onload=downloadJSAtOnload;';
 
     }
 
 }
-

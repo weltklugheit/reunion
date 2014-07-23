@@ -52,7 +52,7 @@ class AstronomicalObject extends \Application\Entity\ObjectEntity
      * @Annotation\Exclude
      */
     protected $id;
-    
+
     /**
      * @var string
      * @ORM\Column(type="string", length=255, unique=false, nullable=false)
@@ -66,7 +66,7 @@ class AstronomicalObject extends \Application\Entity\ObjectEntity
      * @Annotation\Options({"label":"Name:"})
      */
     protected $name;
-    
+
     public function getId()
     {
         return $this->id;
@@ -86,5 +86,5 @@ class AstronomicalObject extends \Application\Entity\ObjectEntity
     {
         $this->name = $name;
     }
-    
+
 }

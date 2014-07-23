@@ -42,27 +42,30 @@ class CMSController extends AbstractActionController
         /* @var $service \CMS\Service\PostService */
         $entity = new \CMS\Entity\Post();
         $form = $service->createForm();
-        
+
         $prg = $this->prg('/admin/cms/new', true);
 
         if ($prg instanceof \Zend\Http\PhpEnvironment\Response) {
             // returned a response to redirect us
             echo 'returned a response to redirect us';
+
             return $prg;
         } elseif ($prg === false) {
             // this wasn't a POST request, but there were no params in the flash messenger
            echo 'probably this is the first time the form was loaded';
+
             return array('form' => $form);
         }
-        
+
         $form->setData($prg);
         if ($form->isValid()) {
-            
+
             $entity->exchangeArray($prg);
             $service->create($entity);
         }
 
         var_dump($entity);
+
         return array('form' => $form);
     }
 

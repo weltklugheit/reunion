@@ -40,7 +40,7 @@ use Zend\Form\Annotation;
  */
 class Galaxy extends AstronomicalObject implements GalaxyInterface
 {
-    
+
     /**
      *
      * @var PlanetarySystem[]
@@ -48,9 +48,9 @@ class Galaxy extends AstronomicalObject implements GalaxyInterface
      * @Annotation\Exclude
      */
     protected $planetarySystems;
-    
+
     /**
-     * 
+     *
      * @return PlanetarySystem[]
      */
     public function getPlanetarySystems()
@@ -63,8 +63,4 @@ class Galaxy extends AstronomicalObject implements GalaxyInterface
         $this->planetarySystems = $planetarySystems;
     }
 
-
-    
-    
-    
 }

@@ -28,8 +28,6 @@ namespace Bootstrap\View\Helper;
 
 use Zend\Form\View\Helper\Form as ZendForm;
 
-
-
 /**
  * Description of Form
  *
@@ -37,18 +35,18 @@ use Zend\Form\View\Helper\Form as ZendForm;
  */
 class BootstrapForm extends ZendForm
 {
-    
+
     public function render(\Zend\Form\FormInterface $form)
     {
         //var_dump(get_class($this->getView()->formRow()));
-        
+
         //var_dump($form->getAttributes());
         $partial = 'partial/bootstrap/form-horizontal-form-group';
         //$partial = null;
         if (method_exists($form, 'prepare')) {
             $form->prepare();
         }
-        
+
         $formContent = '';
 
         foreach ($form as $element) {

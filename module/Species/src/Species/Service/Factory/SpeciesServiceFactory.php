@@ -42,8 +42,9 @@ class SpeciesServiceFactory implements FactoryInterface
         $entityManager = $serviceLocator->get('Doctrine\ORM\EntityManager');
         $repository = $entityManager->getRepository('World\Entity\PlanetarySystem');
         $nameService = $serviceLocator->get('Application\Service\Name');
+
         return new SpeciesService($repository, $nameService);
-        
+
     }
 
 }

@@ -48,7 +48,7 @@ class Base
      * @ORM\Column(type="string", length=255, unique=false, nullable=false)
      */
     protected $name;
-    
+
     /**
      *
      * @var \World\Entity\World

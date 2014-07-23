@@ -48,7 +48,7 @@ class Storey
      * @ORM\Column(type="string", length=255, unique=false, nullable=false)
      */
     protected $name;
-    
+
     /**
      *
      * @var \Base\Entity\Base
@@ -56,5 +56,5 @@ class Storey
      * @ORM\JoinColumn(name="base_id", referencedColumnName="id")
      */
     protected $base;
-    
+
 }

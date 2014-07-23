@@ -40,8 +40,9 @@ class StarSystemServiceFactory implements FactoryInterface
     {
         $nameService = $serviceLocator->get('Application\Service\Name');
         $starService = $serviceLocator->get('World\Service\Star');
+
         return new \World\Service\StarSystemService($nameService, $starService);
-        
+
     }
 
 }

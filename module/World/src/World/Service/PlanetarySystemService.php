@@ -38,7 +38,7 @@ use World\Entity\PlanetarySystem;
  */
 class PlanetarySystemService
 {
-    
+
     /**
      *
      * @var EntityRepository
@@ -46,23 +46,23 @@ class PlanetarySystemService
     protected $repository;
     /**
      *
-     * @var NameService 
+     * @var NameService
      */
     protected $nameService;
-    
+
     /**
      *
      * @var StarSystemService
      */
     protected $starSystemService;
-    
+
     /**
      *
      * @var PlanetService
      */
     protected $planetService;
-            
-    function __construct(EntityRepository $repository, NameService $nameService, StarSystemService $starSystemService, PlanetService $planetService)
+
+    public function __construct(EntityRepository $repository, NameService $nameService, StarSystemService $starSystemService, PlanetService $planetService)
     {
         $this->repository = $repository;
         $this->nameService = $nameService;
@@ -71,8 +71,8 @@ class PlanetarySystemService
     }
 
     /**
-     * 
-     * @param Galaxy $galaxy
+     *
+     * @param  Galaxy          $galaxy
      * @return PlanetarySystem
      */
     public function createRandomPlanetarySystem($galaxy)
@@ -86,25 +86,26 @@ class PlanetarySystemService
         for ($index = 0; $index < $planets; $index++) {
             $planetarySystem->addPlanet($this->planetService->createRandomPlanet($planetarySystem));
         }
-        
+
         $planetarySystem->setCoordinate($this->createRandomCoordinate());
+
         return $planetarySystem;
     }
-    
+
     protected function createRandomCoordinate()
     {
         $coordx = rand(0,800);
         $coordy = rand(0,1024);
         $coordz = 0;
         $coordinate = $coordx.'.'.$coordy.'.'.$coordz;
-        if (null === $this->repository->findOneBy(array('coordinate'=>$coordinate))){
+        if (null === $this->repository->findOneBy(array('coordinate'=>$coordinate))) {
             return $coordinate;
         } else {
             echo 'exists';
+
             return $this->createRandomCoordinate();
         }
-        
+
     }
-    
-    
+
 }

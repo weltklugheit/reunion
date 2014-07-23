@@ -48,14 +48,14 @@ class Individual
      * @ORM\Column(type="string", length=255, unique=false, nullable=false)
      */
     protected $name;
-    
+
     /**
      *
-     * @var \Species\Entity\Species 
+     * @var \Species\Entity\Species
      * @ORM\ManyToOne(targetEntity="Species\Entity\Species", inversedBy="individuals")
      */
     protected $species;
-    
+
     /**
      *
      * @var \World\Entity\World

@@ -51,14 +51,13 @@ class ApplicationService
         ));
         $form->add($csrf);
         $form->add($send);
-        
 
         return $form;
     }
-    
+
     public function createName()
     {
-        
+
     }
 
 }

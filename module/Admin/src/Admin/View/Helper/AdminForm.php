@@ -30,8 +30,6 @@ use Zend\Form\FieldsetInterface;
 use Zend\Form\FormInterface;
 use Zend\Form\View\Helper\Form as ZendForm;
 
-
-
 /**
  * Description of Form
  *
@@ -39,17 +37,17 @@ use Zend\Form\View\Helper\Form as ZendForm;
  */
 class AdminForm extends ZendForm
 {
-    
+
     public function render(FormInterface $form)
     {
         //var_dump(get_class($this->getView()->formRow()));
-        
+
         //var_dump($form->getAttributes());
         //$partial = null;
         if (method_exists($form, 'prepare')) {
             $form->prepare();
         }
-        
+
         $formContent = '';
 
         foreach ($form as $element) {
@@ -64,6 +62,5 @@ class AdminForm extends ZendForm
 
         return $this->openTag($form) . $formContent . $this->closeTag();
     }
-
 
 }

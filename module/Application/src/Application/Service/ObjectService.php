@@ -32,7 +32,6 @@ use Zend\Form\Annotation\AnnotationBuilder;
 use Zend\Form\Element;
 use Zend\Form\Element\Csrf;
 
-
 /**
  * Description of ObjectService
  *
@@ -45,22 +44,19 @@ class ObjectService
      * @var string
      */
     protected $entityName;
-    
+
     /**
      *
      * @var EntityManager
      */
     protected $entityManager;
-    
-    
-    function __construct($entityName, EntityManager $entityManager)
+
+    public function __construct($entityName, EntityManager $entityManager)
     {
         $this->entityName = $entityName;
         $this->entityManager = $entityManager;
     }
 
-    
-    
     public function createForm()
     {
         $builder = new AnnotationBuilder();
@@ -75,15 +71,15 @@ class ObjectService
         ));
         $form->add($csrf);
         $form->add($send);
-        
 
         return $form;
     }
-    
+
     public function create(ObjectEntity $entity)
     {
         $this->entityManager->persist($entity);
         $this->entityManager->flush();
+
         return $entity;
     }
 }

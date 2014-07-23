@@ -28,12 +28,11 @@ namespace World\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
-
 /**
  * Description of World
  * @ORM\Entity
  * @ORM\Table(name="stars")
- * 
+ *
  * @author heiner
  */
 class Star extends AstronomicalObject
@@ -45,7 +44,7 @@ class Star extends AstronomicalObject
      * @ORM\ManyToOne(targetEntity="World\Entity\StarSystem", inversedBy="stars" )
      */
     protected $starSystem;
-    
+
     public function getStarSystem()
     {
         return $this->starSystem;
@@ -56,7 +55,4 @@ class Star extends AstronomicalObject
         $this->starSystem = $starSystem;
     }
 
-
-
-    
 }

@@ -29,7 +29,6 @@ namespace World\Service;
 use Application\Service\NameService;
 use World\Entity\Planet;
 
-
 /**
  * Description of StarService
  *
@@ -39,11 +38,11 @@ class PlanetService
 {
     /**
      *
-     * @var NameService 
+     * @var NameService
      */
     protected $nameService;
-    
-    function __construct(NameService $nameService)
+
+    public function __construct(NameService $nameService)
     {
         $this->nameService = $nameService;
     }
@@ -57,8 +56,8 @@ class PlanetService
         $distanceFromSun = rand();
         $planet->setDistanceFromSun($distanceFromSun);
         $planet->setRadius($radius);
+
         return $planet;
     }
-    
-    
+
 }

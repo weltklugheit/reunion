@@ -1,6 +1,6 @@
 <?php
 
-/* 
+/*
  * The MIT License
  *
  * Copyright 2014 heiner.
@@ -66,7 +66,7 @@ return array(
             ),
         ),
     ),
-    
+
     'controllers' => array(
         'invokables' => array(
             'CMS\Controller\Article' => 'CMS\Controller\ArticleController',
